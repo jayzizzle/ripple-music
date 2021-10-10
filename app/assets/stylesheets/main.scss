@@ -28,8 +28,8 @@ h3 {
 
 main {
   width: 100%;
-  height: 100vh;
   margin-left: 250px;
+  padding: 25px;
 }
 
 footer {
@@ -93,6 +93,26 @@ hover-white:hover {
   padding: 40px 0px;
 }
 
+.vertical-center {
+  align-items: center;
+}
+
 .horizontal-padding {
   padding: 0px 10px;
+}
+
+.white {
+  color: #fff;
+}
+
+.silver {
+  color: #ccc;
+}
+
+.lightgray {
+  color: #aaa;
+}
+
+.darkgray {
+  color: #333;
 }

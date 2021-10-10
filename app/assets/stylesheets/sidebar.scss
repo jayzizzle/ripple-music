@@ -2,13 +2,21 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
-  height: 100vh;
+  width: 220px;
+  height: 100%;
   background: linear-gradient(215deg,#1a1a1a 15%,#222 85%) no-repeat 50% fixed;
+  padding: 15px 15px;
   z-index: 5;
 }
 
-.sidebar-inner {
-  width: 100%;
-  padding: 20px 20px;
+.sidebar-row {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.sidebar-row:hover {
+  background-color: #333;
 }
