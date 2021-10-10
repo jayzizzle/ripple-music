@@ -10,6 +10,7 @@ export default class SessionForm extends Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   componentWillUnmount() {
@@ -42,7 +43,7 @@ export default class SessionForm extends Component {
   renderEmailInput() {
     return(
       <>
-        <label>Enter Email
+        <label className='session-label'>Enter Email
           <br />
           <input 
             type='email' 
@@ -50,7 +51,7 @@ export default class SessionForm extends Component {
             value={this.state.email} 
             onChange={this.update('email')} 
             autoComplete='email' 
-            className='input-text'
+            className='session-input-text'
           />
         </label>
         <br />
@@ -58,11 +59,16 @@ export default class SessionForm extends Component {
     )
   }
 
+  handleGuestLogin(e) {
+    e.preventDefault();
+    this.props.login(this.props.guest)
+      .then(() => this.props.history.push('/dashboard'));
+  }
+
   render() {
     const { formType } = this.props;
     return (
-      <div className='flex-col-center'>
-
+      <div className='flex-col-center session-form-wrapper'>
         <h2>Ripple</h2>
 
         <div className='flex-row-center'>
@@ -75,7 +81,7 @@ export default class SessionForm extends Component {
         </div>
         <div className='session-form-box'>
           <form onSubmit={this.handleSubmit} className='flex-col-center'>
-            <label>Enter Username
+            <label className='session-label'>Enter Username
               <br />
               <input 
                 type='text' 
@@ -83,12 +89,12 @@ export default class SessionForm extends Component {
                 value={this.state.username} 
                 onChange={this.update('username')}
                 autoComplete='username'
-                className='input-text'
+                className='session-input-text'
               />
             </label>
             <br />
             {formType === 'Sign Up' ? this.renderEmailInput() : null}
-            <label>Enter Password
+            <label className='session-label'>Enter Password
               <br />
               <input 
                 type='password' 
@@ -96,16 +102,20 @@ export default class SessionForm extends Component {
                 value={this.state.password} 
                 onChange={this.update('password')} 
                 autoComplete={ formType === 'Sign Up' ? 'new-password' : 'current-password' }
-                className='input-text'
+                className='session-input-text'
               />
             </label>
             <br />
             <button className=''>{formType}</button>
             {this.renderErrors()}
           </form>
-          
+
           <div className='flex-col-center'>
             <p>or</p>
+            <button className='' onClick={this.handleGuestLogin}>
+              <i className="fa-solid fa-key"></i>
+              Continue as Guest
+            </button>
           </div>
 
         </div>
