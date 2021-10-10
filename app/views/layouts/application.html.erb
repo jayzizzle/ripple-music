@@ -10,7 +10,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="<%= image_url('favicon.ico')%>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-    
+    <% if logged_in? %>
+      <script id="bootstrap-current-user" type="text/javascript">
+        window.currentUser = <%= render("api/users/user.json.jbuilder",
+          user: current_user).html_safe %>
+      </script>
+    <% end %>
   </head>
 
   <body>
