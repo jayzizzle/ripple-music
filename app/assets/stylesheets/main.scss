@@ -8,6 +8,7 @@ body {
   background-color: #1a1a1a;
   background: linear-gradient(215deg,#171d26 15%,#000 85%) no-repeat 50% fixed;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -20,10 +21,28 @@ h2 {
   letter-spacing: 5px;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
 .flex-row-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-row-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 .flex-col-center {
@@ -32,30 +51,8 @@ h2 {
   align-items: center;
 }
 
-.session-form-wrapper {
-  padding: 100px 0px;
-}
-
-.session-form-box {
-  background-color: #1c2026;
-  width: 400px;
-  padding: 40px 25px;
-  border-radius: 5px;
-}
-
-.session-input-text {
-  width: 300px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid lightslategray;
-  font-size: 20px;
+hover-white:hover {
   color: #fff;
-}
-
-.session-input-text:focus {
-  outline: none;
-  border-bottom: 1px solid cyan;
   transition: 0.5s;
 }
 
@@ -65,7 +62,20 @@ h2 {
 :-ms-input-placeholder {color: #555;}
 ::-ms-input-placeholder {color: #555;}
 
-.session-label {
-  padding: 10px 0px;
-  font-size: 12px;
+.cyan-btn {
+  background-color: cyan;
+  color: #333;
+}
+
+.cyan-btn:hover {
+  background-color: darkcyan;
+  transition: 0.5s;
+}
+
+.vertical-padding {
+  padding: 40px 0px;
+}
+
+.horizontal-padding {
+  padding: 0px 10px;
 }

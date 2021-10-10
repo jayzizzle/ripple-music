@@ -1,0 +1,106 @@
+.session-form-wrapper {
+  padding: 50px 0px;
+}
+
+.session-form-outer {
+  background-color: #1c2026;
+  width: 380px;
+  margin: 50px;
+  padding: 40px 20px 60px 20px;
+  border-radius: 5px;
+}
+
+.session-form-inner {
+  width: 300px;
+}
+
+.session-header {
+  padding: 100px 0px;
+}
+
+.session-input-text {
+  width: 300px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid lightslategray;
+  font-size: 20px;
+  color: #fff;
+}
+
+.session-input-text:focus {
+  outline: none;
+  border-bottom: 1px solid cyan;
+  transition: 0.5s;
+}
+
+.session-label {
+  padding: 10px 0px;
+  font-size: 12px;
+}
+
+.session-form-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  padding: 15px 0px;
+}
+
+.outline-btn {
+  position: relative;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.outline-btn:hover {
+  background-color: #666;
+  transition: 0.5s;
+}
+
+.fa-key {
+  position: absolute;
+  left: 25px;
+  font-size: 18px;
+}
+
+.session-errors {
+  padding: 20px 10px;
+  font-size: 14px;
+  color: salmon;
+}
+
+.guest-login {
+  margin-top: 40px;
+}
+
+a.session-link {
+  color: #666 
+}
+
+a.session-link:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+a.session-active {
+  color: #fff;
+}
+
+.session-footer {
+  width: 95%;
+  border-top: 1px solid #1a1a1a;
+  color: #ccc;
+  padding: 30px 10px;
+}
+
+.session-footer-link {
+  padding-left: 20px;
+}
+
+.session-footer-link:hover {
+  color: cyan;
+}
