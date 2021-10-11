@@ -26,6 +26,23 @@ h3 {
   font-weight: 700;
 }
 
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+
 main {
   width: 100%;
   margin-left: 250px;
@@ -49,6 +66,11 @@ footer {
 .flex-row-start {
   display: flex;
   justify-content: flex-start;
+}
+
+.flex-row-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .flex-row-between {
@@ -115,4 +137,12 @@ hover-white:hover {
 
 .darkgray {
   color: #333;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-top {
+  margin-top: 5px;
 }
