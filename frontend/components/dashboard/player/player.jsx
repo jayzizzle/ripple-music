@@ -7,29 +7,52 @@ export const Player = () => {
   const [currentTime, setCurrentTime] = useState(0);
 
   const player = useRef();
+  const progressBar = useRef();
+  const animationRef = useRef();
   
   useEffect(() => {
     player.current.volume = 0.2
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
+    progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
     if (!prevValue) {
+      player.current.src = '/assets/brasstracks-my_boo.mp3';
       player.current.play();
+      animationRef.current = requestAnimationFrame(whilePlaying)
     } else {
       player.current.pause();
+      cancelAnimationFrame(animationRef.current);
     }
+  }
+
+  const whilePlaying = () => {
+    progressBar.current.value = player.current.currentTime;
+    changePlayerCurrentTime();
+    animationRef.current = requestAnimationFrame(whilePlaying);
+  }
+
+  const changeRange = () => {
+    player.current.currentTime = progressBar.current.value;
+    changePlayerCurrentTime();
+
+  }
+
+  const changePlayerCurrentTime = () => {
+    progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}%`)
+    setCurrentTime(progressBar.current.value);
   }
 
 
   return (
-    <div className='player-wrapper flex-row-center'>
+    <div className='player-wrapper flex-row-center vertical-center'>
 
-      <audio ref={player} src='/assets/brasstracks-my_boo.mp3' preload="metadata" />
+      <audio ref={player} src='/assets/brasstracks-my_boo.mp3' />
 
       <button>
         <i className="fas fa-step-backward"></i>
@@ -46,10 +69,10 @@ export const Player = () => {
       <div>{convertDuration(currentTime)}</div>
 
       <div>
-        <input type="range" className='progress-bar' defaultValue='0' />
+        <input type="range" className='progressBar' defaultValue={0} ref={progressBar} onChange={changeRange} />
       </div>
 
-      <div>{(duration && !isNaN) ? convertDuration(duration) : null }</div>
+      <div>{(duration && !isNaN(duration)) ? convertDuration(duration) : '0:00' }</div>
 
     </div>
 

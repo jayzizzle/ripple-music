@@ -9,7 +9,7 @@
   box-shadow: 0px -2px 20px #000;
 }
 
-.progress-bar {
+.progressBar {
   --bar-bg: lightpink;
   --seek-before-width: 0;
   --seek-before-color: red;
@@ -27,7 +27,7 @@
 
 /* PROGRESS BAR SAFARI */
 
-.progress-bar::-webkit-slider-runnable-track {
+.progressBar::-webkit-slider-runnable-track {
   background: var(--bar-bg);
   border-radius: 10px;
   position: relative;
@@ -38,7 +38,7 @@
 
 /* PROGRESS BAR FIREFOX */
 
-.progress-bar::-moz-range-track {
+.progressBar::-moz-range-track {
   background: var(--bar-bg);
   border-radius: 10px;
   position: relative;
@@ -47,13 +47,13 @@
   outline: none;
 }
 
-.progress-bar::-moz-focus-outer {
+.progressBar::-moz-focus-outer {
   border: 0;
 }
 
 /* PROGRESS BAR CHROME & SAFARI */
 
-.progress-bar::before {
+.progressBar::before {
   content: '';
   height: 11px;
   width: var(--seek-before-width);
@@ -69,7 +69,7 @@
 
 /* PROGRESS BAR FIREFOX */
 
-.progress-bar::-moz-range-progress {
+.progressBar::-moz-range-progress {
   background-color: var(--seek-before-color);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -78,7 +78,7 @@
 
 /* KNOBBY CHROME & SAFARI */
 
-.progress-bar::-webkit-slider-thumb {
+.progressBar::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 15px;
   width: 15px;
@@ -94,14 +94,14 @@
 
 /* KNOBBY WHILE DRAGGING CHROME & SAFARI */
 
-.progress-bar:active::-webkit-slider-thumb {
+.progressBar:active::-webkit-slider-thumb {
   transform: scale(1.2);
   background: var(--selected-knobby);
 }
 
 /* KNOBBY FIREFOX */
 
-.progress-bar::-moz-range-thumb {
+.progressBar::-moz-range-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -115,7 +115,7 @@
 
 /* KNOBBY WHILE DRAGGING FIREFOX */
 
-.progress-bar:active::-moz-range-thumb {
+.progressBar:active::-moz-range-thumb {
   transform: scale(1.2);
   background: var(--selected-knobby);
 }
