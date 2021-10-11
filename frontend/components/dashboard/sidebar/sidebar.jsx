@@ -14,7 +14,7 @@ export default class Sidebar extends Component {
     if (!this.props.user.username) return null;
     const { user, logout } = this.props;
     return (
-      <div className='flex-col-center sidebar'>
+      <div className='flex-col-start sidebar'>
 
         <div className='sidebar-row'>
           <div className='flex-row-center vertical-center sidebar-left-col'>
