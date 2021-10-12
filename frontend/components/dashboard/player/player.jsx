@@ -72,7 +72,12 @@ export const Player = (props) => {
 
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
-      handleSongEnded();
+      songIndex.num++
+      if (songIndex.num > songs.length - 1) {
+        songIndex.num = 0;
+      }
+      loadSong(songs[songIndex.num]);
+      player.current.play()
     }
     progressBar.current.value = player.current.currentTime;
     changePlayerCurrentTime();
