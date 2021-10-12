@@ -6,21 +6,28 @@ export const Player = (props) => {
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(0.5)
-  const [songIndex, setSongIndex] = useState({num: 0});
-
-  const [title, setTitle] = useState('');
-
+  
   const player = useRef();
   const volumeSlider = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
-
+  
+  if (!props.currentPlaylist) return null;
+  
   const songs = props.currentPlaylist;
   
+  const [songIndex, setSongIndex] = useState({num: 0});
+  const [title, setTitle] = useState('');
+  const [songUrl, setSongUrl] = useState('');
+
   useEffect(() => {
     player.current.volume = currentVolume;
 
-    setTitle(songs[songIndex.num].title);
+    if (!songs[songIndex.num]) songIndex.num = 0;
+    let currentSong = songs[songIndex.num];
+
+    setTitle(currentSong.title);
+    setSongUrl(currentSong.filePath);
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
@@ -63,6 +70,7 @@ export const Player = (props) => {
     }
     loadSong(songs[songIndex.num]);
     if (isPlaying) player.current.play()
+    console.log(songIndex.num);
   };
 
 
@@ -102,6 +110,9 @@ export const Player = (props) => {
 
   return (
     <div className='player-wrapper flex-row-center vertical-center'>
+
+      {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
+      {/* <audio ref={player} src={songUrl} /> */}
 
       <audio ref={player} src={songs[0].filePath} />
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
