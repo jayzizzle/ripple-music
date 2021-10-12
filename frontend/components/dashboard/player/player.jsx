@@ -44,6 +44,19 @@ export const Player = (props) => {
     }
   }
 
+  const prevSong = () => {
+    if (player.current.currentTime > 3) {
+      player.current.currentTime = 0;
+    } else {
+      songIndex.num--;
+      if (songIndex.num < 0) {
+        songIndex.num = songs.length - 1;
+      }
+      loadSong(songs[songIndex.num]);
+      if (isPlaying) player.current.play();
+    }
+  }
+
   const nextSong = () => {
     songIndex.num++
     if (songIndex.num > songs.length - 1) {
@@ -52,6 +65,8 @@ export const Player = (props) => {
     loadSong(songs[songIndex.num]);
     if (isPlaying) player.current.play()
   };
+
+
 
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
@@ -85,7 +100,7 @@ export const Player = (props) => {
       {/* <audio ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
-      <button>
+      <button onClick={prevSong}>
         <i className="fas fa-step-backward"></i>
       </button>
 
