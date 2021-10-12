@@ -1,7 +1,7 @@
 .volumeSlider {
-  --bar-bg: #999;
+  --bar-bg: #444;
   --seek-before-width: 0;
-  --seek-before-color: #333;
+  --seek-before-color: #777;
   --knobby: #fff;
   --selected-knobby: #fff;
   
@@ -9,7 +9,7 @@
   background: var(--bar-bg);
   border-radius: 10px;
   position: relative;
-  width: 100%;
+  width: 80px;
   height: 11px;
   outline: none;
 }
@@ -20,7 +20,7 @@
   background: var(--bar-bg);
   border-radius: 10px;
   position: relative;
-  width: 100%;
+  width: 80px;
   height: 11px;
   outline: none;
 }
@@ -31,7 +31,7 @@
   background: var(--bar-bg);
   border-radius: 10px;
   position: relative;
-  width: 100%;
+  width: 80px;
   height: 11px;
   outline: none;
 }

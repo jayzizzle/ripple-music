@@ -8,6 +8,7 @@ export const Player = (props) => {
   const [currentVolume, setCurrentVolume] = useState(0.5)
   const [songIndex, setSongIndex] = useState({num: 0});
 
+  const [title, setTitle] = useState('');
 
   const player = useRef();
   const volumeSlider = useRef();
@@ -15,16 +16,11 @@ export const Player = (props) => {
   const animationRef = useRef();
 
   const songs = props.currentPlaylist;
-  // let songIndex = 0;
-
-  // loadSong(songs[songIndex]); 
   
   useEffect(() => {
-    player.current.volume = 0.2 // SOLVE THIS !!!
+    player.current.volume = currentVolume;
 
-    const { currentPlaylist } = props;
-
-    // loadSong(songs[0]); 
+    setTitle(songs[songIndex.num].title);
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
@@ -108,8 +104,9 @@ export const Player = (props) => {
     <div className='player-wrapper flex-row-center vertical-center'>
 
       <audio ref={player} src={songs[0].filePath} />
-      {/* <audio ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
+
+      <p>{title}</p>
 
       <button onClick={prevSong}>
         <i className="fas fa-step-backward"></i>
@@ -137,7 +134,7 @@ export const Player = (props) => {
             min='0' 
             max='1' 
             step='0.01' 
-            value={currentVolume}
+            defaultValue={currentVolume}
             onChange={adjustVolume}
             ref={volumeSlider}
             className='volumeSlider'
