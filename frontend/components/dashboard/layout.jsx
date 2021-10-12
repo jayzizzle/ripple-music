@@ -1,6 +1,6 @@
 import React from 'react';
 import SidebarContainer from './sidebar/sidebar_container';
-import { Player } from './player/player';
+import PlayerContainer from './player/player_container';
 
 export default function Layout() {
   return (
@@ -12,7 +12,7 @@ export default function Layout() {
           Excelsior!
         </main>
       </div>
-      <Player />
+      <PlayerContainer />
     </>
   )
 }

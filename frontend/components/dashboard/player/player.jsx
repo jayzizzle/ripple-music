@@ -1,28 +1,42 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { convertDuration } from '../../../util/helper_util';
 
-export const Player = () => {
+export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [song, setSong] = useState({});
 
   const player = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
+
+  const songs = props.currentPlaylist;
+  let songIndex = 0;
+
+  // loadSong(songs[songIndex]); 
   
   useEffect(() => {
-    player.current.volume = 0.2
+    player.current.volume = 0.2 // SOLVE THIS !!!
+
+    const { currentPlaylist } = props;
+
+    // loadSong(songs[songIndex]); 
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
     progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
+  const loadSong = (song) => {
+    player.current.src = song.filePath;
+    player.current.play();
+  }
+
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
     if (!prevValue) {
-      player.current.src = '/assets/brasstracks-my_boo.mp3';
       player.current.play();
       animationRef.current = requestAnimationFrame(whilePlaying)
     } else {
@@ -32,6 +46,9 @@ export const Player = () => {
   }
 
   const whilePlaying = () => {
+    if (player.current.currentTime === player.current.duration) {
+      handleSongEnded();
+    }
     progressBar.current.value = player.current.currentTime;
     changePlayerCurrentTime();
     animationRef.current = requestAnimationFrame(whilePlaying);
@@ -48,11 +65,16 @@ export const Player = () => {
     setCurrentTime(progressBar.current.value);
   }
 
+  const handleSongEnded = () => {
+    togglePlayPause();
+  }
+
 
   return (
     <div className='player-wrapper flex-row-center vertical-center'>
 
-      <audio ref={player} src='/assets/brasstracks-my_boo.mp3' />
+      <audio ref={player} src={songs[0].filePath} />
+      {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
       <button>
         <i className="fas fa-step-backward"></i>
@@ -62,7 +84,7 @@ export const Player = () => {
         <i className={isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
       </button>
 
-      <button>
+      <button onClick={() => loadSong(songs[1])}>
         <i className="fas fa-step-forward"></i>
       </button>
 
