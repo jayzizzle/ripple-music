@@ -5,14 +5,14 @@ export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [song, setSong] = useState({});
+  const [songIndex, setSongIndex] = useState({num: 0});
 
   const player = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
 
   const songs = props.currentPlaylist;
-  let songIndex = 0;
+  // let songIndex = 0;
 
   // loadSong(songs[songIndex]); 
   
@@ -21,7 +21,7 @@ export const Player = (props) => {
 
     const { currentPlaylist } = props;
 
-    // loadSong(songs[songIndex]); 
+    // loadSong(songs[0]); 
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
@@ -30,7 +30,6 @@ export const Player = (props) => {
 
   const loadSong = (song) => {
     player.current.src = song.filePath;
-    player.current.play();
   }
 
   const togglePlayPause = () => {
@@ -44,6 +43,15 @@ export const Player = (props) => {
       cancelAnimationFrame(animationRef.current);
     }
   }
+
+  const nextSong = () => {
+    songIndex.num++
+    if (songIndex.num > songs.length - 1) {
+      songIndex.num = 0;
+    }
+    loadSong(songs[songIndex.num]);
+    if (isPlaying) player.current.play()
+  };
 
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
@@ -74,6 +82,7 @@ export const Player = (props) => {
     <div className='player-wrapper flex-row-center vertical-center'>
 
       <audio ref={player} src={songs[0].filePath} />
+      {/* <audio ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
       <button>
@@ -84,7 +93,7 @@ export const Player = (props) => {
         <i className={isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
       </button>
 
-      <button onClick={() => loadSong(songs[1])}>
+      <button onClick={nextSong}>
         <i className="fas fa-step-forward"></i>
       </button>
 
