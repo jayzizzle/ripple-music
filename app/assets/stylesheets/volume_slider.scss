@@ -1,0 +1,110 @@
+.volumeSlider {
+  --bar-bg: #999;
+  --seek-before-width: 0;
+  --seek-before-color: #333;
+  --knobby: #fff;
+  --selected-knobby: #fff;
+  
+  appearance: none;
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+/* PROGRESS BAR SAFARI */
+
+.volumeSlider::-webkit-slider-runnable-track {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+/* PROGRESS BAR FIREFOX */
+
+.volumeSlider::-moz-range-track {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+.volumeSlider::-moz-focus-outer {
+  border: 0;
+}
+
+/* PROGRESS BAR CHROME & SAFARI */
+
+.volumeSlider::before {
+  content: '';
+  height: 11px;
+  width: var(--seek-before-width);
+  background-color: var(--seek-before-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  cursor: pointer;
+}
+
+/* PROGRESS BAR FIREFOX */
+
+.volumeSlider::-moz-range-progress {
+  background-color: var(--seek-before-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 11px;
+}
+
+/* KNOBBY CHROME & SAFARI */
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 12;
+  box-sizing: border-box;
+}
+
+/* KNOBBY WHILE DRAGGING CHROME & SAFARI */
+
+.volumeSlider:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background: var(--selected-knobby);
+}
+
+/* KNOBBY FIREFOX */
+
+.volumeSlider::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  z-index: 12;
+  box-sizing: border-box;
+}
+
+/* KNOBBY WHILE DRAGGING FIREFOX */
+
+.volumeSlider:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background: var(--selected-knobby);
+}

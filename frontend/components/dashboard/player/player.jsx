@@ -5,9 +5,12 @@ export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [currentVolume, setCurrentVolume] = useState(0.5)
   const [songIndex, setSongIndex] = useState({num: 0});
 
+
   const player = useRef();
+  const volumeSlider = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
 
@@ -67,7 +70,6 @@ export const Player = (props) => {
   };
 
 
-
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
       handleSongEnded();
@@ -77,10 +79,14 @@ export const Player = (props) => {
     animationRef.current = requestAnimationFrame(whilePlaying);
   }
 
+  const adjustVolume = () => {
+    player.current.volume = volumeSlider.current.value;
+    setCurrentVolume(volumeSlider.current.value);
+  }
+
   const changeRange = () => {
     player.current.currentTime = progressBar.current.value;
     changePlayerCurrentTime();
-
   }
 
   const changePlayerCurrentTime = () => {
@@ -119,6 +125,19 @@ export const Player = (props) => {
       </div>
 
       <div>{(duration && !isNaN(duration)) ? convertDuration(duration) : '0:00' }</div>
+
+      <div>
+        <input
+            type='range' 
+            min='0' 
+            max='1' 
+            step='0.01' 
+            value={currentVolume}
+            onChange={adjustVolume}
+            ref={volumeSlider}
+            className='volumeSlider'
+          />
+      </div>
 
     </div>
 
