@@ -17,16 +17,23 @@ export const Player = (props) => {
   const songs = props.currentPlaylist;
   
   const [songIndex, setSongIndex] = useState({num: 0});
+  const [artist, setArtist] = useState('');
   const [title, setTitle] = useState('');
+  const [cover, setCover] = useState('');
   const [songUrl, setSongUrl] = useState('');
 
   useEffect(() => {
     player.current.volume = currentVolume;
 
+    console.log('THERE WAS A RE-RENDER')
+
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
+    // let currentSong = props.currentPlaylist[0]
 
+    setArtist(currentSong.artist);
     setTitle(currentSong.title);
+    setCover(currentSong.cover);
     setSongUrl(currentSong.filePath);
 
     const seconds = Math.floor(player.current.duration);
@@ -70,7 +77,6 @@ export const Player = (props) => {
     }
     loadSong(songs[songIndex.num]);
     if (isPlaying) player.current.play()
-    console.log(songIndex.num);
   };
 
 
@@ -107,39 +113,63 @@ export const Player = (props) => {
     togglePlayPause();
   }
 
-
   return (
-    <div className='player-wrapper flex-row-center vertical-center'>
+    <div className='player-wrapper flex-row-between'>
 
       {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
       {/* <audio ref={player} src={songUrl} /> */}
+      <audio autoPlay ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
+      
 
-      <audio ref={player} src={songs[0].filePath} />
+
+      {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
-      <p>{title}</p>
-
-      <button onClick={prevSong}>
-        <i className="fas fa-step-backward"></i>
-      </button>
-
-      <button onClick={togglePlayPause}>
-        <i className={isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
-      </button>
-
-      <button onClick={nextSong}>
-        <i className="fas fa-step-forward"></i>
-      </button>
-
-      <div>{convertDuration(currentTime)}</div>
-
-      <div>
-        <input type="range" className='progressBar' defaultValue={0} ref={progressBar} onChange={changeRange} />
+      <div className ='flex-row-start vertical-center player-side player-left'>
+        <div className='player-cover'>
+          <img src={cover} />
+        </div>
+        <div className='player-info'>
+          <p className='player-title'>{title}</p>
+          <p className='player-artist'>{artist}</p>
+        </div>
       </div>
 
-      <div>{(duration && !isNaN(duration)) ? convertDuration(duration) : '0:00' }</div>
+      <div className='flex-col-center player-center'>
 
-      <div>
+        <div className='flex-row-center player-controls'>
+
+          <button className='player-btn' onClick={prevSong}>
+            <i className="fas fa-step-backward"></i>
+          </button>
+
+          <button className='player-btn' onClick={togglePlayPause}>
+            <i className={isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
+          </button>
+
+          <button className='player-btn' onClick={nextSong}>
+            <i className="fas fa-step-forward"></i>
+          </button>
+
+        </div>
+
+        <div className='flex-row-center vertical-center player-seek'>
+
+          <div className='player-time'>{convertDuration(currentTime)}</div>
+
+          <div>
+            <input type="range" className='progressBar' defaultValue={0} ref={progressBar} onChange={changeRange} />
+          </div>
+
+          <div className='player-time'>{(duration && !isNaN(duration)) ? convertDuration(duration) : '0:00' }</div>
+
+        </div>
+
+      </div>
+
+
+
+      <div className='flex-row-end vertical-center player-side player-right'>
         <input
             type='range' 
             min='0' 
