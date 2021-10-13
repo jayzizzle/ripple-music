@@ -8,7 +8,7 @@ const currentPlaylistReducer = (oldState={}, action) => {
 
   //test preloaded state
   oldState = {
-    1: {id: 1, artist: 'Jenevieve', title: 'Resume', filePath: '/assets/jenevieve-resume.mp3', cover: '/assets/jenevieve-division.jpg'},
+    // 1: {id: 1, artist: 'Jenevieve', title: 'Resume', filePath: '/assets/jenevieve-resume.mp3', cover: '/assets/jenevieve-division.jpg'},
     2: {id: 2, artist: 'Mahalia', title: 'Surprise Me', filePath: '/assets/mahalia-surprise_me.mp3', cover: '/assets/mahalia-seasons.jpg'},
     3: {id: 3, artist: 'Brasstracks', title: 'My Boo', filePath: '/assets/brasstracks-my_boo.mp3', cover: '/assets/brasstracks-my_boo.jpg'},
   }

@@ -113,7 +113,7 @@ export const Player = (props) => {
       {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
       {/* <audio ref={player} src={songUrl} /> */}
       
-      <audio ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
+      <audio autoPlay ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
       
       {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
