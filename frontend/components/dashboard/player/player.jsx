@@ -29,7 +29,6 @@ export const Player = (props) => {
 
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
-    // let currentSong = props.currentPlaylist[0]
 
     setArtist(currentSong.artist);
     setTitle(currentSong.title);
@@ -79,7 +78,6 @@ export const Player = (props) => {
     if (isPlaying) player.current.play()
   };
 
-
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
       songIndex.num++
@@ -109,19 +107,14 @@ export const Player = (props) => {
     setCurrentTime(progressBar.current.value);
   }
 
-  const handleSongEnded = () => {
-    togglePlayPause();
-  }
-
   return (
     <div className='player-wrapper flex-row-between'>
 
       {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
       {/* <audio ref={player} src={songUrl} /> */}
-      <audio autoPlay ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
       
-
-
+      <audio ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
+      
       {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
@@ -136,38 +129,25 @@ export const Player = (props) => {
       </div>
 
       <div className='flex-col-center player-center'>
-
         <div className='flex-row-center player-controls'>
-
           <button className='player-btn' onClick={prevSong}>
             <i className="fas fa-step-backward"></i>
           </button>
-
           <button className='player-btn' onClick={togglePlayPause}>
             <i className={isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
           </button>
-
           <button className='player-btn' onClick={nextSong}>
             <i className="fas fa-step-forward"></i>
           </button>
-
         </div>
-
         <div className='flex-row-center vertical-center player-seek'>
-
           <div className='player-time'>{convertDuration(currentTime)}</div>
-
           <div>
             <input type="range" className='progressBar' defaultValue={0} ref={progressBar} onChange={changeRange} />
           </div>
-
           <div className='player-time'>{(duration && !isNaN(duration)) ? convertDuration(duration) : '0:00' }</div>
-
         </div>
-
       </div>
-
-
 
       <div className='flex-row-end vertical-center player-side player-right'>
         <input
