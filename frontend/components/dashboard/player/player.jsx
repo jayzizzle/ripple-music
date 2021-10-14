@@ -5,12 +5,13 @@ export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [currentVolume, setCurrentVolume] = useState(0.5)
+  const [currentVolume, setCurrentVolume] = useState(0.5);
   
   const player = useRef();
   const volumeSlider = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
+  const isReady = useRef(false);
   
   if (!props.currentPlaylist) return null;
   
@@ -25,8 +26,6 @@ export const Player = (props) => {
   useEffect(() => {
     player.current.volume = currentVolume;
 
-    console.log('THERE WAS A RE-RENDER')
-
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
@@ -34,6 +33,8 @@ export const Player = (props) => {
     setTitle(currentSong.title);
     setCover(currentSong.cover);
     setSongUrl(currentSong.filePath);
+
+    setIsPlaying(props.currentPlaylist ? (!!player.current.paused ? false : true) : false);
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
@@ -75,7 +76,11 @@ export const Player = (props) => {
       songIndex.num = 0;
     }
     loadSong(songs[songIndex.num]);
-    if (isPlaying) player.current.play()
+    if (isPlaying) {
+      player.current.play();
+    } else {
+      player.current.pause();
+    }
   };
 
   const whilePlaying = () => {
@@ -109,11 +114,8 @@ export const Player = (props) => {
 
   return (
     <div className='player-wrapper flex-row-between'>
-
-      {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
-      {/* <audio ref={player} src={songUrl} /> */}
       
-      <audio autoPlay ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
+      <audio ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
       
       {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
       {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
@@ -154,7 +156,7 @@ export const Player = (props) => {
             type='range' 
             min='0' 
             max='1' 
-            step='0.01' 
+            step='0.02' 
             defaultValue={currentVolume}
             onChange={adjustVolume}
             ref={volumeSlider}

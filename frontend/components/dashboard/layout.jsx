@@ -19,6 +19,9 @@ export default function Layout() {
     };
     dispatch(receivedNewPlaylist(newPlaylist));
   }
+
+  
+
   return (
     <>
       <div className='flex-row-start'>
