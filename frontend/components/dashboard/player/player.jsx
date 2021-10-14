@@ -5,13 +5,12 @@ export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [currentVolume, setCurrentVolume] = useState(0.5);
+  const [currentVolume, setCurrentVolume] = useState(0.5)
   
   const player = useRef();
   const volumeSlider = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
-  const isReady = useRef(false);
   
   if (!props.currentPlaylist) return null;
   
@@ -25,6 +24,8 @@ export const Player = (props) => {
 
   useEffect(() => {
     player.current.volume = currentVolume;
+
+    props.currentPlaylist[0] !== songs[0] ? togglePlayPause() : null // TESTING
 
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
@@ -114,6 +115,9 @@ export const Player = (props) => {
 
   return (
     <div className='player-wrapper flex-row-between'>
+
+      {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
+      {/* <audio ref={player} src={songUrl} /> */}
       
       <audio ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
       
