@@ -3,7 +3,8 @@ import { getUser, logout } from "../../../actions/session_actions";
 import Sidebar from "./sidebar";
 
 const mSTP = state => ({
-  user: state.entities.users[state.session.id]
+  user: state.entities.users[state.session.id],
+  userId: state.session.id,
 });
 
 const mDTP = dispatch => ({
