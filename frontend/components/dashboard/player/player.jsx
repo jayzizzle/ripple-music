@@ -5,7 +5,7 @@ export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [currentVolume, setCurrentVolume] = useState(0.5)
+  const [currentVolume, setCurrentVolume] = useState(0.5);
   
   const player = useRef();
   const volumeSlider = useRef();
@@ -26,6 +26,13 @@ export const Player = (props) => {
     player.current.volume = currentVolume;
 
     props.currentPlaylist[0] !== songs[0] ? togglePlayPause() : null // TESTING
+
+    if (player.current.currentTime !== 0) {
+      setIsPlaying(true);
+      player.current.play();
+    } else if (isPlaying) {
+      setIsPlaying(true);
+    }
 
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
@@ -118,6 +125,9 @@ export const Player = (props) => {
 
       {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
       {/* <audio ref={player} src={songUrl} /> */}
+
+      {/* <audio autoPlay ref={player} /> */}
+
       
       <audio ref={player} src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''} />
       

@@ -11,7 +11,7 @@ export default class Sidebar extends Component {
   }
 
   render() {
-    if (!this.props.user.username) return null;
+    if (!this.props.user) return null;
     const { user, logout } = this.props;
     return (
       <div className='flex-col-start sidebar'>

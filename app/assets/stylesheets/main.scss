@@ -10,6 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #fff;
+  margin: 0 auto;
 }
 
 h2 {
@@ -49,12 +50,25 @@ main {
   padding: 25px;
 }
 
+header {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+}
+
 footer {
   position: fixed;
   width: 100%;
   bottom: 0;
   z-index: 10;
   overflow: hidden;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
 }
 
 .flex-row-center {
@@ -101,6 +115,19 @@ hover-white:hover {
 :-ms-input-placeholder {color: #555;}
 ::-ms-input-placeholder {color: #555;}
 
+.white-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.white-btn:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
 .cyan-btn {
   background-color: cyan;
   color: #333;
@@ -109,6 +136,16 @@ hover-white:hover {
 .cyan-btn:hover {
   background-color: darkcyan;
   transition: 0.5s;
+}
+
+.white-text-link {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0px 15px;
+}
+
+.white-text-link:hover {
+  color: cyan;
 }
 
 .vertical-padding {
