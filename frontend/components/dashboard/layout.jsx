@@ -10,17 +10,15 @@ export default function Layout() {
   // const addSong = () => {
   //   const newPlaylist =  {
   //     1: {
-  //       id: 1, 
-  //       artist: 'Jenevieve', 
-  //       title: 'Resume', 
-  //       filePath: '/assets/jenevieve-resume.mp3', 
+  //       id: 1,
+  //       artist: 'Jenevieve',
+  //       title: 'Resume',
+  //       filePath: '/assets/jenevieve-resume.mp3',
   //       cover: '/assets/jenevieve-division.jpg'
-  //     } 
+  //     }
   //   };
   //   dispatch(receivedNewPlaylist(newPlaylist));
   // }
-
-  
 
   return (
     <>
@@ -29,5 +27,5 @@ export default function Layout() {
         <Main />
       </div>
     </>
-  )
+  );
 }

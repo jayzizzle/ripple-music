@@ -5,7 +5,7 @@ import {
   Switch,
   Link,
   HashRouter,
-  BrowserRouter
+  BrowserRouter,
 } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -16,6 +16,8 @@ import Layout from './dashboard/layout';
 import Dashboard from './dashboard/dashboard';
 import SidebarContainer from './dashboard/sidebar/sidebar_container';
 import PlayerContainer from './dashboard/player/player_container';
+import TestContainer from './dashboard/player/test_container';
+
 import { Main } from './dashboard/main';
 import { Playlists } from './dashboard/playlists';
 
@@ -23,13 +25,14 @@ const App = () => (
   <>
     <SidebarContainer />
     <Switch>
-      <Route exact path='/' component={Splash} />
+      <AuthRoute exact path='/' component={Splash} />
       <AuthRoute exact path='/signup' component={SignupFormContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <>
         <ProtectedRoute exact path='/playlists' component={Playlists} />
         <ProtectedRoute exact path='/dashboard' component={Main} />
-        <PlayerContainer />
+        {/* <PlayerContainer /> */}
+        <TestContainer />
       </>
     </Switch>
   </>

@@ -10,26 +10,29 @@ class GuestLogin extends Component {
 
   handleGuestLogin(e) {
     e.preventDefault();
-    this.props.login(this.props.guest)
-      .then(() => this.props.history.push('/dashboard'));
+    this.props.login(this.props.guest);
+    // .then(() => this.props.history.push('/dashboard'));
   }
 
   render() {
     return (
-      <button className='session-form-btn outline-btn guest-login' onClick={this.handleGuestLogin}>
-        <i className="fa-solid fa-key"></i>
+      <button
+        className='session-form-btn outline-btn guest-login'
+        onClick={this.handleGuestLogin}
+      >
+        <i className='fa-solid fa-key'></i>
         Continue as Guest
       </button>
-    )
+    );
   }
 }
 
-const mSTP = state => ({
-  guest: {username: 'spidey', password: 'parker'}
+const mSTP = (state) => ({
+  guest: { username: 'spidey', password: 'parker' },
 });
 
-const mDTP = dispatch => ({
-  login: (user) => dispatch(login(user))
+const mDTP = (dispatch) => ({
+  login: (user) => dispatch(login(user)),
 });
 
 export default connect(mSTP, mDTP)(GuestLogin);

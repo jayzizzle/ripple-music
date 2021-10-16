@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { convertDuration } from '../../../util/helper_util';
 
-export const Player = (props) => {
+export const Test = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -34,7 +34,7 @@ export const Player = (props) => {
 
     props.currentPlaylist[0] !== songs[0] ? togglePlayPause() : null; // TESTING
 
-    if (player.current.currentTime !== 0 && isReady) {
+    if (player.current.currentTime !== 0 && !player.current.paused) {
       setIsPlaying(true);
       // player.current.play();
       togglePlayPause();
