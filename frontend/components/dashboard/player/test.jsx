@@ -7,7 +7,6 @@ export const Test = (props) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(0.5);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
-  const [isReady, setIsReady] = useState(false);
 
   const player = useRef();
   const volumeSlider = useRef();
@@ -29,27 +28,6 @@ export const Test = (props) => {
 
     console.log('this is a render');
 
-    // setIsAutoPlay(true);
-    // togglePlayPause();
-
-    props.currentPlaylist[0] !== songs[0] ? togglePlayPause() : null; // TESTING
-
-    if (player.current.currentTime !== 0 && !player.current.paused) {
-      setIsPlaying(true);
-      // player.current.play();
-      togglePlayPause();
-    } else {
-      setIsPlaying(false);
-    }
-
-    // if (player.current.currentTime !== 0) {
-    //   setIsPlaying(true);
-    //   // player.current.play();
-    //   togglePlayPause();
-    // } else if (isPlaying) {
-    //   setIsPlaying(true);
-    // }
-
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
@@ -67,13 +45,16 @@ export const Test = (props) => {
     progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
+  useEffect(() => {
+    setIsAutoPlay(true);
+  }, [isAutoPlay]);
+
   const loadSong = (song) => {
     player.current.src = song.filePath;
   };
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;
-    console.log(isPlaying);
     setIsPlaying(!prevValue);
     if (!prevValue) {
       player.current.play();
@@ -84,7 +65,6 @@ export const Test = (props) => {
       cancelAnimationFrame(animationRef.current);
       setIsAutoPlay(false);
     }
-    console.log(isPlaying);
   };
 
   const prevSong = () => {
@@ -150,20 +130,11 @@ export const Test = (props) => {
   } else {
     return (
       <div className='player-wrapper flex-row-between'>
-        {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
-        {/* <audio ref={player} src={songUrl} /> */}
-
-        {/* <audio autoPlay ref={player} /> */}
-        {/* <audio autoPlay ref={player} /> */}
-
         <audio
           autoPlay={isAutoPlay}
           ref={player}
           src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''}
         />
-
-        {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
-        {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
         <div className='flex-row-start vertical-center player-side player-left'>
           <div className='player-cover'>
