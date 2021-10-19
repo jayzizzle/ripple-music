@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { ArtistItem } from './artist_item';
 
 export const Artists = (props) => {
   useEffect(() => {
@@ -12,8 +13,8 @@ export const Artists = (props) => {
       <main className='flex-col-start'>
         <h3>Artists</h3>
         <ul>
-          {props.followedArtists.map((artist, i) => (
-            <li key={i}>{artist.artistName}</li>
+          {props.followedArtists.map((artist) => (
+            <ArtistItem artist={artist} key={artist.id} />
           ))}
         </ul>
       </main>
