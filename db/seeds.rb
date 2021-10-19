@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Follow.destroy_all
+Artist.destroy_all
 User.destroy_all
 
 require 'open-uri'
@@ -13,3 +15,28 @@ require 'open-uri'
 spidey = User.create(username: 'spidey', email: 'spidey@marvel.com', password: 'parker')
 miles = User.create(username: 'miles', email: 'miles@marvel.com', password: 'morales')
 gwen = User.create(username: 'gwen', email: 'gwen@marvel.com', password: 'gstacy')
+
+her = Artist.create(
+    artist_name: 'H.E.R.', 
+    bio: ''
+)
+
+kehlani = Artist.create(
+    artist_name: 'Kehlani', 
+    bio: ''
+)
+
+wolftyla = Artist.create(
+    artist_name: 'Wolftyla', 
+    bio: ''
+)
+
+follows1 = Follow.create(
+    artist_id: kehlani.id,
+    user_id: spidey.id
+)
+
+follows2 = Follow.create(
+    artist_id: wolftyla.id,
+    user_id: spidey.id
+)
