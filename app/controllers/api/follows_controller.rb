@@ -3,12 +3,12 @@ class Api::FollowsController < ApplicationController
   before_action :underscore_params!
 
   def index
-    @follows = current_user.artists_followed
+    @artists_followed = current_user.artists_followed
     render :index
   end
 
   def show
-    @follow = Follow.find_by(id: params[:id])
+    @artist_followed = Follow.find_by(id: params[:id])
     if @follow
       render :show
     else
@@ -31,6 +31,7 @@ class Api::FollowsController < ApplicationController
       render :show
     else
       render json: ['Follow does not exist'], status: 404
+    end
   end
 
   private
