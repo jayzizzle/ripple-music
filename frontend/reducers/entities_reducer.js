@@ -7,7 +7,7 @@ import artists from './entities/artists_reducer';
 // import playlists from './entities/playlists_reducer';
 // import likedTracks from "./entities/liked_tracks_reducer";
 // import likedAlbums from "./entities/liked_albums_reducer";
-import followedArtists from './entities/folows_reducer';
+import followedArtists from './entities/follows_reducer';
 
 export default combineReducers({
   users,

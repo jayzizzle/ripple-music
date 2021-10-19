@@ -14,7 +14,7 @@ const artistsReducer = (oldState = {}, action) => {
       newState[action.artist.artist.id] = action.artist.artist;
       return newState;
     case RECEIVED_ALL_FOLLOWS:
-      return { ...action.follows };
+      return { ...action.follows.artists };
     default:
       return oldState;
   }

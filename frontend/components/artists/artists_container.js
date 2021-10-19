@@ -6,6 +6,10 @@ import { getAllFollows } from '../../actions/follow_actions';
 const mSTP = (state) => ({
   followedArtists: Object.values(state.entities.artists),
   userId: state.session.id,
+  follows: Object.entries(state.entities.followedArtists).reduce(
+    (acc, [key, value]) => ((acc[value] = key), acc),
+    {}
+  ),
 });
 
 const mDTP = (dispatch) => ({

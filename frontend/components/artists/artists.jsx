@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 export const Artists = (props) => {
   useEffect(() => {
     props.getAllFollows(props.userId);
-    console.log(props.followedArtists);
   }, []);
 
   if (!props.followedArtists) return null;

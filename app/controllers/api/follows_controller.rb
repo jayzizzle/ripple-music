@@ -4,6 +4,7 @@ class Api::FollowsController < ApplicationController
 
   def index
     @artists_followed = current_user.artists_followed
+    @follows = current_user.follows
     render :index
   end
 

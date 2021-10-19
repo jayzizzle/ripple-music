@@ -13,6 +13,7 @@ class Api::UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     if @user
+      @follows = @user.follows
       render :show
     else
       render json: ['This user does not exist.'], status: 404
