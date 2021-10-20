@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Follow.destroy_all
+Album.destroy_all
 Artist.destroy_all
 User.destroy_all
 
@@ -31,12 +32,41 @@ wolftyla = Artist.create(
     bio: ''
 )
 
-follows1 = Follow.create(
+her_vol_1 = Album.create(
+    title: 'H.E.R. Volume 1',
+    artist_id: her.id,
+    category: 'EP',
+    year: 2016,
+    is_explicit: false
+)
+
+cloud_19 = Album.create(
+    title: 'Cloud 19',
     artist_id: kehlani.id,
+    category: 'LP',
+    year: 2014,
+    is_explicit: true
+)
+
+wolf_in_color = Album.create(
+    title: 'Wolf In Color',
+    artist_id: wolftyla.id,
+    category: 'LP',
+    year: 2020,
+    is_explicit: false
+)
+
+follows1 = Follow.create(
+    artist_id: her.id,
     user_id: spidey.id
 )
 
 follows2 = Follow.create(
+    artist_id: kehlani.id,
+    user_id: spidey.id
+)
+
+follows3 = Follow.create(
     artist_id: wolftyla.id,
     user_id: spidey.id
 )
