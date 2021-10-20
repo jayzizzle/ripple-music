@@ -27,8 +27,6 @@ export const Player = (props) => {
   useEffect(() => {
     player.current.volume = currentVolume;
 
-    console.log('this is a render');
-
     // setIsAutoPlay(true);
     // togglePlayPause();
 
@@ -73,7 +71,6 @@ export const Player = (props) => {
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;
-    console.log(isPlaying);
     setIsPlaying(!prevValue);
     if (!prevValue) {
       player.current.play();
@@ -84,7 +81,6 @@ export const Player = (props) => {
       cancelAnimationFrame(animationRef.current);
       setIsAutoPlay(false);
     }
-    console.log(isPlaying);
   };
 
   const prevSong = () => {

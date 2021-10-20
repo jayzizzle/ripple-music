@@ -26,8 +26,6 @@ export const Test = (props) => {
   useEffect(() => {
     player.current.volume = currentVolume;
 
-    console.log('this is a render');
-
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 

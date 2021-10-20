@@ -19,7 +19,6 @@ class HeartButton extends React.Component {
       deleteHeart(userId, hearts[itemId]);
     } else {
       postHeart(userId, { userId: userId, [itemKey]: itemId });
-      console.log({ userId: userId, [itemKey]: itemId });
     }
   }
 
