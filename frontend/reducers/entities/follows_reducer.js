@@ -15,7 +15,7 @@ const followsReducer = (oldState = {}, action) => {
       newState[action.follow.id] = action.follow.artistId;
       return newState;
     case REMOVED_FOLLOW:
-      delete newState[action.artistId];
+      delete newState[action.followId.id];
       return newState;
     case RECEIVED_CURRENT_USER:
       return { ...oldState, ...action.currentUser.followedArtists };

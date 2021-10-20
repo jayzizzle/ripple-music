@@ -9,7 +9,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def show
-    @artist_followed = Follow.find_by(id: params[:id])
+    @follow = Follow.find_by(id: params[:id])
     if @follow
       render :show
     else

@@ -1,12 +1,16 @@
 import React from 'react';
-import { HeartButton } from '../heart_button/heart_button';
+import ArtistHeartContainer from '../heart_button/artist_heart_container';
 
 export const ArtistItem = (props) => {
   const { artist } = props;
   return (
     <li>
       <h4>{artist.artistName}</h4>
-      <HeartButton />
+      <ArtistHeartContainer
+        itemId={artist.id}
+        hearts={props.follows}
+        itemKey='artistId'
+      />
     </li>
   );
 };

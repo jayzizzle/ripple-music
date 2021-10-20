@@ -14,7 +14,11 @@ export const Artists = (props) => {
         <h3>Artists</h3>
         <ul>
           {props.followedArtists.map((artist) => (
-            <ArtistItem artist={artist} key={artist.id} />
+            <ArtistItem
+              artist={artist}
+              follows={props.follows}
+              key={artist.id}
+            />
           ))}
         </ul>
       </main>
