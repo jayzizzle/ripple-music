@@ -115,7 +115,7 @@ GEM
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
-     racc (~> 1.4)
+      racc (~> 1.4)
     open-uri (0.2.0)
       stringio
       time
