@@ -2,6 +2,7 @@ import {
   RECEIVED_ALL_ALBUMS,
   RECEIVED_ALBUM,
 } from '../../actions/album_actions';
+import { RECEIVED_ALL_ALBUM_LIKES } from '../../actions/like_actions';
 
 const albumsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -12,6 +13,8 @@ const albumsReducer = (oldState = {}, action) => {
     case RECEIVED_ALBUM:
       newState[action.album.id] = action.album;
       return newState;
+    case RECEIVED_ALL_ALBUM_LIKES:
+      return { ...action.albumLikes.albums };
     default:
       return oldState;
   }
