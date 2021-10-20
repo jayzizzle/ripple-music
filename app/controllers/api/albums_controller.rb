@@ -6,7 +6,7 @@ class Api::AlbumsController < ApplicationController
   end
 
   def show
-    @album.includes(:artist).find_by(id: params[:id])
+    @album = Album.includes(:artist).find_by(id: params[:id])
     # @album = Album.with_attached_cover.includes(:tracks, :artist).find_by(id: params[:id])
     if @album
       render :show
