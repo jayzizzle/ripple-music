@@ -5,3 +5,9 @@ json.set! 'followedArtists' do
     json.set! follow.id, follow.artist_id
   end
 end
+
+json.set! 'likedAlbums' do
+  @user.album_likes.each do |like|
+    json.set! like.id, like.album_id
+  end
+end
