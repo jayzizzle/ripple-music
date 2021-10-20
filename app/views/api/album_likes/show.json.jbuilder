@@ -1,0 +1,1 @@
+json.extract! @album_like, :id, :album_id

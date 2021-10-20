@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+AlbumLike.destroy_all
 Follow.destroy_all
 Album.destroy_all
 Artist.destroy_all
@@ -68,5 +69,20 @@ follows2 = Follow.create(
 
 follows3 = Follow.create(
     artist_id: wolftyla.id,
+    user_id: spidey.id
+)
+
+album_like1 = AlbumLike.create(
+    album_id: her_vol_1.id,
+    user_id: spidey.id
+)
+
+album_like2 = AlbumLike.create(
+    album_id: cloud_19.id,
+    user_id: spidey.id
+)
+
+album_like3 = AlbumLike.create(
+    album_id: wolf_in_color.id,
     user_id: spidey.id
 )
