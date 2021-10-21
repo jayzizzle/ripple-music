@@ -11,8 +11,8 @@ export const Artists = (props) => {
   return (
     <div className='flex-row-start'>
       <main className='flex-col-start'>
-        <h3>Artists</h3>
-        <ul>
+        <h1 className='section-title'>My Artists</h1>
+        <ul className='flex-row-start flex-wrap'>
           {props.followedArtists.map((artist) => (
             <ArtistItem
               artist={artist}

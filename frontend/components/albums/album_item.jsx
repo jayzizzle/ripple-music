@@ -5,6 +5,12 @@ export const AlbumItem = (props) => {
   const { album } = props;
   return (
     <li>
+      <img
+        className='album'
+        width='150px'
+        height='150px'
+        src={album.coverUrl}
+      />
       <h4>{album.title}</h4>
       <p>{album.artistName}</p>
       <p>{album.category}</p>

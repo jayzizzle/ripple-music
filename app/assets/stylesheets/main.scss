@@ -13,6 +13,20 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
@@ -29,6 +43,7 @@ h3 {
 
 h4 {
   font-size: 18px;
+  font-weight: bold;
 }
 
 h5 {
@@ -47,7 +62,7 @@ h6 {
 main {
   width: 100%;
   margin-left: 250px;
-  padding: 25px;
+  padding: 25px 40px;
   margin-bottom: 100px;
 }
 
@@ -70,6 +85,10 @@ button {
   border: none;
   background-color: transparent;
   color: #fff;
+}
+
+.section-title {
+  margin-bottom: 20px;
 }
 
 .flex-row-center {
@@ -103,6 +122,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 hover-white:hover {

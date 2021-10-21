@@ -11,7 +11,7 @@ export const Albums = (props) => {
   return (
     <div className='flex-row-start'>
       <main className='flex-col-start'>
-        <h3>Albums</h3>
+        <h1 className='section-title'>My Albums</h1>
         <ul>
           {props.likedAlbums.map((album) => (
             <AlbumItem album={album} likes={props.likes} key={album.id} />

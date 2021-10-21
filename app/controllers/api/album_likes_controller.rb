@@ -3,7 +3,7 @@ class Api::AlbumLikesController < ApplicationController
   before_action :underscore_params!
 
   def index
-    @albums_liked = current_user.albums_liked.includes(:artist)
+    @albums_liked = current_user.albums_liked.with_attached_cover.includes(:artist)
     @likes = current_user.album_likes
     render :index
   end

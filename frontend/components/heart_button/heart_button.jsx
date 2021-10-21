@@ -23,7 +23,11 @@ class HeartButton extends React.Component {
   }
 
   render() {
-    return <button onClick={this.handleClick}>{this.toggleHeart()}</button>;
+    return (
+      <button className={this.props.itemKey} onClick={this.handleClick}>
+        {this.toggleHeart()}
+      </button>
+    );
   }
 }
 
