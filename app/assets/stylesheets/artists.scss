@@ -1,0 +1,16 @@
+.image-crop {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.artist-photo {
+  display: inline;
+  margin: 0 auto;
+  // margin-left: -25%;
+  width: auto;
+}

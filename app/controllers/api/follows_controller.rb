@@ -3,7 +3,7 @@ class Api::FollowsController < ApplicationController
   before_action :underscore_params!
 
   def index
-    @artists_followed = current_user.artists_followed
+    @artists_followed = current_user.artists_followed.with_attached_photo
     @follows = current_user.follows
     render :index
   end

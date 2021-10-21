@@ -33,6 +33,15 @@ wolftyla = Artist.create(
     bio: ''
 )
 
+file003 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
+her.photo.attach(io: file003, filename: 'her.jpg')
+
+file007 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/kehlani.jpg')
+kehlani.photo.attach(io: file007, filename: 'kehlani.jpg')
+
+file011 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
+wolftyla.photo.attach(io: file011, filename: 'wolftyla.jpg')
+
 her_vol_1 = Album.create(
     title: 'H.E.R. Volume 1',
     artist_id: her.id,
@@ -40,6 +49,9 @@ her_vol_1 = Album.create(
     year: 2016,
     is_explicit: false
 )
+
+cover01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol1.jpg')
+her_vol_1.cover.attach(io: cover01, filename: 'her-vol1.jpg')
 
 cloud_19 = Album.create(
     title: 'Cloud 19',
@@ -49,6 +61,9 @@ cloud_19 = Album.create(
     is_explicit: true
 )
 
+cover02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/kehlani-cloud.jpg')
+cloud_19.cover.attach(io: cover02, filename: 'kehlani-cloud.jpg')
+
 wolf_in_color = Album.create(
     title: 'Wolf In Color',
     artist_id: wolftyla.id,
@@ -56,6 +71,9 @@ wolf_in_color = Album.create(
     year: 2020,
     is_explicit: false
 )
+
+cover03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/wolftyla-wolf.jpg')
+wolf_in_color.cover.attach(io: cover03, filename: 'wolftyla-wolf.jpg')
 
 follows1 = Follow.create(
     artist_id: her.id,
