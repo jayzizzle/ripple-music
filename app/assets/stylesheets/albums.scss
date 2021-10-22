@@ -8,6 +8,12 @@
   margin-bottom: 5px;
 }
 
+.cover-lg {
+  width: 200px;
+  height: 200px;
+  margin-right: 30px;
+}
+
 .cover:hover {
   opacity: 0.5;
   transition: 0.5s;
@@ -46,4 +52,11 @@
 .albumId:hover {
   color: #fff;
   transition: 0.5s;
+}
+
+.album-show-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

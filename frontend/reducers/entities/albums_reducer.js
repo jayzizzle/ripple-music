@@ -11,7 +11,7 @@ const albumsReducer = (oldState = {}, action) => {
     case RECEIVED_ALL_ALBUMS:
       return { ...oldState, ...action.albums };
     case RECEIVED_ALBUM:
-      newState[action.album.id] = action.album;
+      newState[action.album.album.id] = action.album.album;
       return newState;
     case RECEIVED_ALL_ALBUM_LIKES:
       return { ...action.albumLikes.albums };

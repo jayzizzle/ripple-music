@@ -5,6 +5,7 @@ end
 
 json.set! 'artist' do
   json.set! @artist.id do
+    json.id @artist.id
     json.artistName @artist.artist_name
     json.photoUrl url_for(@artist.photo)
   end

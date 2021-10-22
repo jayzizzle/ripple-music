@@ -22,6 +22,7 @@ import { Main } from './dashboard/main';
 import { Playlists } from './dashboard/playlists';
 import ArtistsContainer from './artists/artists_container';
 import AlbumsContainer from './albums/albums_container';
+import AlbumShowContainer from './albums/album_show_container';
 
 const App = () => (
   <>
@@ -31,6 +32,10 @@ const App = () => (
       <AuthRoute exact path='/signup' component={SignupFormContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <>
+        <ProtectedRoute
+          path='/artists/:artistId/albums/:albumId'
+          component={AlbumShowContainer}
+        />
         <ProtectedRoute exact path='/dashboard' component={Main} />
         <ProtectedRoute exact path='/playlists' component={Playlists} />
         <ProtectedRoute exact path='/albums' component={AlbumsContainer} />
