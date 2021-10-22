@@ -5,13 +5,22 @@
 .cover {
   width: 150px;
   height: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.cover:hover {
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
 .album-artist {
   font-size: 14px;
   font-weight: bold;
   color: #bbb;
+}
+
+.album-artist:hover {
+  color: #fff;
 }
 
 .album-sm-caps {
@@ -28,4 +37,13 @@
   padding: 3px 5px;
   border-radius: 2px;
   margin: 0 5px;
+}
+
+.albumId {
+  color: #777;
+}
+
+.albumId:hover {
+  color: #fff;
+  transition: 0.5s;
 }

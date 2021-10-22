@@ -15,6 +15,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
@@ -176,6 +177,7 @@ hover-white:hover {
 
 .white-text-link:hover {
   color: cyan;
+  text-decoration: none;
 }
 
 .vertical-padding {
@@ -184,6 +186,10 @@ hover-white:hover {
 
 .vertical-center {
   align-items: center;
+}
+
+.vertical-top {
+  align-items: flex-start;
 }
 
 .horizontal-padding {
