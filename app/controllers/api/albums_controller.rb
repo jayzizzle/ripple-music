@@ -1,14 +1,14 @@
 class Api::AlbumsController < ApplicationController
   def index
-    @albums = Album.all.includes(:artist)
-    # @albums = Album.all.with_attached_cover.joins(:artist)
+    @albums = Album.all.with_attached_cover.includes(:artist)
     render :index
   end
 
   def show
-    @album = Album.includes(:artist).find_by(id: params[:id])
-    # @album = Album.with_attached_cover.includes(:tracks, :artist).find_by(id: params[:id])
+    @album = Album.with_attached_cover.find_by(id: params[:id])
     if @album
+      @artist = @album.artist
+      @tracks = @album.tracks
       render :show
     else
       render json: ['Album does not exist.'], status: 404
@@ -16,6 +16,6 @@ class Api::AlbumsController < ApplicationController
   end
 
   def album_params
-    params.require(:album).permit(:title, :artist_id, :category, :year, :is_explicit, :photo)
+    params.require(:album).permit(:title, :artist_id, :category, :year, :is_explicit, :cover)
   end
 end

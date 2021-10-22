@@ -1,0 +1,1 @@
+json.extract! @track, :id, :title, :artist_id, :album_id, :num, :seconds, :is_interlude
