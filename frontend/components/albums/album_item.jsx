@@ -10,7 +10,10 @@ export const AlbumItem = (props) => {
         <img className='cover' src={album.coverUrl} />
       </Link>
       <div className='flex-row-between vertical-top full-width'>
-        <Link to={`/artists/${album.artistId}/albums/${album.id}`}>
+        <Link
+          className='hover-line'
+          to={`/artists/${album.artistId}/albums/${album.id}`}
+        >
           <h4>{album.title}</h4>
         </Link>
         <AlbumHeartContainer
@@ -19,7 +22,10 @@ export const AlbumItem = (props) => {
           itemKey='albumId'
         />
       </div>
-      <Link to={`artists/${album.artistId}`}>
+      <Link
+        className='hover-line lightgray-white'
+        to={`artists/${album.artistId}`}
+      >
         <p className='album-artist'>{album.artistName}</p>
       </Link>
       <p className='album-sm-caps'>

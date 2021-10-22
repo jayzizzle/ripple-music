@@ -19,7 +19,19 @@ a {
 }
 
 a:hover {
+  color: #fff;
+}
+
+.hover-line:hover {
   text-decoration: underline;
+}
+
+.lightgray-white {
+  color: darkgray;
+}
+
+.lightgray-white:cover {
+  color: #fff;
 }
 
 h1 {
@@ -184,6 +196,10 @@ hover-white:hover {
   padding: 40px 0px;
 }
 
+.vertical-text-separation {
+  padding: 5px 0;
+}
+
 .vertical-center {
   align-items: center;
 }
@@ -206,6 +222,10 @@ hover-white:hover {
 
 .lightgray {
   color: #aaa;
+}
+
+.midgray {
+  color: #777;
 }
 
 .darkgray {
