@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+TrackLike.destroy_all
 AlbumLike.destroy_all
 Follow.destroy_all
 Track.destroy_all
@@ -271,5 +272,50 @@ album_like2 = AlbumLike.create(
 
 album_like3 = AlbumLike.create(
     album_id: wolf_in_color.id,
+    user_id: spidey.id
+)
+
+track_like1 = TrackLike.create(
+    track_id: her_vol_1_01.id,
+    user_id: spidey.id
+)
+
+track_like2 = TrackLike.create(
+    track_id: her_vol_1_02.id,
+    user_id: spidey.id
+)
+
+track_like3 = TrackLike.create(
+    track_id: her_vol_1_03.id,
+    user_id: spidey.id
+)
+
+track_like4 = TrackLike.create(
+    track_id: cloud_19_01.id,
+    user_id: spidey.id
+)
+
+track_like5 = TrackLike.create(
+    track_id: cloud_19_02.id,
+    user_id: spidey.id
+)
+
+track_like6 = TrackLike.create(
+    track_id: cloud_19_03.id,
+    user_id: spidey.id
+)
+
+track_like7 = TrackLike.create(
+    track_id: wolf_in_color_01.id,
+    user_id: spidey.id
+)
+
+track_like8 = TrackLike.create(
+    track_id: wolf_in_color_02.id,
+    user_id: spidey.id
+)
+
+track_like9 = TrackLike.create(
+    track_id: wolf_in_color_03.id,
     user_id: spidey.id
 )

@@ -1,0 +1,1 @@
+json.extract! @track_like, :id, :track_id

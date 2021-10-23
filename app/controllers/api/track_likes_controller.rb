@@ -3,7 +3,8 @@ class Api::TrackLikesController < ApplicationController
   before_action :underscore_params!
 
   def index
-    @tracks_liked = current_user.tracks_liked.with_attached_mp3File.includes(:artist, :album)
+    @tracks_liked = current_user.tracks_liked.includes(:artist, :album)
+    # @tracks_liked = current_user.tracks_liked.with_attached_mp3File.includes(:artist, :album)
     @likes = current_user.track_likes
     render :index
   end
