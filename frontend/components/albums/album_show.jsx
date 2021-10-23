@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import AlbumHeartContainer from '../heart_button/album_heart_container';
+import TrackHeartContainer from '../heart_button/track_heart_container';
 import { Link } from 'react-router-dom';
 import { convertDuration } from '../../util/helper_util';
 import { FaRegHeart } from 'react-icons/fa';
@@ -77,9 +78,11 @@ export const AlbumShow = (props) => {
               <button>
                 <ImPlus />
               </button>
-              <button>
-                <FaRegHeart />
-              </button>
+              <TrackHeartContainer
+                itemId={track.id}
+                hearts={props.likedTracks}
+                itemKey='trackId'
+              />
             </div>
           </div>
         ))}

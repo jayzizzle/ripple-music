@@ -12,10 +12,10 @@ const mSTP = (state, ownProps) => ({
     (acc, [key, value]) => ((acc[value] = key), acc),
     {}
   ),
-  // likedTracks: Object.entries(state.entities.likedTracks).reduce(
-  //   (acc, [key, value]) => ((acc[value] = key), acc),
-  //   {}
-  // ),
+  likedTracks: Object.entries(state.entities.likedTracks).reduce(
+    (acc, [key, value]) => ((acc[value] = key), acc),
+    {}
+  ),
 });
 
 const mDTP = (dispatch) => ({
