@@ -23,6 +23,7 @@ import { Playlists } from './dashboard/playlists';
 import ArtistsContainer from './artists/artists_container';
 import AlbumsContainer from './albums/albums_container';
 import AlbumShowContainer from './albums/album_show_container';
+import TracksContainer from './tracks/tracks_container';
 
 const App = () => (
   <>
@@ -39,6 +40,7 @@ const App = () => (
         <ProtectedRoute exact path='/dashboard' component={Main} />
         <ProtectedRoute exact path='/playlists' component={Playlists} />
         <ProtectedRoute exact path='/albums' component={AlbumsContainer} />
+        <ProtectedRoute exact path='/tracks' component={TracksContainer} />
         <ProtectedRoute exact path='/artists' component={ArtistsContainer} />
         {/* <PlayerContainer /> */}
         <TestContainer />

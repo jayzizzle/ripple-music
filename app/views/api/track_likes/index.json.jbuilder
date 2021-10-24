@@ -2,7 +2,7 @@ json.set! 'tracks' do
   @tracks_liked.each do |track|
     json.set! track.id do
       json.extract! track, :id, :title, :artist_id, :album_id, :num, :seconds, :is_interlude
-      json.artistName track.artist.artistName
+      json.artistName track.artist.artist_name
       json.albumTitle track.album.title
     end
   end
