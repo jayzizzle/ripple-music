@@ -4,6 +4,9 @@ import { AlbumItem } from './album_item';
 export const Albums = (props) => {
   useEffect(() => {
     props.getAllAlbumLikes(props.userId);
+    return function cleanup() {
+      props.clearAlbums();
+    };
   }, []);
 
   if (!props.likedAlbums) return null;

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Albums } from '../albums/albums';
+import { clearAlbums } from '../../actions/album_actions';
 import { getAllAlbumLikes } from '../../actions/like_actions';
 
 const mSTP = (state) => ({
@@ -14,6 +15,7 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => ({
   getAllAlbumLikes: (userId) => dispatch(getAllAlbumLikes(userId)),
+  clearAlbums: () => dispatch(clearAlbums()),
 });
 
 export default withRouter(connect(mSTP, mDTP)(Albums));

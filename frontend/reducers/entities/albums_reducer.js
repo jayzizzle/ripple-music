@@ -2,6 +2,7 @@ import {
   RECEIVED_ALL_ALBUMS,
   RECEIVED_ALBUM,
 } from '../../actions/album_actions';
+import { RECEIVED_ARTIST } from '../../actions/artist_actions';
 import { RECEIVED_ALL_ALBUM_LIKES } from '../../actions/like_actions';
 
 const albumsReducer = (oldState = {}, action) => {
@@ -13,6 +14,8 @@ const albumsReducer = (oldState = {}, action) => {
     case RECEIVED_ALBUM:
       newState[action.album.album.id] = action.album.album;
       return newState;
+    case RECEIVED_ARTIST:
+      return { ...action.artist.albums };
     case RECEIVED_ALL_ALBUM_LIKES:
       return { ...action.albumLikes.albums };
     default:

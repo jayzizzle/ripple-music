@@ -35,10 +35,12 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <>
         <ProtectedRoute
+          exact
           path='/artists/:artistId/albums/:albumId'
           component={AlbumShowContainer}
         />
         <ProtectedRoute
+          exact
           path='/artists/:artistId'
           component={ArtistShowContainer}
         />
