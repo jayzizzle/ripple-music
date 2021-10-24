@@ -10,6 +10,7 @@ class Api::ArtistsController < ApplicationController
   def show
     @artist = Artist.with_attached_photo.find_by(id: params[:id])
     if @artist
+      @albums = @artist.albums.with_attached_cover
       render :show
     else
       render json: ['Artist does not exist.'], status: 404
