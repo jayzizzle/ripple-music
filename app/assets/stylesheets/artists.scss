@@ -34,3 +34,16 @@
   color: #fff;
   transition: 0.5s;
 }
+
+.artist-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 1;
+}

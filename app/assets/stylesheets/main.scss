@@ -79,6 +79,7 @@ main {
   margin-left: 250px;
   padding: 25px 40px;
   margin-bottom: 100px;
+  position: relative;
 }
 
 header {
@@ -242,4 +243,13 @@ hover-white:hover {
 
 .margin-top {
   margin-top: 5px;
+}
+
+.black-bg {
+  background-color: black;
+  height: 100vh;
+}
+
+.z1 {
+  z-index: 1;
 }
