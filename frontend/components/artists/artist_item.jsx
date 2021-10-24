@@ -22,6 +22,7 @@ export const ArtistItem = (props) => {
           itemId={artist.id}
           hearts={props.follows}
           itemKey='artistId'
+          classStyle='artistId'
         />
       </div>
     </li>

@@ -21,11 +21,12 @@ export const ArtistShow = (props) => {
         ></div>
         <div className='flex-col-start full-width z1'>
           <div className='flex-row-between full-width artist-heading'>
-            <h1 className='section-title'>{props.artist.artistName}</h1>
+            <h1 className='artist-h1'>{props.artist.artistName}</h1>
             <ArtistHeartContainer
               itemId={props.artist.id}
               hearts={props.follows}
               itemKey='artistId'
+              classStyle='heart-btn-lg'
             />
           </div>
           <div className='image-crop'>

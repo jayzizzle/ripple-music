@@ -36,6 +36,7 @@ export const TrackItem = (props) => {
           itemId={props.itemId}
           hearts={props.hearts}
           itemKey={props.itemKey}
+          classStyle='trackId'
         />
       </div>
     </div>

@@ -101,6 +101,9 @@ button {
   border: none;
   background-color: transparent;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subtitle {
@@ -252,4 +255,8 @@ hover-white:hover {
 
 .z1 {
   z-index: 1;
+}
+
+.heart-btn-lg {
+  font-size: 32px;
 }

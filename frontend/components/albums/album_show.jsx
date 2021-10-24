@@ -36,6 +36,7 @@ export const AlbumShow = (props) => {
               itemId={props.album.id}
               hearts={props.likedAlbums}
               itemKey='albumId'
+              classStyle='albumId'
             />
           </div>
         </div>
@@ -48,6 +49,7 @@ export const AlbumShow = (props) => {
             itemId={track.id}
             hearts={props.likedTracks}
             itemKey='trackId'
+            classStyle='trackId'
             key={track.id}
           />
         ))}

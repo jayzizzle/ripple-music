@@ -20,6 +20,7 @@ export const AlbumItem = (props) => {
           itemId={album.id}
           hearts={props.likes}
           itemKey='albumId'
+          classStyle='albumId'
         />
       </div>
       <Link

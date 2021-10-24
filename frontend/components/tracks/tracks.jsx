@@ -23,6 +23,7 @@ export const Tracks = (props) => {
             itemId={track.id}
             hearts={props.likes}
             itemKey='trackId'
+            classStyle='trackId'
             key={track.id}
           />
         ))}
