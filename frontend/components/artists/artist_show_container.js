@@ -7,6 +7,10 @@ const mSTP = (state, ownProps) => ({
   artist: state.entities.artists[ownProps.match.params.artistId],
   albums: Object.values(state.entities.albums),
   userId: state.session.id,
+  follows: Object.entries(state.entities.followedArtists).reduce(
+    (acc, [key, value]) => ((acc[value] = key), acc),
+    {}
+  ),
   likedAlbums: Object.entries(state.entities.likedAlbums).reduce(
     (acc, [key, value]) => ((acc[value] = key), acc),
     {}

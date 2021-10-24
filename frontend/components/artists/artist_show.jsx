@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AlbumItem } from '../albums/album_item';
+import ArtistHeartContainer from '../heart_button/artist_heart_container';
 import { Link } from 'react-router-dom';
 
 export const ArtistShow = (props) => {
@@ -18,8 +19,15 @@ export const ArtistShow = (props) => {
             backgroundImage: `linear-gradient(transparent, #000 75%), url(${props.artist.photoUrl})`,
           }}
         ></div>
-        <div className='flex-col-start z1'>
-          <h1 className='section-title'>{props.artist.artistName}</h1>
+        <div className='flex-col-start full-width z1'>
+          <div className='flex-row-between full-width artist-heading'>
+            <h1 className='section-title'>{props.artist.artistName}</h1>
+            <ArtistHeartContainer
+              itemId={props.artist.id}
+              hearts={props.follows}
+              itemKey='artistId'
+            />
+          </div>
           <div className='image-crop'>
             <img className='artist-photo' src={props.artist.photoUrl} />
           </div>
