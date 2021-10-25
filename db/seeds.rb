@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+PlaylistTrack.destroy_all
 TrackLike.destroy_all
 AlbumLike.destroy_all
 Follow.destroy_all
+Playlist.destroy_all
 Track.destroy_all
 Album.destroy_all
 Artist.destroy_all
@@ -318,4 +320,44 @@ track_like8 = TrackLike.create(
 track_like9 = TrackLike.create(
     track_id: wolf_in_color_03.id,
     user_id: spidey.id
+)
+
+playlist1 = Playlist.create(
+    title: 'Favorites',
+    user_id: spidey.id
+)
+
+playlist2 = Playlist.create(
+    title: 'New Songs',
+    user_id: spidey.id
+)
+
+playlist_track1 = PlaylistTrack.create(
+    playlist_id: playlist1.id,
+    track_id: her_vol_1_01.id
+)
+
+playlist_track2 = PlaylistTrack.create(
+    playlist_id: playlist1.id,
+    track_id: cloud_19_01.id
+)
+
+playlist_track3 = PlaylistTrack.create(
+    playlist_id: playlist1.id,
+    track_id: wolf_in_color_01.id
+)
+
+playlist_track4 = PlaylistTrack.create(
+    playlist_id: playlist2.id,
+    track_id: her_vol_1_04.id
+)
+
+playlist_track5 = PlaylistTrack.create(
+    playlist_id: playlist2.id,
+    track_id: cloud_19_04.id
+)
+
+playlist_track6 = PlaylistTrack.create(
+    playlist_id: playlist2.id,
+    track_id: wolf_in_color_04.id
 )

@@ -8,7 +8,7 @@ class Splash extends React.Component {
       <>
         <header className='flex-row-between vertical-center splash'>
           <h2>RIPPLE</h2>
-          <div>
+          <div className='flex-row-end vertical-center'>
             <Link className='white-text-link' to='/login'>
               Log In
             </Link>
