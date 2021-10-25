@@ -24,9 +24,10 @@ export const PlaylistShow = (props) => {
           </div>
         </div>
         <TrackLabels />
-        {props.tracks.map((track) => (
+        {props.tracks.map((track, i) => (
           <TrackItem
             track={track}
+            num={i + 1}
             artist={{ id: track.artistId, artistName: track.artistName }}
             album={{ id: track.albumId, title: track.albumTitle }}
             itemId={track.id}
