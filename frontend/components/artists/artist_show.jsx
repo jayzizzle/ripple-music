@@ -29,9 +29,11 @@ export const ArtistShow = (props) => {
               classStyle='heart-btn-lg'
             />
           </div>
-          <div className='image-crop'>
-            <img className='artist-photo' src={props.artist.photoUrl} />
-          </div>
+          <Link to={`/artists/${props.artist.id}`}>
+            <div className='image-crop'>
+              <img className='artist-photo' src={props.artist.photoUrl} />
+            </div>
+          </Link>
           <h3 className='subtitle'>Albums by {props.artist.artistName}</h3>
           <ul className='flex-row-start flex-wrap'>
             {props.albums.map((album) => (

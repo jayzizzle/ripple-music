@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_23_010803) do
+ActiveRecord::Schema.define(version: 2021_10_25_033923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,26 @@ ActiveRecord::Schema.define(version: 2021_10_23_010803) do
     t.index ["artist_id", "user_id"], name: "index_follows_on_artist_id_and_user_id", unique: true
     t.index ["artist_id"], name: "index_follows_on_artist_id"
     t.index ["user_id"], name: "index_follows_on_user_id"
+  end
+
+  create_table "playlist_tracks", force: :cascade do |t|
+    t.integer "playlist_id", null: false
+    t.integer "track_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["playlist_id", "track_id"], name: "index_playlist_tracks_on_playlist_id_and_track_id", unique: true
+    t.index ["playlist_id"], name: "index_playlist_tracks_on_playlist_id"
+    t.index ["track_id"], name: "index_playlist_tracks_on_track_id"
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "user_id", null: false
+    t.boolean "is_public", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title", "user_id"], name: "index_playlists_on_title_and_user_id", unique: true
+    t.index ["user_id"], name: "index_playlists_on_user_id"
   end
 
   create_table "track_likes", force: :cascade do |t|
