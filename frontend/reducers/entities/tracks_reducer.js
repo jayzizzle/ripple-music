@@ -4,6 +4,7 @@ import {
 } from '../../actions/track_actions';
 import { RECEIVED_ALBUM } from '../../actions/album_actions';
 import { RECEIVED_ALL_TRACK_LIKES } from '../../actions/like_actions';
+import { RECEIVED_PLAYLIST } from '../../actions/playlist_actions';
 
 const tracksReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -18,6 +19,8 @@ const tracksReducer = (oldState = {}, action) => {
       return { ...action.album.tracks };
     case RECEIVED_ALL_TRACK_LIKES:
       return { ...action.trackLikes.tracks };
+    case RECEIVED_PLAYLIST:
+      return { ...action.playlist.tracks };
     default:
       return oldState;
   }

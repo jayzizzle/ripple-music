@@ -19,8 +19,23 @@ export const PlaylistShow = (props) => {
           <div className='flex-row-center vertical-center playlist-colorbox-lg'>
             {shorten(props.playlist.title)}
           </div>
-          <h1>{props.playlist.title}</h1>
+          <div className='album-show-details'>
+            <h1>{props.playlist.title}</h1>
+          </div>
         </div>
+        <TrackLabels />
+        {props.tracks.map((track) => (
+          <TrackItem
+            track={track}
+            artist={{ id: track.artistId, artistName: track.artistName }}
+            album={{ id: track.albumId, title: track.albumTitle }}
+            itemId={track.id}
+            hearts={props.likedTracks}
+            itemKey='trackId'
+            classStyle='trackId'
+            key={track.id}
+          />
+        ))}
       </main>
     </div>
   );

@@ -5,6 +5,7 @@ import { getPlaylist } from '../../actions/playlist_actions';
 
 const mSTP = (state, ownProps) => ({
   playlist: state.entities.playlists[ownProps.match.params.playlistId],
+  tracks: Object.values(state.entities.tracks),
   userId: state.session.id,
   likedTracks: Object.entries(state.entities.likedTracks).reduce(
     (acc, [key, value]) => ((acc[value] = key), acc),

@@ -9,11 +9,11 @@ class Api::PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.includes(:tracks).find_by(id: params[:id])
-    @playlist_tracks = PlaylistTrack.where(playlist_id: params[:id])
     if @playlist
+      @tracks = @playlist.tracks.includes(:album, :artist)
       render :show
     else
-      render json: ['Playlist does not exist'], status: 404
+      render json: ['Playlist ie empty or does not exist'], status: 404
     end
   end
 
