@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PlaylistItem } from './playlist_item';
-import { FiPlusCircle } from 'react-icons/fi';
 
 export const Playlists = (props) => {
   useEffect(() => {
     props.getAllPlaylists(props.userId);
   }, []);
 
-  if (!props.playlists) return null;
+  // if (!props.playlists) return null;
 
   return (
     <div className='flex-row-start'>

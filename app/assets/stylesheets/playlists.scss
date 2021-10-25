@@ -13,3 +13,15 @@
   opacity: 0.5;
   transition: 0.5s;
 }
+
+.playlist-colorbox-lg {
+  background: linear-gradient(215deg, red 0%, purple 50%, blue 100%) no-repeat
+    50% fixed;
+  width: 200px;
+  height: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-right: 30px;
+}

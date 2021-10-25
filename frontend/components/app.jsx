@@ -25,6 +25,7 @@ import ArtistShowContainer from './artists/artist_show_container';
 import AlbumsContainer from './albums/albums_container';
 import AlbumShowContainer from './albums/album_show_container';
 import TracksContainer from './tracks/tracks_container';
+import PlaylistShowContainer from './playlists/playlist_show_container';
 
 const App = () => (
   <>
@@ -38,6 +39,11 @@ const App = () => (
           exact
           path='/artists/:artistId/albums/:albumId'
           component={AlbumShowContainer}
+        />
+        <ProtectedRoute
+          exact
+          path='/playlists/:playlistId'
+          component={PlaylistShowContainer}
         />
         <ProtectedRoute
           exact

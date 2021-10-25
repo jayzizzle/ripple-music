@@ -11,7 +11,7 @@ const playlistsReducer = (oldState = {}, action) => {
     case RECEIVED_ALL_PLAYLISTS:
       return { ...oldState, ...action.playlists };
     case RECEIVED_PLAYLIST:
-      newState[action.playlist.id] = action.playlist;
+      newState[action.playlist.playlist.id] = action.playlist.playlist;
       return newState;
     case REMOVED_PLAYLIST:
       delete newState[action.playlistId];
