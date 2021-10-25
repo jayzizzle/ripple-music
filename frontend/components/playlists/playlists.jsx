@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { PlaylistItem } from './playlist_item';
+import { FiPlusCircle } from 'react-icons/fi';
 
 export const Playlists = (props) => {
   useEffect(() => {
@@ -16,6 +18,14 @@ export const Playlists = (props) => {
           {props.playlists.map((playlist) => (
             <PlaylistItem playlist={playlist} key={playlist.id} />
           ))}
+          <li className='flex-col-start album-li'>
+            <Link to={'/playlists/new'}>
+              <div className='flex-row-center vertical-center playlist-colorbox'>
+                +
+              </div>
+              <h4 className='hover-line'>Create New Playlist</h4>
+            </Link>
+          </li>
         </ul>
       </main>
     </div>
