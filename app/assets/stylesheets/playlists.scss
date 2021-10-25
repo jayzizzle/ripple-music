@@ -1,0 +1,12 @@
+.playlist-colorbox {
+  background: linear-gradient(215deg, red 0%, purple 50%, blue 100%) no-repeat
+    50% fixed;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+
+.playlist-colorbox:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
