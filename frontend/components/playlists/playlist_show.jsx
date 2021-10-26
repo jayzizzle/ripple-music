@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { TrackItem } from '../tracks/track_item';
+import { PlaylistTrackItem } from './playlist_track_item';
 import { TrackLabels } from '../tracks/track_labels';
 import EditPlaylistModal from '../modals/edit_playlist_modal';
 import { shorten } from '../../util/helper_util';
@@ -39,7 +38,7 @@ export const PlaylistShow = (props) => {
         </div>
         <TrackLabels />
         {props.tracks.map((track, i) => (
-          <TrackItem
+          <PlaylistTrackItem
             track={track}
             num={i + 1}
             artist={{ id: track.artistId, artistName: track.artistName }}
@@ -49,6 +48,7 @@ export const PlaylistShow = (props) => {
             itemKey='trackId'
             classStyle='trackId'
             key={track.id}
+            deletePlaylistTrack={props.deletePlaylistTrack}
           />
         ))}
         <EditPlaylistModal

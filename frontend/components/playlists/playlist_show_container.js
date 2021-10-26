@@ -22,6 +22,8 @@ const mDTP = (dispatch) => ({
   getPlaylist: (playlistId) => dispatch(getPlaylist(playlistId)),
   patchPlaylist: (playlist) => dispatch(patchPlaylist(playlist)),
   clearPlaylistErrors: () => dispatch(clearPlaylistErrors()),
+  deletePlaylistTrack: (playlistTrackId) =>
+    dispatch(deletePlaylistTrack(playlistTrackId)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(PlaylistShow));

@@ -11,6 +11,7 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist.includes(:tracks).find_by(id: params[:id])
     if @playlist
       @tracks = @playlist.tracks.includes(:album, :artist)
+      @playlist_tracks = PlaylistTrack.where(playlist_id: params[:id])
       render :show
     else
       render json: ['Playlist is empty or does not exist'], status: 404

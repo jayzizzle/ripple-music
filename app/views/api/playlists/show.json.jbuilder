@@ -12,3 +12,13 @@ json.set! 'tracks' do
     end
   end
 end
+
+if !!@playlist_tracks
+  json.set! 'tracks' do
+    @playlist_tracks.each do |track|
+      json.set! track.track_id do
+        json.playlistTrackId track.id
+      end
+    end
+  end
+end
