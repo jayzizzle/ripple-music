@@ -10,6 +10,10 @@ class CreatePlaylistModal extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearPlaylistErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.postPlaylist(this.state).then(() => this.props.onClose());
@@ -17,6 +21,19 @@ class CreatePlaylistModal extends React.Component {
 
   update(field) {
     return (e) => this.setState({ [field]: e.target.value });
+  }
+
+  renderErrors() {
+    const { errors } = this.props;
+    return (
+      <ul className='playlist-errors'>
+        {errors.map((error, i) => (
+          <li className='' key={i}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -44,6 +61,7 @@ class CreatePlaylistModal extends React.Component {
           >
             Create Playlist
           </button>
+          {this.renderErrors()}
         </div>
       </div>
     );

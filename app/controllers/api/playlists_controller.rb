@@ -13,7 +13,7 @@ class Api::PlaylistsController < ApplicationController
       @tracks = @playlist.tracks.includes(:album, :artist)
       render :show
     else
-      render json: ['Playlist ie empty or does not exist'], status: 404
+      render json: ['Playlist is empty or does not exist'], status: 404
     end
   end
 

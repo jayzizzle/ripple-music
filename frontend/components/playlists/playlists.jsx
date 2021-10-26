@@ -39,10 +39,14 @@ export const Playlists = (props) => {
           </li>
         </ul>
         <CreatePlaylistModal
-          onClose={() => setShow(false)}
+          onClose={() => {
+            setShow(false);
+            props.clearPlaylistErrors();
+          }}
           show={show}
           postPlaylist={props.postPlaylist}
           userId={props.userId}
+          errors={props.errors}
           clearPlaylistErrors={props.clearPlaylistErrors}
         />
       </main>

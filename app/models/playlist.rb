@@ -3,7 +3,6 @@ class Playlist < ApplicationRecord
   validates :title, :user_id, presence: true
   validates :user_id, uniqueness: { scope: :title }
   validates :title, length: { minimum: 2, maximum: 16 }
-  validates :title, with: /^[A-Za-z0-9]+$/
 
   belongs_to :user,
     foreign_key: :user_id,

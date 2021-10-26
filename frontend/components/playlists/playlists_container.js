@@ -11,7 +11,7 @@ import {
 const mSTP = (state) => ({
   playlists: Object.values(state.entities.playlists),
   userId: state.session.id,
-  errors: state.errors.playlists,
+  errors: state.errors.playlist,
 });
 
 const mDTP = (dispatch) => ({

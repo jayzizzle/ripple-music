@@ -41,17 +41,15 @@ export const getPlaylist = (playlistId) => (dispatch) =>
   );
 
 export const postPlaylist = (playlist) => (dispatch) =>
-  APIUtil.postPlaylist(playlist).then((playlist) =>
-    dispatch(receivedPlaylist(playlist), (error) =>
-      dispatch(receivedPlaylistErrors(error.responseJSON))
-    )
+  APIUtil.postPlaylist(playlist).then(
+    (playlist) => dispatch(receivedPlaylist(playlist)),
+    (error) => dispatch(receivedPlaylistErrors(error.responseJSON))
   );
 
 export const patchPlaylist = (playlist) => (dispatch) =>
-  APIUtil.patchPlaylist(playlist).then((playlist) =>
-    dispatch(receivedPlaylist(playlist), (error) =>
-      dispatch(receivedPlaylistErrors(error.responseJSON))
-    )
+  APIUtil.patchPlaylist(playlist).then(
+    (playlist) => dispatch(receivedPlaylist(playlist)),
+    (error) => dispatch(receivedPlaylistErrors(error.responseJSON))
   );
 
 export const deletePlaylist = (playlistId) => (dispatch) =>
