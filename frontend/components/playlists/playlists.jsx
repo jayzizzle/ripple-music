@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { PlaylistItem } from './playlist_item';
+import CreatePlaylistModal from '../modals/create_playlist_modal';
 
 export const Playlists = (props) => {
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     props.getAllPlaylists(props.userId);
   }, []);
 
-  // if (!props.playlists) return null;
+  if (!props.playlists) return null;
 
   return (
     <div className='flex-row-start'>
@@ -18,14 +20,21 @@ export const Playlists = (props) => {
             <PlaylistItem playlist={playlist} key={playlist.id} />
           ))}
           <li className='flex-col-start album-li'>
-            <Link to={'/playlists/new'}>
-              <div className='flex-row-center vertical-center playlist-colorbox'>
-                +
-              </div>
-              <h4 className='hover-line'>Create New Playlist</h4>
-            </Link>
+            <div
+              onClick={() => setShow(true)}
+              className='flex-row-center vertical-center playlist-colorbox cursor-pointer'
+            >
+              +
+            </div>
+            <h4
+              onClick={() => setShow(true)}
+              className='hover-line cursor-pointer'
+            >
+              Create Playlist
+            </h4>
           </li>
         </ul>
+        <CreatePlaylistModal onClose={() => setShow(false)} show={show} />
       </main>
     </div>
   );
