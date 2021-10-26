@@ -1,7 +1,11 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { PlaylistShow } from '../playlists/playlist_show';
-import { getPlaylist, patchPlaylist } from '../../actions/playlist_actions';
+import {
+  getPlaylist,
+  patchPlaylist,
+  clearPlaylistErrors,
+} from '../../actions/playlist_actions';
 
 const mSTP = (state, ownProps) => ({
   playlist: state.entities.playlists[ownProps.match.params.playlistId],
@@ -11,11 +15,13 @@ const mSTP = (state, ownProps) => ({
     (acc, [key, value]) => ((acc[value] = key), acc),
     {}
   ),
+  errors: state.errors.playlist,
 });
 
 const mDTP = (dispatch) => ({
   getPlaylist: (playlistId) => dispatch(getPlaylist(playlistId)),
   patchPlaylist: (playlist) => dispatch(patchPlaylist(playlist)),
+  clearPlaylistErrors: () => dispatch(clearPlaylistErrors()),
 });
 
 export default withRouter(connect(mSTP, mDTP)(PlaylistShow));

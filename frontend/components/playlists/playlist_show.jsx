@@ -52,11 +52,16 @@ export const PlaylistShow = (props) => {
           />
         ))}
         <EditPlaylistModal
-          onClose={() => setShow(false)}
+          onClose={() => {
+            setShow(false);
+            props.clearPlaylistErrors();
+          }}
           show={show}
           playlist={props.playlist}
           patchPlaylist={props.patchPlaylist}
           userId={props.userId}
+          errors={props.errors}
+          clearPlaylistErrors={props.clearPlaylistErrors}
         />
       </main>
     </div>
