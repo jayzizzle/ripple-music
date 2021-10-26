@@ -6,6 +6,7 @@ import {
   patchPlaylist,
   clearPlaylistErrors,
 } from '../../actions/playlist_actions';
+import { deletePlaylistTrack } from '../../actions/playlist_track_actions';
 
 const mSTP = (state, ownProps) => ({
   playlist: state.entities.playlists[ownProps.match.params.playlistId],

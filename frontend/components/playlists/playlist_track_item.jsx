@@ -31,7 +31,9 @@ export const PlaylistTrackItem = (props) => {
         {convertDuration(track.seconds)}
       </div>
       <div className='flex-row-center w-10 table-pad'>
-        <button onClick={() => props.deletePlaylistTrack()}>
+        <button
+          onClick={() => props.deletePlaylistTrack(track.playlistTrackId)}
+        >
           <ImMinus />
         </button>
         <button>

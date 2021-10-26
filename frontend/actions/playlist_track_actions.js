@@ -41,5 +41,5 @@ export const patchPlaylistTrack = (playlistTrack) => (dispatch) =>
 
 export const deletePlaylistTrack = (playlistTrackId) => (dispatch) =>
   APIUtil.deletePlaylistTrack(playlistTrackId).then((playlistTrack) =>
-    dispatch(removedPlaylistTrack(playlistTrackId))
+    dispatch(removedPlaylistTrack(playlistTrack))
   );
