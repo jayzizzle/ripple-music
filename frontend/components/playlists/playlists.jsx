@@ -43,6 +43,7 @@ export const Playlists = (props) => {
           show={show}
           postPlaylist={props.postPlaylist}
           userId={props.userId}
+          clearPlaylistErrors={props.clearPlaylistErrors}
         />
       </main>
     </div>
