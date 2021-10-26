@@ -34,7 +34,12 @@ export const Playlists = (props) => {
             </h4>
           </li>
         </ul>
-        <CreatePlaylistModal onClose={() => setShow(false)} show={show} />
+        <CreatePlaylistModal
+          onClose={() => setShow(false)}
+          show={show}
+          postPlaylist={props.postPlaylist}
+          userId={props.userId}
+        />
       </main>
     </div>
   );

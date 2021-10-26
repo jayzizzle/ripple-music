@@ -5,15 +5,14 @@ class CreatePlaylistModal extends React.Component {
     super(props);
     this.state = {
       title: '',
+      userId: this.props.userId,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props
-      .action(this.state)
-      .then(() => this.props.history.push('/dashboard'));
+    this.props.postPlaylist(this.state).then(() => this.props.onClose());
   }
 
   update(field) {
@@ -27,7 +26,6 @@ class CreatePlaylistModal extends React.Component {
         onClick={this.props.onClose}
       >
         <div className='modal-content' onClick={(e) => e.stopPropagation()}>
-          <h3>Create New Playlist</h3>
           <label className='session-label'>
             Enter Title
             <br />
@@ -39,6 +37,13 @@ class CreatePlaylistModal extends React.Component {
               className='session-input-text'
             />
           </label>
+          <br />
+          <button
+            onClick={this.handleSubmit}
+            className='session-form-btn cyan-btn'
+          >
+            Create Playlist
+          </button>
         </div>
       </div>
     );
