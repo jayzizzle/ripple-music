@@ -30,6 +30,7 @@ class Api::PlaylistsController < ApplicationController
   def update
     @playlist = Playlist.find_by(id: params[:id])
     if @playlist && @playlist.update(playlist_params)
+      @tracks = @playlist.tracks.includes(:album, :artist)
       render :show
     else
       render json: @playlist.errors.full_messages, status: 422
