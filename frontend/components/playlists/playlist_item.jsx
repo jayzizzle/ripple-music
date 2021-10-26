@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { shorten } from '../../util/helper_util';
+import { HiOutlineTrash } from 'react-icons/hi';
 
 export const PlaylistItem = (props) => {
   const { playlist } = props;
@@ -10,8 +11,15 @@ export const PlaylistItem = (props) => {
         <div className='flex-row-center vertical-center playlist-colorbox'>
           {shorten(playlist.title)}
         </div>
-        <h4 className='hover-line'>{playlist.title}</h4>
       </Link>
+      <div className='flex-row-between vertical-top w-150'>
+        <h4 className='hover-line'>
+          <Link to={`/playlists/${playlist.id}`}>{playlist.title}</Link>
+        </h4>
+        <button onClick={() => props.deletePlaylist(playlist.id)}>
+          <HiOutlineTrash />
+        </button>
+      </div>
       <p className='album-sm-caps bold'>
         {playlist.numTracks === 1
           ? `${playlist.numTracks} Track`

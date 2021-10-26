@@ -39,6 +39,7 @@ class Api::PlaylistsController < ApplicationController
   def destroy
     @playlist = Playlist.find_by(id: params[:id])
     if @playlist.destroy
+      @tracks = []
       render :show
     else
       render json: ['Playlist does not exist'], status: 404

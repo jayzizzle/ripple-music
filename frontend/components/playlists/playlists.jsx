@@ -17,7 +17,11 @@ export const Playlists = (props) => {
         <h1 className='section-title'>My Playlists</h1>
         <ul className='flex-row-start flex-wrap'>
           {props.playlists.map((playlist) => (
-            <PlaylistItem playlist={playlist} key={playlist.id} />
+            <PlaylistItem
+              playlist={playlist}
+              deletePlaylist={props.deletePlaylist}
+              key={playlist.id}
+            />
           ))}
           <li className='flex-col-start album-li'>
             <div
