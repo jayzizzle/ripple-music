@@ -32,7 +32,7 @@ export default class Sidebar extends Component {
         <div className='sidebar-break flex-row-start'></div>
 
         <NavLink
-          className='sidebar-link'
+          className='sidebar-link main-link'
           to='/dashboard'
           activeClassName='sidebar-active'
         >
@@ -40,7 +40,7 @@ export default class Sidebar extends Component {
         </NavLink>
 
         <NavLink
-          className='sidebar-link'
+          className='sidebar-link main-link'
           to='/explore'
           activeClassName='sidebar-active'
         >

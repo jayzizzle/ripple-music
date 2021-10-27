@@ -278,3 +278,17 @@ hover-white:hover {
 .break {
   height: 40px;
 }
+
+.main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 100%;
+  background-image: linear-gradient(transparent, #000 75%),
+    image-url('splash_spidergwen.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1;
+}

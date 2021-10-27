@@ -4,7 +4,7 @@
   left: 0;
   width: 220px;
   height: 100%;
-  background: linear-gradient(215deg,#1a1a1a 15%,#222 85%) no-repeat 50% fixed;
+  background: linear-gradient(215deg, #1a1a1a 15%, #222 85%) no-repeat 50% fixed;
   padding: 15px 15px;
   z-index: 5;
 }
@@ -37,7 +37,7 @@ a.sidebar-link {
   color: #aaa;
 }
 
-a.sidebar-link:hover{
+a.sidebar-link:hover {
   background-color: #333;
   color: #fff;
 }
@@ -56,4 +56,8 @@ a.sidebar-active {
 .logout-button:hover {
   color: red;
   transition: 0.5s;
+}
+
+a.main-link {
+  font-size: 18px;
 }

@@ -12,13 +12,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from './splash/splash';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
-import Layout from './dashboard/layout';
-import Dashboard from './dashboard/dashboard';
 import SidebarContainer from './dashboard/sidebar/sidebar_container';
 import PlayerContainer from './dashboard/player/player_container';
 import TestContainer from './dashboard/player/test_container';
 
-import { Main } from './dashboard/main';
+import MainContainer from './dashboard/main/main_container';
 import PlaylistsContainer from './playlists/playlists_container';
 import ArtistsContainer from './artists/artists_container';
 import ArtistShowContainer from './artists/artist_show_container';
@@ -51,7 +49,7 @@ const App = () => (
           path='/artists/:artistId'
           component={ArtistShowContainer}
         />
-        <ProtectedRoute exact path='/dashboard' component={Main} />
+        <ProtectedRoute exact path='/dashboard' component={MainContainer} />
         <ProtectedRoute
           exact
           path='/playlists'
