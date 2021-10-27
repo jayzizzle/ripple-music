@@ -17,3 +17,11 @@ json.set! 'likedTracks' do
     json.set! like.id, like.track_id
   end
 end
+
+json.set! 'playlists' do
+  @user.playlists.each do |playlist|
+    json.set! playlist.id do
+      json.extract! playlist, :id, :title, :user_id
+    end
+  end
+end

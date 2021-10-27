@@ -3,6 +3,7 @@ import {
   RECEIVED_PLAYLIST,
   REMOVED_PLAYLIST,
 } from '../../actions/playlist_actions';
+import { RECEIVED_CURRENT_USER } from '../../actions/session_actions';
 
 const playlistsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -16,6 +17,8 @@ const playlistsReducer = (oldState = {}, action) => {
     case REMOVED_PLAYLIST:
       delete newState[action.playlistId];
       return newState;
+    case RECEIVED_CURRENT_USER:
+      return { ...oldState, ...action.currentUser.playlists };
     default:
       return oldState;
   }
