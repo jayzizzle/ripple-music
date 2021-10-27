@@ -13,6 +13,10 @@ const mSTP = (state) => ({
     {}
   ),
   artists: Object.values(state.entities.artists),
+  follows: Object.entries(state.entities.followedArtists).reduce(
+    (acc, [key, value]) => ((acc[value] = key), acc),
+    {}
+  ),
 });
 
 const mDTP = (dispatch) => ({
