@@ -9,7 +9,7 @@ export const Playlists = (props) => {
     props.getAllPlaylists(props.userId);
   }, []);
 
-  if (!props.playlists) return null;
+  if (Object.keys(props.playlists).includes('trackNum')) return null;
 
   return (
     <div className='flex-row-start'>

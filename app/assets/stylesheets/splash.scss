@@ -33,6 +33,11 @@
   box-shadow: 2px 2px 20px #000;
 }
 
+.hero-btn:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
 .splash-items a {
   padding: 0;
   margin: 0;
