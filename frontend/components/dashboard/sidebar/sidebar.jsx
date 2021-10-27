@@ -39,6 +39,14 @@ export default class Sidebar extends Component {
           <div className='sidebar-row'>Home</div>
         </NavLink>
 
+        <NavLink
+          className='sidebar-link'
+          to='/explore'
+          activeClassName='sidebar-active'
+        >
+          <div className='sidebar-row'>Explore</div>
+        </NavLink>
+
         <div className='sidebar-break'>
           <h6 className='silver'>My Collection</h6>
         </div>
