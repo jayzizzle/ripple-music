@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { convertDuration } from '../../util/helper_util';
 import TrackHeartContainer from '../heart_button/track_heart_container';
 import { AddToPlayListButton } from '../playlists/add_to_playlist_button';
-import { ImPlus } from 'react-icons/im';
 
 export const TrackItem = (props) => {
   const { track } = props;
@@ -32,7 +31,12 @@ export const TrackItem = (props) => {
         {convertDuration(track.seconds)}
       </div>
       <div className='flex-row-center w-10 table-pad'>
-        <AddToPlayListButton />
+        <AddToPlayListButton
+          userId={props.userId}
+          trackId={track.id}
+          postPlaylistTrack={props.postPlaylistTrack}
+          playlists={props.playlists}
+        />
         <TrackHeartContainer
           itemId={props.itemId}
           hearts={props.hearts}

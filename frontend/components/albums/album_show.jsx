@@ -51,6 +51,8 @@ export const AlbumShow = (props) => {
             itemKey='trackId'
             classStyle='trackId'
             key={track.id}
+            playlists={props.playlists}
+            postPlaylistTrack={props.postPlaylistTrack}
           />
         ))}
       </main>

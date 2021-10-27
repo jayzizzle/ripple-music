@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { AlbumShow } from '../albums/album_show';
 import { getAlbum } from '../../actions/album_actions';
+import { postPlaylistTrack } from '../../actions/playlist_track_actions';
 
 const mSTP = (state, ownProps) => ({
   album: state.entities.albums[ownProps.match.params.albumId],
@@ -16,10 +17,13 @@ const mSTP = (state, ownProps) => ({
     (acc, [key, value]) => ((acc[value] = key), acc),
     {}
   ),
+  playlists: Object.values(state.entities.playlists),
 });
 
 const mDTP = (dispatch) => ({
   getAlbum: (albumId) => dispatch(getAlbum(albumId)),
+  postPlaylistTrack: (playlistTrack) =>
+    dispatch(postPlaylistTrack(playlistTrack)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(AlbumShow));
