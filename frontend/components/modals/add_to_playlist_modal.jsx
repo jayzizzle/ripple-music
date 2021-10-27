@@ -3,11 +3,17 @@ import React from 'react';
 class AddToPlaylistModal extends React.Component {
   constructor(props) {
     super(props);
-    // this.postPlaylistTrack = this.props.postPlaylistTrack.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
+    this.postPlaylistTrack = this.props.postPlaylistTrack.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(newTrack) {
+    this.postPlaylistTrack(newTrack);
+    this.props.onClose();
   }
 
   render() {
+    const { playlists, trackId } = this.props;
     return (
       <div
         className={`modal ${this.props.show ? 'show' : ''}`}
@@ -16,8 +22,16 @@ class AddToPlaylistModal extends React.Component {
         <div className='modal-content' onClick={(e) => e.stopPropagation()}>
           <p className='modal-header'>Add To Playlist</p>
           <ul className='modal-ul'>
-            {this.props.playlists.map((playlist) => (
-              <li key={playlist.id}>
+            {playlists.map((playlist) => (
+              <li
+                onClick={() =>
+                  this.handleClick({
+                    playlistId: playlist.id,
+                    trackId: trackId,
+                  })
+                }
+                key={playlist.id}
+              >
                 <span className='playlist-plus'>+</span>
                 {playlist.title}
               </li>

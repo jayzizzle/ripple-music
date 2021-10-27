@@ -36,9 +36,6 @@ export const PlaylistTrackItem = (props) => {
         >
           <ImMinus />
         </button>
-        <button>
-          <ImPlus />
-        </button>
         <TrackHeartContainer
           itemId={props.itemId}
           hearts={props.hearts}
