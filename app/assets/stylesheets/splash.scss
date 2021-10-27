@@ -4,4 +4,36 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.splash-items {
+  padding: 7%;
+  font-size: 20px;
+  text-shadow: 4px 4px 10px #000;
+}
+
+.hero-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 84px;
+}
+
+.hero-btn {
+  background-color: #fff;
+  color: #000;
+  width: 200px;
+  font-size: 20px;
+  padding: 15px 0px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 20px #000;
+}
+
+.splash-items a {
+  padding: 0;
+  margin: 0;
 }

@@ -17,7 +17,16 @@ class Splash extends React.Component {
             </Link>
           </div>
         </header>
-        <div className='splash-container'></div>
+        <div className='flex-col-start splash-container'>
+          <div className='flex-col-start splash-items'>
+            <p className='hero-text'>Discover the tracks</p>
+            <p className='hero-text'>where it all began.</p>
+            <Link className='white-text-link' to='/signup'>
+              <button className='hero-btn'>Start Free Trial</button>
+            </Link>
+            <p>Every tidal wave starts out as a ripple.</p>
+          </div>
+        </div>
       </>
     );
   }
