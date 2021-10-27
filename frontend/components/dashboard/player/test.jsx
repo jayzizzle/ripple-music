@@ -43,9 +43,9 @@ export const Test = (props) => {
     progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
-  useEffect(() => {
-    setIsAutoPlay(true);
-  }, [isAutoPlay]);
+  // useEffect(() => {
+  //   setIsAutoPlay(true);
+  // }, [isAutoPlay]);
 
   const loadSong = (song) => {
     player.current.src = song.filePath;

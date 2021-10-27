@@ -25,6 +25,7 @@ export const Tracks = (props) => {
             itemKey='trackId'
             classStyle='trackId'
             key={track.id}
+            userId={props.userId}
             playlists={props.playlists}
             postPlaylistTrack={props.postPlaylistTrack}
           />
