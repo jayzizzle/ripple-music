@@ -27,6 +27,7 @@ export const Tracks = (props) => {
             userId={props.userId}
             playlists={props.playlists}
             postPlaylistTrack={props.postPlaylistTrack}
+            addedSingleTracklist={props.addedSingleTracklist}
           />
         ))}
       </main>
