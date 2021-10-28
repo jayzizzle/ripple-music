@@ -5,7 +5,6 @@ import { TrackItem } from './track_item';
 export const Tracks = (props) => {
   useEffect(() => {
     props.getAllTrackLikes(props.userId);
-    console.log(props);
   }, []);
 
   if (!props.likedTracks) return null;
@@ -13,7 +12,6 @@ export const Tracks = (props) => {
     <div className='flex-row-start'>
       <main className='flex-col-start'>
         <h1 className='section-title'>My Tracks</h1>
-        {console.log(props)}
         <TrackLabels />
         {props.likedTracks.map((track) => (
           <TrackItem

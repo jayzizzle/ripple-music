@@ -88,7 +88,7 @@ her_vol_1_01 = Track.create(
 )
 
 vol1_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Losing.mp3')
-her_vol_1_01.audioFile.attach(io: vol1_01, filename: 'Losing.mp3')
+her_vol_1_01.audiofile.attach(io: vol1_01, filename: 'Losing.mp3')
 
 her_vol_1_02 = Track.create(
     title: 'Wait For It',
@@ -99,7 +99,7 @@ her_vol_1_02 = Track.create(
 )
 
 vol1_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Wait+For+It.mp3')
-her_vol_1_02.audioFile.attach(io: vol1_02, filename: 'Wait+For+It.mp3')
+her_vol_1_02.audiofile.attach(io: vol1_02, filename: 'Wait+For+It.mp3')
 
 her_vol_1_03 = Track.create(
     title: 'Facts',
@@ -110,7 +110,7 @@ her_vol_1_03 = Track.create(
 )
 
 vol1_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Facts.mp3')
-her_vol_1_03.audioFile.attach(io: vol1_03, filename: 'Facts.mp3')
+her_vol_1_03.audiofile.attach(io: vol1_03, filename: 'Facts.mp3')
 
 her_vol_1_04 = Track.create(
     title: 'U',
@@ -121,7 +121,7 @@ her_vol_1_04 = Track.create(
 )
 
 vol1_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/U.mp3')
-her_vol_1_04.audioFile.attach(io: vol1_04, filename: 'U.mp3')
+her_vol_1_04.audiofile.attach(io: vol1_04, filename: 'U.mp3')
 
 her_vol_1_05 = Track.create(
     title: 'Focus',
@@ -132,7 +132,7 @@ her_vol_1_05 = Track.create(
 )
 
 vol1_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Focus.mp3')
-her_vol_1_05.audioFile.attach(io: vol1_05, filename: 'Focus.mp3')
+her_vol_1_05.audiofile.attach(io: vol1_05, filename: 'Focus.mp3')
 
 her_vol_1_06 = Track.create(
     title: 'Jungle',
@@ -143,7 +143,7 @@ her_vol_1_06 = Track.create(
 )
 
 vol1_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Jungle.mp3')
-her_vol_1_06.audioFile.attach(io: vol1_06, filename: 'Jungle.mp3')
+her_vol_1_06.audiofile.attach(io: vol1_06, filename: 'Jungle.mp3')
 
 her_vol_1_07 = Track.create(
     title: 'Pigment',
@@ -154,7 +154,7 @@ her_vol_1_07 = Track.create(
 )
 
 vol1_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Pigment.mp3')
-her_vol_1_07.audioFile.attach(io: vol1_07, filename: 'Pigment.mp3')
+her_vol_1_07.audiofile.attach(io: vol1_07, filename: 'Pigment.mp3')
 
 cloud_19_01 = Track.create(
     title: 'FWU',
@@ -165,7 +165,7 @@ cloud_19_01 = Track.create(
 )
 
 cloud01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/01+FWU.mp3')
-cloud_19_01.audioFile.attach(io: cloud01, filename: '01+FWU.mp3')
+cloud_19_01.audiofile.attach(io: cloud01, filename: '01+FWU.mp3')
 
 cloud_19_02 = Track.create(
     title: 'As I Am',
@@ -176,7 +176,7 @@ cloud_19_02 = Track.create(
 )
 
 cloud02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/02+As+I+Am.mp3')
-cloud_19_02.audioFile.attach(io: cloud02, filename: '02+As+I+Am.mp3')
+cloud_19_02.audiofile.attach(io: cloud02, filename: '02+As+I+Am.mp3')
 
 cloud_19_03 = Track.create(
     title: 'Get Away',
@@ -187,7 +187,7 @@ cloud_19_03 = Track.create(
 )
 
 cloud03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/03+Get+Away.mp3')
-cloud_19_03.audioFile.attach(io: cloud03, filename: '03+Get+Away.mp3')
+cloud_19_03.audiofile.attach(io: cloud03, filename: '03+Get+Away.mp3')
 
 cloud_19_04 = Track.create(
     title: 'Deserve Better',
@@ -198,7 +198,7 @@ cloud_19_04 = Track.create(
 )
 
 cloud04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/04+Deserve+Better.mp3')
-cloud_19_04.audioFile.attach(io: cloud04, filename: '04+Deserve+Better.mp3')
+cloud_19_04.audiofile.attach(io: cloud04, filename: '04+Deserve+Better.mp3')
 
 cloud_19_05 = Track.create(
     title: 'How We Do Us',
@@ -209,7 +209,7 @@ cloud_19_05 = Track.create(
 )
 
 cloud05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/05+How+We+Do+Us+(feat.+Kyle+Dion).mp3')
-cloud_19_05.audioFile.attach(io: cloud05, filename: '05+How+We+Do+Us+(feat.+Kyle+Dion).mp3')
+cloud_19_05.audiofile.attach(io: cloud05, filename: '05+How+We+Do+Us+(feat.+Kyle+Dion).mp3')
 
 cloud_19_06 = Track.create(
     title: '1st Position',
@@ -220,7 +220,7 @@ cloud_19_06 = Track.create(
 )
 
 cloud06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/06+1st+Position.mp3')
-cloud_19_06.audioFile.attach(io: cloud06, filename: '06+1st+Position.mp3')
+cloud_19_06.audiofile.attach(io: cloud06, filename: '06+1st+Position.mp3')
 
 cloud_19_07 = Track.create(
     title: 'Act A Fool',
@@ -231,7 +231,7 @@ cloud_19_07 = Track.create(
 )
 
 cloud07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/kehlani-cloud/07+Tell+Your+Mama.mp3')
-cloud_19_07.audioFile.attach(io: cloud07, filename: '07+Tell+Your+Mama.mp3')
+cloud_19_07.audiofile.attach(io: cloud07, filename: '07+Tell+Your+Mama.mp3')
 
 wolf_in_color_01 = Track.create(
     title: 'Someone Like You',
@@ -242,7 +242,7 @@ wolf_in_color_01 = Track.create(
 )
 
 wolf01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/01+Someone+Like+You.mp3')
-wolf_in_color_01.audioFile.attach(io: wolf01, filename: '01+Someone+Like+You.mp3')
+wolf_in_color_01.audiofile.attach(io: wolf01, filename: '01+Someone+Like+You.mp3')
 
 wolf_in_color_02 = Track.create(
     title: 'Boom Boom Room',
@@ -253,7 +253,7 @@ wolf_in_color_02 = Track.create(
 )
 
 wolf02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/02+Boom+Boom+Room+(feat.+Roy+Woods).mp3')
-wolf_in_color_02.audioFile.attach(io: wolf02, filename: '02+Boom+Boom+Room+(feat.+Roy+Woods).mp3')
+wolf_in_color_02.audiofile.attach(io: wolf02, filename: '02+Boom+Boom+Room+(feat.+Roy+Woods).mp3')
 
 wolf_in_color_03 = Track.create(
     title: 'All Tinted',
@@ -264,7 +264,7 @@ wolf_in_color_03 = Track.create(
 )
 
 wolf03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3')
-wolf_in_color_03.audioFile.attach(io: wolf03, filename: '03+All+Tinted.mp3')
+wolf_in_color_03.audiofile.attach(io: wolf03, filename: '03+All+Tinted.mp3')
 
 wolf_in_color_04 = Track.create(
     title: 'Candy',
@@ -275,7 +275,7 @@ wolf_in_color_04 = Track.create(
 )
 
 wolf04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/04+Candy.mp3')
-wolf_in_color_04.audioFile.attach(io: wolf04, filename: '04+Candy.mp3')
+wolf_in_color_04.audiofile.attach(io: wolf04, filename: '04+Candy.mp3')
 
 wolf_in_color_05 = Track.create(
     title: 'Butterflies',
@@ -286,7 +286,7 @@ wolf_in_color_05 = Track.create(
 )
 
 wolf05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/05+Butterflies+(feat.+Jay+Park).mp3')
-wolf_in_color_05.audioFile.attach(io: wolf05, filename: '05+Butterflies+(feat.+Jay+Park).mp3')
+wolf_in_color_05.audiofile.attach(io: wolf05, filename: '05+Butterflies+(feat.+Jay+Park).mp3')
 
 wolf_in_color_06 = Track.create(
     title: 'In The Middle',
@@ -297,7 +297,7 @@ wolf_in_color_06 = Track.create(
 )
 
 wolf06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/06+In+the+Middle.mp3')
-wolf_in_color_06.audioFile.attach(io: wolf06, filename: '06+In+the+Middle.mp3')
+wolf_in_color_06.audiofile.attach(io: wolf06, filename: '06+In+the+Middle.mp3')
 
 follows1 = Follow.create(
     artist_id: her.id,
