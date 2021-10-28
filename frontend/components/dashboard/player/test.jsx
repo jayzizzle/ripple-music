@@ -26,6 +26,18 @@ export const Test = (props) => {
   useEffect(() => {
     player.current.volume = currentVolume;
 
+    const seconds = Math.floor(player.current.duration);
+    setDuration(seconds);
+    progressBar.current.max = seconds;
+  }, [player?.current?.loadedmetadata, player?.current?.readyState]);
+
+  useEffect(() => {
+    console.log('playlist change');
+  }, [songs]);
+
+  useEffect(() => {
+    console.log('song change');
+
     if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
@@ -33,15 +45,7 @@ export const Test = (props) => {
     setTitle(currentSong.title);
     setCover(currentSong.cover);
     setSongUrl(currentSong.audioUrl);
-
-    const seconds = Math.floor(player.current.duration);
-    setDuration(seconds);
-    progressBar.current.max = seconds;
-  }, [player?.current?.loadedmetadata, player?.current?.readyState]);
-
-  // useEffect(() => {
-  //   console.log('song change');
-  // }, [currentSong]);
+  }, [player?.current?.src]);
 
   // useEffect(() => {
   //   setIsAutoPlay(true);
