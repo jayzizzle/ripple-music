@@ -32,11 +32,7 @@ export const Test = (props) => {
     setArtist(currentSong.artist);
     setTitle(currentSong.title);
     setCover(currentSong.cover);
-    setSongUrl(currentSong.filePath);
-
-    setIsPlaying(
-      props.currentPlaylist ? (!!player.current.paused ? false : true) : false
-    );
+    setSongUrl(currentSong.audioUrl);
 
     const seconds = Math.floor(player.current.duration);
     setDuration(seconds);
@@ -44,11 +40,15 @@ export const Test = (props) => {
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
   // useEffect(() => {
+  //   console.log('song change');
+  // }, [currentSong]);
+
+  // useEffect(() => {
   //   setIsAutoPlay(true);
   // }, [isAutoPlay]);
 
   const loadSong = (song) => {
-    player.current.src = song.filePath;
+    player.current.src = song.audioUrl;
   };
 
   const togglePlayPause = () => {
@@ -131,7 +131,7 @@ export const Test = (props) => {
         <audio
           autoPlay={isAutoPlay}
           ref={player}
-          src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''}
+          src={props.currentPlaylist ? props.currentPlaylist[0].audioUrl : ''}
         />
 
         <div className='flex-row-start vertical-center player-side player-left'>

@@ -5,6 +5,7 @@ json.set! 'tracks' do
       json.artistName track.artist.artist_name
       json.albumTitle track.album.title
       json.audioUrl url_for(track.audiofile)
+      # json.coverUrl url_for(track.album.cover)
     end
   end
 end
