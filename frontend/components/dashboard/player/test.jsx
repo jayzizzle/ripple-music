@@ -7,6 +7,7 @@ export const Test = (props) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(0.5);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const [isPlayed, setIsPlayed] = useState(false);
 
   const player = useRef();
   const volumeSlider = useRef();
@@ -36,7 +37,7 @@ export const Test = (props) => {
   useEffect(() => {
     console.log('song change');
 
-    if (!songs[songIndex.num]) songIndex.num = 0;
+    // if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
     setArtist(currentSong.artist);
@@ -56,6 +57,7 @@ export const Test = (props) => {
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
+    setIsPlayed(true);
     if (!prevValue) {
       player.current.play();
       animationRef.current = requestAnimationFrame(whilePlaying);

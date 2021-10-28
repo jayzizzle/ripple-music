@@ -11,6 +11,7 @@ export const TrackItem = (props) => {
     id: track.id,
     title: track.title,
     artist: props.artist.artistName,
+    albumId: props.album.id,
     album: props.album.title,
     audioUrl: track.audioUrl,
     cover: props.album.coverUrl,
@@ -18,7 +19,7 @@ export const TrackItem = (props) => {
   return (
     <div className='flex-row-between vertical-center full-width track-row'>
       <div className='flex-row-end w-5 midgray table-pad'>
-        {track.num ? track.num : props.num}
+        {props.num ? props.num : track.num}
       </div>
       <div className='flex-row-start flex-wrap w-25 table-pad'>
         {track.title}

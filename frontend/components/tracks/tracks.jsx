@@ -13,8 +13,9 @@ export const Tracks = (props) => {
       <main className='flex-col-start'>
         <h1 className='section-title'>My Tracks</h1>
         <TrackLabels />
-        {props.likedTracks.map((track) => (
+        {props.likedTracks.map((track, i) => (
           <TrackItem
+            num={i + 1}
             track={track}
             artist={{ id: track.artistId, artistName: track.artistName }}
             album={{ id: track.albumId, title: track.albumTitle }}
