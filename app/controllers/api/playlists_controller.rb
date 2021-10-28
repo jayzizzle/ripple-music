@@ -10,7 +10,7 @@ class Api::PlaylistsController < ApplicationController
   def show
     @playlist = Playlist.includes(:tracks).find_by(id: params[:id])
     if @playlist
-      @tracks = @playlist.tracks.includes(:album, :artist)
+      @tracks = @playlist.tracks.with_attached_audiofile.includes(:album, :artist)
       @playlist_tracks = PlaylistTrack.where(playlist_id: params[:id])
       render :show
     else

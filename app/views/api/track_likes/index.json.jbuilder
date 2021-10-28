@@ -4,6 +4,7 @@ json.set! 'tracks' do
       json.extract! track, :id, :title, :artist_id, :album_id, :num, :seconds, :is_interlude
       json.artistName track.artist.artist_name
       json.albumTitle track.album.title
+      json.audioUrl url_for(track.audiofile)
     end
   end
 end

@@ -27,6 +27,6 @@ class Track < ApplicationRecord
     through: :playlist_tracks,
     source: :playlist
 
-  has_one_attached :mp3File
+  has_one_attached :audiofile
 
 end
