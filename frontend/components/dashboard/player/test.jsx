@@ -13,8 +13,6 @@ export const Test = (props) => {
   const progressBar = useRef();
   const animationRef = useRef();
 
-  // if (!props.currentPlaylist) return null;
-
   const songs = props.currentPlaylist;
 
   const [songIndex, setSongIndex] = useState({ num: 0 });

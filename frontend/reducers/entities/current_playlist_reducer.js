@@ -5,31 +5,32 @@ import {
   ADDED_SINGLE_TRACKLIST,
 } from '../../actions/current_playlist_actions';
 
-const currentPlaylistReducer = (oldState = {}, action) => {
+const defaultState = {
+  1: {
+    id: 1,
+    artist: 'Jenevieve',
+    title: 'Resume',
+    audioUrl: '/assets/jenevieve-resume.mp3',
+    cover: '/assets/jenevieve-division.jpg',
+  },
+  2: {
+    id: 2,
+    artist: 'Mahalia',
+    title: 'Surprise Me',
+    audioUrl: '/assets/mahalia-surprise_me.mp3',
+    cover: '/assets/mahalia-seasons.jpg',
+  },
+  3: {
+    id: 3,
+    artist: 'Brasstracks',
+    title: 'My Boo',
+    audioUrl: '/assets/brasstracks-my_boo.mp3',
+    cover: '/assets/brasstracks-my_boo.jpg',
+  },
+};
+
+const currentPlaylistReducer = (oldState = defaultState, action) => {
   //test preloaded state
-  oldState = {
-    1: {
-      id: 1,
-      artist: 'Jenevieve',
-      title: 'Resume',
-      audioUrl: '/assets/jenevieve-resume.mp3',
-      cover: '/assets/jenevieve-division.jpg',
-    },
-    2: {
-      id: 2,
-      artist: 'Mahalia',
-      title: 'Surprise Me',
-      audioUrl: '/assets/mahalia-surprise_me.mp3',
-      cover: '/assets/mahalia-seasons.jpg',
-    },
-    3: {
-      id: 3,
-      artist: 'Brasstracks',
-      title: 'My Boo',
-      audioUrl: '/assets/brasstracks-my_boo.mp3',
-      cover: '/assets/brasstracks-my_boo.jpg',
-    },
-  };
 
   Object.freeze(oldState);
   const newState = Object.assign({}, oldState);
