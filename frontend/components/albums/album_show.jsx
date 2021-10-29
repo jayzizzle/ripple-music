@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AlbumHeartContainer from '../heart_button/album_heart_container';
 import { TrackItem } from '../tracks/track_item';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,22 @@ export const AlbumShow = (props) => {
     props.getAlbum(props.match.params.albumId);
   }, []);
 
-  if (!props.album || !props.artist) return null;
+  if (!props.album || !props.artist) {
+    return null;
+  } else {
+    const songList = props.tracks.map((track) => ({
+      [track.num]: {
+        id: track.id,
+        title: track.title,
+        artist: props.artist.artistName,
+        albumId: props.album.id,
+        album: props.album.title,
+        audioUrl: track.audioUrl,
+        cover: props.album.coverUrl,
+      },
+    }));
+    console.log(songList);
+  }
 
   return (
     <div className='flex-row-start'>
