@@ -8,6 +8,7 @@ export const Test = (props) => {
   const [currentVolume, setCurrentVolume] = useState(0.5);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
   const [isPlayed, setIsPlayed] = useState(false);
+  const [playCount, setPlayCount] = useState({ count: 0 });
 
   const player = useRef();
   const volumeSlider = useRef();
@@ -37,7 +38,7 @@ export const Test = (props) => {
   useEffect(() => {
     console.log('song change');
 
-    // if (!songs[songIndex.num]) songIndex.num = 0;
+    if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
     setArtist(currentSong.artist);
