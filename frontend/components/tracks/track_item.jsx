@@ -7,18 +7,13 @@ import { FaRegPlayCircle } from 'react-icons/fa';
 
 export const TrackItem = (props) => {
   const { track } = props;
-  const song = {
-    id: track.id,
-    title: track.title,
-    artist: props.artist.artistName,
-    albumId: props.album.id,
-    album: props.album.title,
-    audioUrl: track.audioUrl,
-    cover: props.album.coverUrl,
-  };
+  let songList = props.songList;
+  let idx;
+  props.num ? (idx = props.num - 1) : (idx = track.num - 1);
+  songList = songList.slice(idx).concat(songList.slice(0, idx));
 
   const playSong = () => {
-    props.addedSingleTracklist(song);
+    props.receivedNewPlaylist(songList);
     props.setToPlay({ isPlaying: true });
   };
 

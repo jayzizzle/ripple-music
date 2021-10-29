@@ -42,7 +42,7 @@ const currentPlaylistReducer = (oldState = defaultState, action) => {
   const newState = Object.assign({}, oldState);
   switch (action.type) {
     case RECEIVED_NEW_PLAYLIST:
-      return { ...action.playlist };
+      return Object.values(action.playlist);
     case ADDED_TRACK_TO_PLAYLIST:
       newState[action.track.id] = action.track;
       return newState;

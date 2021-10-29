@@ -3,7 +3,10 @@ import { withRouter } from 'react-router';
 import { AlbumShow } from '../albums/album_show';
 import { getAlbum } from '../../actions/album_actions';
 import { postPlaylistTrack } from '../../actions/playlist_track_actions';
-import { addedSingleTracklist } from '../../actions/current_playlist_actions';
+import {
+  receivedNewPlaylist,
+  addedSingleTracklist,
+} from '../../actions/current_playlist_actions';
 import { setToPlay } from '../../actions/ui_actions';
 
 const mSTP = (state, ownProps) => ({
@@ -27,6 +30,7 @@ const mDTP = (dispatch) => ({
   postPlaylistTrack: (playlistTrack) =>
     dispatch(postPlaylistTrack(playlistTrack)),
   addedSingleTracklist: (track) => dispatch(addedSingleTracklist(track)),
+  receivedNewPlaylist: (playlist) => dispatch(receivedNewPlaylist(playlist)),
   setToPlay: (playerStatus) => dispatch(setToPlay(playerStatus)),
 });
 
