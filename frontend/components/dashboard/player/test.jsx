@@ -20,6 +20,7 @@ export const Test = (props) => {
   const [songIndex, setSongIndex] = useState({ num: 0 });
   const [artist, setArtist] = useState('');
   const [title, setTitle] = useState('');
+  const [playlistTitle, setPlaylistTitle] = useState('');
   const [cover, setCover] = useState('');
   const [songUrl, setSongUrl] = useState('');
 
@@ -37,6 +38,7 @@ export const Test = (props) => {
 
     setArtist(currentSong.artist);
     setTitle(currentSong.title);
+    setPlaylistTitle(currentSong.playlistTitle);
     setCover(currentSong.cover);
     setSongUrl(currentSong.audioUrl);
   }, [player?.current?.src, songs]);
@@ -149,6 +151,9 @@ export const Test = (props) => {
           <div className='player-info'>
             <p className='player-title'>{title}</p>
             <p className='player-artist'>{artist}</p>
+            <p className='player-playlist'>
+              <span className='bold'>Playing From:</span> {playlistTitle}
+            </p>
           </div>
         </div>
 

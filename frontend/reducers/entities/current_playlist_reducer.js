@@ -14,6 +14,7 @@ const defaultState = {
     album: 'Division',
     audioUrl: '/assets/jenevieve-resume.mp3',
     cover: '/assets/jenevieve-division.jpg',
+    playlistTitle: 'Ripple Playlist',
   },
   2: {
     id: 2,
@@ -23,6 +24,7 @@ const defaultState = {
     album: 'Seasons',
     audioUrl: '/assets/mahalia-surprise_me.mp3',
     cover: '/assets/mahalia-seasons.jpg',
+    playlistTitle: 'Ripple Playlist',
   },
   3: {
     id: 3,
@@ -32,6 +34,7 @@ const defaultState = {
     album: 'My Boo',
     audioUrl: '/assets/brasstracks-my_boo.mp3',
     cover: '/assets/brasstracks-my_boo.jpg',
+    playlistTitle: 'Ripple Playlist',
   },
 };
 
