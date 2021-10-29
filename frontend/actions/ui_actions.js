@@ -1,0 +1,12 @@
+export const SET_TO_PLAY = 'SET_TO_PLAY';
+export const SET_TO_PAUSE = 'SET_TO_PAUSE';
+
+export const setToPlay = (playerStatus) => ({
+  type: SET_TO_PLAY,
+  playerStatus,
+});
+
+export const setToPause = (playerStatus) => ({
+  type: SET_TO_PAUSE,
+  playerStatus,
+});

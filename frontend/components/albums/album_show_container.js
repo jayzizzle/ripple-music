@@ -4,6 +4,7 @@ import { AlbumShow } from '../albums/album_show';
 import { getAlbum } from '../../actions/album_actions';
 import { postPlaylistTrack } from '../../actions/playlist_track_actions';
 import { addedSingleTracklist } from '../../actions/current_playlist_actions';
+import { setToPlay } from '../../actions/ui_actions';
 
 const mSTP = (state, ownProps) => ({
   album: state.entities.albums[ownProps.match.params.albumId],
@@ -26,6 +27,7 @@ const mDTP = (dispatch) => ({
   postPlaylistTrack: (playlistTrack) =>
     dispatch(postPlaylistTrack(playlistTrack)),
   addedSingleTracklist: (track) => dispatch(addedSingleTracklist(track)),
+  setToPlay: (playerStatus) => dispatch(setToPlay(playerStatus)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(AlbumShow));

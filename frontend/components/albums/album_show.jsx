@@ -55,6 +55,7 @@ export const AlbumShow = (props) => {
             playlists={props.playlists}
             postPlaylistTrack={props.postPlaylistTrack}
             addedSingleTracklist={props.addedSingleTracklist}
+            setToPlay={props.setToPlay}
           />
         ))}
       </main>

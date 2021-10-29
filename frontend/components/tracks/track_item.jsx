@@ -17,6 +17,11 @@ export const TrackItem = (props) => {
     cover: props.album.coverUrl,
   };
 
+  const playSong = () => {
+    props.addedSingleTracklist(song);
+    props.setToPlay({ isPlaying: true });
+  };
+
   return (
     <div className='flex-row-between vertical-center full-width track-row'>
       <div className='flex-row-end w-5 midgray table-pad'>
@@ -24,7 +29,7 @@ export const TrackItem = (props) => {
       </div>
       <div className='flex-row-start flex-wrap w-25 table-pad'>
         {track.title}
-        <button onClick={() => props.addedSingleTracklist(song)}>
+        <button onClick={() => playSong()}>
           <FaRegPlayCircle />
         </button>
       </div>

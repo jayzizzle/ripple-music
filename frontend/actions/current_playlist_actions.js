@@ -18,7 +18,7 @@ export const removedTrackFromPlaylist = (trackId) => ({
   trackId,
 });
 
-export const addedSingleTracklist = (track, isTrue) => ({
+export const addedSingleTracklist = (track) => ({
   type: ADDED_SINGLE_TRACKLIST,
   track,
 });
