@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { convertDuration } from '../../../util/helper_util';
-import { HiVolumeUp } from 'react-icons/hi';
+import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
 export const Test = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -33,7 +33,11 @@ export const Test = (props) => {
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
   useEffect(() => {
-    if (!songs[songIndex.num]) songIndex.num = 0;
+    songIndex.num = 0;
+  }, [songs]);
+
+  useEffect(() => {
+    // if (!songs[songIndex.num]) songIndex.num = 0;
     let currentSong = songs[songIndex.num];
 
     setArtist(currentSong.artist);
@@ -41,7 +45,7 @@ export const Test = (props) => {
     setPlaylistTitle(currentSong.playlistTitle);
     setCover(currentSong.cover);
     setSongUrl(currentSong.audioUrl);
-  }, [player?.current?.src, songs]);
+  }, [player?.current?.src]);
 
   useEffect(() => {
     if (!isPlaying && props.isCurrentlyPlaying) {
