@@ -23,6 +23,7 @@ export const AlbumShow = (props) => {
       album: props.album.title,
       audioUrl: track.audioUrl,
       cover: props.album.coverUrl,
+      playlistTitle: props.album.title,
     }));
   }
 

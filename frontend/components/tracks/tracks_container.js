@@ -3,7 +3,11 @@ import { withRouter } from 'react-router';
 import { Tracks } from '../tracks/tracks';
 import { getAllTrackLikes } from '../../actions/like_actions';
 import { postPlaylistTrack } from '../../actions/playlist_track_actions';
-import { addedSingleTracklist } from '../../actions/current_playlist_actions';
+import {
+  receivedNewPlaylist,
+  addedSingleTracklist,
+} from '../../actions/current_playlist_actions';
+import { setToPlay } from '../../actions/ui_actions';
 
 const mSTP = (state) => ({
   likedTracks: Object.values(state.entities.tracks),
@@ -20,6 +24,8 @@ const mDTP = (dispatch) => ({
   postPlaylistTrack: (playlistTrack) =>
     dispatch(postPlaylistTrack(playlistTrack)),
   addedSingleTracklist: (track) => dispatch(addedSingleTracklist(track)),
+  receivedNewPlaylist: (playlist) => dispatch(receivedNewPlaylist(playlist)),
+  setToPlay: (playerStatus) => dispatch(setToPlay(playerStatus)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(Tracks));

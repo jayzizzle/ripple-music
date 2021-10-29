@@ -3,11 +3,28 @@ import { TrackLabels } from './track_labels';
 import { TrackItem } from './track_item';
 
 export const Tracks = (props) => {
+  let songList;
+
   useEffect(() => {
     props.getAllTrackLikes(props.userId);
   }, []);
 
-  if (!props.likedTracks) return null;
+  if (!props.likedTracks) {
+    return null;
+  } else {
+    songList = props.likedTracks.map((track) => ({
+      id: track.id,
+      title: track.title,
+      artistId: track.artistId,
+      artist: track.artistName,
+      albumId: track.albumId,
+      album: track.albumTitle,
+      audioUrl: track.audioUrl,
+      // cover: props.album.coverUrl, -- HOW !?!?
+      playlistTitle: 'My Tracks',
+    }));
+  }
+
   return (
     <div className='flex-row-start'>
       <main className='flex-col-start'>
@@ -28,6 +45,9 @@ export const Tracks = (props) => {
             playlists={props.playlists}
             postPlaylistTrack={props.postPlaylistTrack}
             addedSingleTracklist={props.addedSingleTracklist}
+            receivedNewPlaylist={props.receivedNewPlaylist}
+            setToPlay={props.setToPlay}
+            songList={songList}
           />
         ))}
       </main>
