@@ -24,7 +24,7 @@ export const TrackItem = (props) => {
       </div>
       <div className='flex-row-start flex-wrap w-25 table-pad'>
         {track.title}
-        <button onClick={() => playSong()}>
+        <button className='inline-play-btn' onClick={() => playSong()}>
           <FaRegPlayCircle />
         </button>
       </div>

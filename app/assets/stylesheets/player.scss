@@ -47,17 +47,26 @@
 }
 
 .player-btn {
-  border:none;
+  border: none;
   width: 28px;
   padding: 5px 0px;
   text-align: center;
   border-radius: 4px;
   background-color: transparent;
   color: white;
-  font-size: 20px ;
+  font-size: 20px;
 }
 
 .player-btn:hover {
   color: #777;
   transition: 0.4s;
+}
+
+.inline-play-btn {
+  color: #777;
+}
+
+.inline-play-btn:hover {
+  color: cyan;
+  transition: 0.5s;
 }
