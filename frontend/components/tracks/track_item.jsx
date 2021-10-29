@@ -16,6 +16,7 @@ export const TrackItem = (props) => {
     audioUrl: track.audioUrl,
     cover: props.album.coverUrl,
   };
+
   return (
     <div className='flex-row-between vertical-center full-width track-row'>
       <div className='flex-row-end w-5 midgray table-pad'>
