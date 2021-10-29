@@ -6,6 +6,8 @@ import { shorten } from '../../util/helper_util';
 import { HiOutlinePencilAlt } from 'react-icons/hi';
 
 export const PlaylistShow = (props) => {
+  let songList;
+
   const [show, setShow] = useState(false);
 
   const renderEdit = (currentUserId, playlistUserId) => {
@@ -22,7 +24,21 @@ export const PlaylistShow = (props) => {
     props.getPlaylist(props.match.params.playlistId);
   }, []);
 
-  if (!props.playlist) return null;
+  if (!props.playlist) {
+    return null;
+  } else {
+    songList = props.tracks.map((track) => ({
+      id: track.id,
+      title: track.title,
+      artistId: track.artistId,
+      artist: track.artistName,
+      albumId: track.albumId,
+      album: track.albumTitle,
+      audioUrl: track.audioUrl,
+      // cover: props.album.coverUrl,
+      playlistTitle: props.playlist.title,
+    }));
+  }
 
   return (
     <div className='flex-row-start'>
@@ -39,8 +55,8 @@ export const PlaylistShow = (props) => {
         <TrackLabels />
         {props.tracks.map((track, i) => (
           <PlaylistTrackItem
-            track={track}
             num={i + 1}
+            track={track}
             artist={{ id: track.artistId, artistName: track.artistName }}
             album={{ id: track.albumId, title: track.albumTitle }}
             itemId={track.id}
@@ -48,7 +64,12 @@ export const PlaylistShow = (props) => {
             itemKey='trackId'
             classStyle='trackId'
             key={track.id}
+            userId={props.userId}
+            playlists={props.playlists}
             deletePlaylistTrack={props.deletePlaylistTrack}
+            receivedNewPlaylist={props.receivedNewPlaylist}
+            setToPlay={props.setToPlay}
+            songList={songList}
           />
         ))}
         <EditPlaylistModal
