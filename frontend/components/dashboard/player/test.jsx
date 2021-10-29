@@ -41,6 +41,13 @@ export const Test = (props) => {
     setSongUrl(currentSong.audioUrl);
   }, [player?.current?.src, songs]);
 
+  useEffect(() => {
+    if (!isPlaying && props.isCurrentlyPlaying) {
+      togglePlayPause();
+      setIsAutoPlay(true);
+    }
+  }, [props.isCurrentlyPlaying]);
+
   // useEffect(() => {
   //   setIsAutoPlay(true);
   // }, [isAutoPlay]);
@@ -57,10 +64,12 @@ export const Test = (props) => {
       player.current.play();
       animationRef.current = requestAnimationFrame(whilePlaying);
       setIsAutoPlay(true);
+      props.setToPlay({ isPlaying: true });
     } else {
       player.current.pause();
       cancelAnimationFrame(animationRef.current);
       setIsAutoPlay(false);
+      props.setToPause({ isPlaying: false });
     }
   };
 
