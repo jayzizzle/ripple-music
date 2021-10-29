@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { convertDuration } from '../../../util/helper_util';
+import { HiVolumeUp } from 'react-icons/hi';
 
 export const Test = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(0.5);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
-  const [isPlayed, setIsPlayed] = useState(false);
-  const [playCount, setPlayCount] = useState({ count: 0 });
 
   const player = useRef();
   const volumeSlider = useRef();
@@ -50,10 +50,6 @@ export const Test = (props) => {
     }
   }, [props.isCurrentlyPlaying]);
 
-  // useEffect(() => {
-  //   setIsAutoPlay(true);
-  // }, [isAutoPlay]);
-
   const loadSong = (song) => {
     player.current.src = song.audioUrl;
   };
@@ -61,12 +57,11 @@ export const Test = (props) => {
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
-    setIsPlayed(true);
     if (!prevValue) {
       player.current.play();
       animationRef.current = requestAnimationFrame(whilePlaying);
       setIsAutoPlay(true);
-      props.setToPlay({ isPlaying: true });
+      if (!props.isCurrentlyPlaying) props.setToPlay({ isPlaying: true });
     } else {
       player.current.pause();
       cancelAnimationFrame(animationRef.current);
@@ -189,6 +184,9 @@ export const Test = (props) => {
         </div>
 
         <div className='flex-row-end vertical-center player-side player-right'>
+          <button>
+            <HiVolumeUp />
+          </button>
           <input
             type='range'
             min='0'
