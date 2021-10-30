@@ -48,6 +48,10 @@ export const Test = (props) => {
   }, [player?.current?.src]);
 
   useEffect(() => {
+    console.log('index has changed');
+  }, [songIndex.num]);
+
+  useEffect(() => {
     if (!isPlaying && props.isCurrentlyPlaying) {
       togglePlayPause();
       setIsAutoPlay(true);
@@ -57,6 +61,8 @@ export const Test = (props) => {
   const loadSong = (song) => {
     player.current.src = song.audioUrl;
   };
+
+  const toggleMute = () => {};
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;

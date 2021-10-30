@@ -5,8 +5,8 @@ import {
   ADDED_SINGLE_TRACKLIST,
 } from '../../actions/current_playlist_actions';
 
-const defaultState = {
-  1: {
+const defaultState = [
+  {
     id: 1,
     artist: 'Jenevieve',
     title: 'Resume',
@@ -16,7 +16,7 @@ const defaultState = {
     cover: '/assets/jenevieve-division.jpg',
     playlistTitle: 'Ripple Playlist',
   },
-  2: {
+  {
     id: 2,
     artist: 'Mahalia',
     title: 'Surprise Me',
@@ -26,7 +26,7 @@ const defaultState = {
     cover: '/assets/mahalia-seasons.jpg',
     playlistTitle: 'Ripple Playlist',
   },
-  3: {
+  {
     id: 3,
     artist: 'Brasstracks',
     title: 'My Boo',
@@ -36,7 +36,7 @@ const defaultState = {
     cover: '/assets/brasstracks-my_boo.jpg',
     playlistTitle: 'Ripple Playlist',
   },
-};
+];
 
 const currentPlaylistReducer = (oldState = defaultState, action) => {
   //test preloaded state
