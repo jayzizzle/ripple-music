@@ -76,3 +76,23 @@
   color: cyan;
   transition: 0.5s;
 }
+
+.lg-play-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.lg-play-btn:hover {
+  background-color: #ccc;
+  color: #333;
+  transition: 0.5s;
+}
+
+.lg-button-text {
+  font-size: 18px;
+  padding-left: 5px;
+}

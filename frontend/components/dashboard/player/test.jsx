@@ -157,7 +157,7 @@ export const Test = (props) => {
             <p className='player-title'>{title}</p>
             <p className='player-artist'>{artist}</p>
             <p className='player-playlist'>
-              <span className='bold'>Playing From:</span> {playlistTitle}
+              <span className='bold'>Playing From</span> {playlistTitle}
             </p>
           </div>
         </div>

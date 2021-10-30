@@ -3,6 +3,7 @@ import AlbumHeartContainer from '../heart_button/album_heart_container';
 import { TrackItem } from '../tracks/track_item';
 import { Link } from 'react-router-dom';
 import { TrackLabels } from '../tracks/track_labels';
+import { FaPlay } from 'react-icons/fa';
 
 export const AlbumShow = (props) => {
   let songList;
@@ -26,6 +27,11 @@ export const AlbumShow = (props) => {
       playlistTitle: props.album.title,
     }));
   }
+
+  const playSong = () => {
+    props.receivedNewPlaylist(songList);
+    props.setToPlay({ isPlaying: true });
+  };
 
   return (
     <div className='flex-row-start'>
@@ -55,6 +61,12 @@ export const AlbumShow = (props) => {
               classStyle='albumId'
             />
           </div>
+        </div>
+        <div className='flex-row-start'>
+          <button className='lg-play-btn' onClick={() => playSong()}>
+            <FaPlay />
+            &nbsp;<span className='lg-button-text'>Play</span>
+          </button>
         </div>
         <TrackLabels />
         {props.tracks.map((track) => (
