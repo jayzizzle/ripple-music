@@ -4,6 +4,8 @@ import { TrackItem } from '../tracks/track_item';
 import { Link } from 'react-router-dom';
 import { TrackLabels } from '../tracks/track_labels';
 import { FaPlay } from 'react-icons/fa';
+import { ImShuffle } from 'react-icons/im';
+import { shuffle } from '../../util/helper_util';
 
 export const AlbumShow = (props) => {
   let songList;
@@ -29,6 +31,12 @@ export const AlbumShow = (props) => {
   }
 
   const playSong = () => {
+    props.receivedNewPlaylist(songList);
+    props.setToPlay({ isPlaying: true });
+  };
+
+  const shuffleSongs = () => {
+    songList = shuffle(songList);
     props.receivedNewPlaylist(songList);
     props.setToPlay({ isPlaying: true });
   };
@@ -66,6 +74,10 @@ export const AlbumShow = (props) => {
           <button className='lg-play-btn' onClick={() => playSong()}>
             <FaPlay />
             &nbsp;<span className='lg-button-text'>Play</span>
+          </button>
+          <button className='lg-shuffle-btn' onClick={() => shuffleSongs()}>
+            <ImShuffle />
+            &nbsp;<span className='lg-button-text'>Shuffle</span>
           </button>
         </div>
         <TrackLabels />
