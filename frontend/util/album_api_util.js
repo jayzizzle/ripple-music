@@ -1,7 +1,7 @@
 export const getAllAlbums = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/albums',
+    url: '/api/albums',
   });
 };
 
