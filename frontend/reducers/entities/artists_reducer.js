@@ -4,6 +4,7 @@ import {
 } from '../../actions/artist_actions';
 import { RECEIVED_ALBUM } from '../../actions/album_actions';
 import { RECEIVED_ALL_FOLLOWS } from '../../actions/follow_actions';
+import { RECEIVED_ALL_FEATURES } from '../../actions/feature_actions';
 
 const artistsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -18,6 +19,8 @@ const artistsReducer = (oldState = {}, action) => {
       return { ...action.album.artist };
     case RECEIVED_ALL_FOLLOWS:
       return { ...action.follows.artists };
+    case RECEIVED_ALL_FEATURES:
+      return { ...action.features.artists };
     default:
       return oldState;
   }

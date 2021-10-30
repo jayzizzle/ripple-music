@@ -4,6 +4,7 @@ import {
 } from '../../actions/album_actions';
 import { RECEIVED_ARTIST } from '../../actions/artist_actions';
 import { RECEIVED_ALL_ALBUM_LIKES } from '../../actions/like_actions';
+import { RECEIVED_ALL_FEATURES } from '../../actions/feature_actions';
 
 const albumsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -18,6 +19,8 @@ const albumsReducer = (oldState = {}, action) => {
       return { ...action.artist.albums };
     case RECEIVED_ALL_ALBUM_LIKES:
       return { ...action.albumLikes.albums };
+    case RECEIVED_ALL_FEATURES:
+      return { ...action.features.albums };
     default:
       return oldState;
   }
