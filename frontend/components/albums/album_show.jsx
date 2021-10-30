@@ -37,8 +37,7 @@ export const AlbumShow = (props) => {
 
   const shuffleSongs = () => {
     songList = shuffle(songList);
-    props.receivedNewPlaylist(songList);
-    props.setToPlay({ isPlaying: true });
+    playSong();
   };
 
   return (

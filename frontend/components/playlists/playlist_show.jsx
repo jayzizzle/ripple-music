@@ -4,6 +4,9 @@ import { TrackLabels } from '../tracks/track_labels';
 import EditPlaylistModal from '../modals/edit_playlist_modal';
 import { shorten } from '../../util/helper_util';
 import { HiOutlinePencilAlt } from 'react-icons/hi';
+import { FaPlay } from 'react-icons/fa';
+import { ImShuffle } from 'react-icons/im';
+import { shuffle } from '../../util/helper_util';
 
 export const PlaylistShow = (props) => {
   let songList;
@@ -40,6 +43,16 @@ export const PlaylistShow = (props) => {
     }));
   }
 
+  const playSong = () => {
+    props.receivedNewPlaylist(songList);
+    props.setToPlay({ isPlaying: true });
+  };
+
+  const shuffleSongs = () => {
+    songList = shuffle(songList);
+    playSong();
+  };
+
   return (
     <div className='flex-row-start'>
       <main className='flex-col-start'>
@@ -51,6 +64,16 @@ export const PlaylistShow = (props) => {
             <h1>{props.playlist.title}</h1>
             {renderEdit(props.userId, props.playlist.userId)}
           </div>
+        </div>
+        <div className='flex-row-start'>
+          <button className='lg-play-btn' onClick={() => playSong()}>
+            <FaPlay />
+            &nbsp;<span className='lg-button-text'>Play</span>
+          </button>
+          <button className='lg-shuffle-btn' onClick={() => shuffleSongs()}>
+            <ImShuffle />
+            &nbsp;<span className='lg-button-text'>Shuffle</span>
+          </button>
         </div>
         <TrackLabels />
         {props.tracks.map((track, i) => (

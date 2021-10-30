@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { TrackLabels } from './track_labels';
 import { TrackItem } from './track_item';
+import { FaPlay } from 'react-icons/fa';
+import { ImShuffle } from 'react-icons/im';
+import { shuffle } from '../../util/helper_util';
 
 export const Tracks = (props) => {
   let songList;
@@ -25,10 +28,30 @@ export const Tracks = (props) => {
     }));
   }
 
+  const playSong = () => {
+    props.receivedNewPlaylist(songList);
+    props.setToPlay({ isPlaying: true });
+  };
+
+  const shuffleSongs = () => {
+    songList = shuffle(songList);
+    playSong();
+  };
+
   return (
     <div className='flex-row-start'>
       <main className='flex-col-start'>
         <h1 className='section-title'>My Tracks</h1>
+        <div className='flex-row-start'>
+          <button className='lg-play-btn' onClick={() => playSong()}>
+            <FaPlay />
+            &nbsp;<span className='lg-button-text'>Play</span>
+          </button>
+          <button className='lg-shuffle-btn' onClick={() => shuffleSongs()}>
+            <ImShuffle />
+            &nbsp;<span className='lg-button-text'>Shuffle</span>
+          </button>
+        </div>
         <TrackLabels />
         {props.likedTracks.map((track, i) => (
           <TrackItem
