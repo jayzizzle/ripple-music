@@ -110,16 +110,104 @@ weeknd.photo.attach(io: file010, filename: 'weeknd.jpg')
 file011 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
 wolftyla.photo.attach(io: file011, filename: 'wolftyla.jpg')
 
-her_vol_1 = Album.create(
-    title: 'H.E.R. Volume 1',
-    artist_id: her.id,
-    category: 'EP',
-    year: 2016,
-    is_explicit: false
+in_case_we_die = Album.create(
+    title: 'In Case We Die',
+    artist_id: tinashe.id,
+    category: 'LP',
+    year: 2012,
+    is_explicit: true
 )
 
-cover01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol1.jpg')
-her_vol_1.cover.attach(io: cover01, filename: 'her-vol1.jpg')
+cover00 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/tinashe-in-case.jpg')
+in_case_we_die.cover.attach(io: cover00, filename: 'tinashe-in-case.jpg')
+
+reverie = Album.create(
+    title: 'Reverie',
+    artist_id: tinashe.id,
+    category: 'LP',
+    year: 2012,
+    is_explicit: true
+)
+
+cover04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/tinashe-reverie.jpg')
+reverie.cover.attach(io: cover04, filename: 'tinashe-reverie.jpg')
+
+black_water = Album.create(
+    title: 'Black Water',
+    artist_id: tinashe.id,
+    category: 'LP',
+    year: 2013,
+    is_explicit: true
+)
+
+cover05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/tinashe-blackwater.jpg')
+black_water.cover.attach(io: cover05, filename: 'tinashe-blackwater.jpg')
+
+sailing_souls = Album.create(
+    title: 'Sailing Soul(s)',
+    artist_id: jhene.id,
+    category: 'LP',
+    year: 2011,
+    is_explicit: true
+)
+
+cover06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jhene-sailing.jpg')
+sailing_souls.cover.attach(io: cover06, filename: 'jhene-sailing.jpg')
+
+nostalgia_ultra = Album.create(
+    title: 'Nostalgia, Ultra',
+    artist_id: frank.id,
+    category: 'LP',
+    year: 2011,
+    is_explicit: true
+)
+
+cover07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/frank-nostalgia.jpg')
+nostalgia_ultra.cover.attach(io: cover07, filename: 'frank-nostalgia.jpg')
+
+house_of_balloons = Album.create(
+    title: 'House Of Balloons',
+    artist_id: weeknd.id,
+    category: 'LP',
+    year: 2011,
+    is_explicit: true
+)
+
+cover08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/weeknd-house.jpg')
+house_of_balloons.cover.attach(io: cover08, filename: 'weeknd-house.jpg')
+
+thursday = Album.create(
+    title: 'Thursday',
+    artist_id: weeknd.id,
+    category: 'LP',
+    year: 2011,
+    is_explicit: true
+)
+
+cover09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/weeknd-thursday.png')
+thursday.cover.attach(io: cover09, filename: 'weeknd-thursday.png')
+
+echoes_of_silence = Album.create(
+    title: 'Echoes Of Silence',
+    artist_id: weeknd.id,
+    category: 'LP',
+    year: 2011,
+    is_explicit: true
+)
+
+cover10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/weeknd-echoes.png')
+echoes_of_silence.cover.attach(io: cover10, filename: 'weeknd-echoes.png')
+
+mischief = Album.create(
+    title: 'Mischief: The Mixtape',
+    artist_id: miguel.id,
+    category: 'LP',
+    year: 2008,
+    is_explicit: true
+)
+
+cover11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/miguel-mischief.jpg')
+mischief.cover.attach(io: cover11, filename: 'miguel-mischief.jpg')
 
 cloud_19 = Album.create(
     title: 'Cloud 19',
@@ -132,6 +220,17 @@ cloud_19 = Album.create(
 cover02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/kehlani-cloud.jpg')
 cloud_19.cover.attach(io: cover02, filename: 'kehlani-cloud.jpg')
 
+division = Album.create(
+    title: 'Division',
+    artist_id: jenevieve.id,
+    category: 'LP',
+    year: 2021,
+    is_explicit: true
+)
+
+cover12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jenevieve-division.jpg')
+division.cover.attach(io: cover12, filename: 'jenevieve-division.jpg')
+
 wolf_in_color = Album.create(
     title: 'Wolf In Color',
     artist_id: wolftyla.id,
@@ -142,6 +241,50 @@ wolf_in_color = Album.create(
 
 cover03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/wolftyla-wolf.jpg')
 wolf_in_color.cover.attach(io: cover03, filename: 'wolftyla-wolf.jpg')
+
+her_vol_1 = Album.create(
+    title: 'H.E.R. Volume 1',
+    artist_id: her.id,
+    category: 'EP',
+    year: 2016,
+    is_explicit: false
+)
+
+cover01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol1.jpg')
+her_vol_1.cover.attach(io: cover01, filename: 'her-vol1.jpg')
+
+her_vol_2 = Album.create(
+    title: 'H.E.R. Volume 2',
+    artist_id: her.id,
+    category: 'EP',
+    year: 2017,
+    is_explicit: false
+)
+    
+cover13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol2.jpg')
+her_vol_2.cover.attach(io: cover13, filename: 'her-vol2.jpg')
+
+friday_night_lights = Album.create(
+    title: 'Friday Night Lights',
+    artist_id: jcole.id,
+    category: 'LP',
+    year: 2010,
+    is_explicit: true
+)
+
+cover15 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jcole-friday.png')
+friday_night_lights.cover.attach(io: cover15, filename: 'jcole-friday.png')
+
+room_for_improvement = Album.create(
+    title: 'Room For Improvement',
+    artist_id: drake.id,
+    category: 'LP',
+    year: 2006,
+    is_explicit: true
+)
+
+cover14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/drake-room.jpg')
+room_for_improvement.cover.attach(io: cover14, filename: 'drake-room.jpg')
 
 her_vol_1_01 = Track.create(
     title: 'Losing',
@@ -219,17 +362,6 @@ her_vol_1_07 = Track.create(
 
 vol1_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Pigment.mp3')
 her_vol_1_07.audiofile.attach(io: vol1_07, filename: 'Pigment.mp3')
-
-her_vol_2 = Album.create(
-    title: 'H.E.R. Volume 2',
-    artist_id: her.id,
-    category: 'EP',
-    year: 2017,
-    is_explicit: false
-)
-    
-cover13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol2.jpg')
-her_vol_2.cover.attach(io: cover13, filename: 'her-vol2.jpg')
 
 her_vol_2_01 = Track.create(
     title: 'Every Kind Of Way',
@@ -461,17 +593,6 @@ wolf_in_color_06 = Track.create(
 
 wolf06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/06+In+the+Middle.mp3')
 wolf_in_color_06.audiofile.attach(io: wolf06, filename: '06+In+the+Middle.mp3')
-
-room_for_improvement = Album.create(
-    title: 'Room For Improvement',
-    artist_id: drake.id,
-    category: 'LP',
-    year: 2006,
-    is_explicit: true
-)
-
-cover14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/drake-room.jpg')
-room_for_improvement.cover.attach(io: cover14, filename: 'drake-room.jpg')
 
 room_for_improvement_01 = Track.create(
     title: 'Intro',
@@ -731,6 +852,8 @@ room_for_improvement_23 = Track.create(
 
 room_23 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/23+UPA+Outro.mp3')
 room_for_improvement_23.audiofile.attach(io: room_23, filename: '23+UPA+Outro.mp3')
+
+
 
 follows1 = Follow.create(
     artist_id: her.id,
