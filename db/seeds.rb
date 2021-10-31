@@ -462,6 +462,276 @@ wolf_in_color_06 = Track.create(
 wolf06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/06+In+the+Middle.mp3')
 wolf_in_color_06.audiofile.attach(io: wolf06, filename: '06+In+the+Middle.mp3')
 
+room_for_improvement = Album.create(
+    title: 'Room For Improvement',
+    artist_id: drake.id,
+    category: 'LP',
+    year: 2006,
+    is_explicit: true
+)
+
+cover14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/drake-room.jpg')
+room_for_improvement.cover.attach(io: cover14, filename: 'drake-room.jpg')
+
+room_for_improvement_01 = Track.create(
+    title: 'Intro',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 1,
+    seconds: 52,
+    is_interlude: true
+)
+
+room_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/01+Intro.mp3')
+room_for_improvement_01.audiofile.attach(io: room_01, filename: '01+Intro.mp3')
+
+room_for_improvement_02 = Track.create(
+    title: 'Pianist Hands (Interlude)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 2,
+    seconds: 71,
+    is_interlude: true
+)
+
+room_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/02+Pianist+Hands+Skit+1.mp3')
+room_for_improvement_02.audiofile.attach(io: room_02, filename: '02+Pianist+Hands+Skit+1.mp3')
+
+room_for_improvement_03 = Track.create(
+    title: 'Special (feat. Voyce)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 3,
+    seconds: 292
+)
+
+room_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/03+Special+Feat+Voyce.mp3')
+room_for_improvement_03.audiofile.attach(io: room_03, filename: '03+Special+Feat+Voyce.mp3')
+
+room_for_improvement_04 = Track.create(
+    title: 'Do What You Do',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 4,
+    seconds: 228
+)
+
+room_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/04+Do+What+You+Do.mp3')
+room_for_improvement_04.audiofile.attach(io: room_04, filename: '04+Do+What+You+Do.mp3')
+
+room_for_improvement_05 = Track.create(
+    title: 'Money (Remix)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 5,
+    seconds: 145
+)
+
+room_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/05+Money+Remix+Featuring+Nickelus+F.mp3')
+room_for_improvement_05.audiofile.attach(io: room_05, filename: '05+Money+Remix+Featuring+Nickelus+F.mp3')
+
+room_for_improvement_06 = Track.create(
+    title: 'AM 2 PM (feat. Nickelus F)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 6,
+    seconds: 208
+)
+
+room_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/06+AM+2+PM+Feat+Nickelus+F.mp3')
+room_for_improvement_06.audiofile.attach(io: room_06, filename: '06+AM+2+PM+Feat+Nickelus+F.mp3')
+
+room_for_improvement_07 = Track.create(
+    title: 'City Is Mine',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 7,
+    seconds: 233
+)
+
+room_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/07+City+Is+Mine.mp3')
+room_for_improvement_07.audiofile.attach(io: room_07, filename: '07+City+Is+Mine.mp3')
+
+room_for_improvement_08 = Track.create(
+    title: "Drake's Voicemail Box #1",
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 8,
+    seconds: 72,
+    is_interlude: true
+)
+
+room_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/08+Drakes+Voice+Skit+2.mp3')
+room_for_improvement_08.audiofile.attach(io: room_08, filename: '08+Drakes+Voice+Skit+2.mp3')
+
+room_for_improvement_09 = Track.create(
+    title: 'Bad Meaning Good',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 9,
+    seconds: 152
+)
+
+room_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/09+Bad+Meanin+Good+Feat+Slakah+the+Beatchild.mp3')
+room_for_improvement_09.audiofile.attach(io: room_09, filename: '09+Bad+Meanin+Good+Feat+Slakah+the+Beatchild.mp3')
+
+room_for_improvement_10 = Track.create(
+    title: 'Thrill Is Gone',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 10,
+    seconds: 182
+)
+
+room_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/10+Thrill+Is+Gone.mp3')
+room_for_improvement_10.audiofile.attach(io: room_10, filename: '10+Thrill+Is+Gone.mp3')
+
+room_for_improvement_11 = Track.create(
+    title: 'Make Things Right',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 11,
+    seconds: 161
+)
+
+room_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/11++Make+Things+Right.mp3')
+room_for_improvement_11.audiofile.attach(io: room_11, filename: '11++Make+Things+Right.mp3')
+
+room_for_improvement_12 = Track.create(
+    title: 'Video Girl',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 12,
+    seconds: 226
+)
+
+room_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/12+Video+Girl+Feat+Sean+G.mp3')
+room_for_improvement_12.audiofile.attach(io: room_12, filename: '12+Video+Girl+Feat+Sean+G.mp3')
+
+room_for_improvement_13 = Track.create(
+    title: "Drake's Voicemail Box #2",
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 13,
+    seconds: 16,
+    is_interlude: true
+)
+
+room_13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/13+Drakes+Voice+Skit+3.mp3')
+room_for_improvement_13.audiofile.attach(io: room_13, filename: '13+Drakes+Voice+Skit+3.mp3')
+
+room_for_improvement_14 = Track.create(
+    title: 'Come Winter',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 14,
+    seconds: 328
+)
+
+room_14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/14+Come+Winter.mp3')
+room_for_improvement_14.audiofile.attach(io: room_14, filename: '14+Come+Winter.mp3')
+
+room_for_improvement_15 = Track.create(
+    title: 'Extra Special',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 15,
+    seconds: 178
+)
+
+room_15 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/15+Extra+Special.mp3')
+room_for_improvement_15.audiofile.attach(io: room_15, filename: '15+Extra+Special.mp3')
+
+room_for_improvement_16 = Track.create(
+    title: 'About The Game (Freestyle)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 16,
+    seconds: 105
+)
+
+room_16 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/16+About+The+Game+Remix+Feat+Trey+Songz.mp3')
+room_for_improvement_16.audiofile.attach(io: room_16, filename: '16+About+The+Game+Remix+Feat+Trey+Songz.mp3')
+
+room_for_improvement_17 = Track.create(
+    title: 'All This Love (feat. Voyce)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 17,
+    seconds: 200
+)
+
+room_17 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/17+All+This+Love+Feat+Voyce.mp3')
+room_for_improvement_17.audiofile.attach(io: room_17, filename: '17+All+This+Love+Feat+Voyce.mp3')
+
+room_for_improvement_18 = Track.create(
+    title: "Drake's Voicemail Box #3",
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 18,
+    seconds: 72,
+    is_interlude: true
+)
+
+room_18 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/18+Drakes+Voice+Skit+4.mp3')
+room_for_improvement_18.audiofile.attach(io: room_18, filename: '18+Drakes+Voice+Skit+4.mp3')
+
+room_for_improvement_19 = Track.create(
+    title: "A Scorpio's Mind",
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 19,
+    seconds: 232
+)
+
+room_19 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/19+A+Scorpios+Mind+Feat+Nickelus+F.mp3')
+room_for_improvement_19.audiofile.attach(io: room_19, filename: '19+A+Scorpios+Mind+Feat+Nickelus+F.mp3')
+
+room_for_improvement_20 = Track.create(
+    title: 'S.T.R.E.S.S.',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 20,
+    seconds: 223
+)
+
+room_20 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/20+STRESS.mp3')
+room_for_improvement_20.audiofile.attach(io: room_20, filename: '20+STRESS.mp3')
+
+room_for_improvement_21 = Track.create(
+    title: 'Try Harder',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 21,
+    seconds: 142
+)
+
+room_21 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/21+Try+Harder.mp3')
+room_for_improvement_21.audiofile.attach(io: room_21, filename: '21+Try+Harder.mp3')
+
+room_for_improvement_22 = Track.create(
+    title: 'Kick, Push (Remix)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 22,
+    seconds: 284
+)
+
+room_22 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/22+Lupe+Fiasco+Ft.+Drake+-+Kick+Push+Remix.mp3')
+room_for_improvement_22.audiofile.attach(io: room_22, filename: '22+Lupe+Fiasco+Ft.+Drake+-+Kick+Push+Remix.mp3')
+
+room_for_improvement_23 = Track.create(
+    title: 'U.P.A. (Outro)',
+    artist_id: drake.id,
+    album_id: room_for_improvement.id,
+    num: 23,
+    seconds: 134,
+    is_interlude: true
+)
+
+room_23 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/23+UPA+Outro.mp3')
+room_for_improvement_23.audiofile.attach(io: room_23, filename: '23+UPA+Outro.mp3')
+
 follows1 = Follow.create(
     artist_id: her.id,
     user_id: spidey.id
