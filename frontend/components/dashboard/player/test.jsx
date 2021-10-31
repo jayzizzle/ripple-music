@@ -62,7 +62,16 @@ export const Test = (props) => {
     player.current.src = song.audioUrl;
   };
 
-  const toggleMute = () => {};
+  const toggleMute = () => {
+    if (!isMuted) {
+      player.current.volume = 0;
+      setCurrentVolume(0);
+      setIsMuted(true);
+    } else {
+      adjustVolume();
+      setIsMuted(false);
+    }
+  };
 
   const togglePlayPause = () => {
     const prevValue = isPlaying;
@@ -194,8 +203,11 @@ export const Test = (props) => {
         </div>
 
         <div className='flex-row-end vertical-center player-side player-right'>
-          <button>
-            <HiVolumeUp />
+          <button
+            className={isMuted ? 'salmon mute-btn' : 'mute-btn hover-cyan'}
+            onClick={() => toggleMute()}
+          >
+            {isMuted ? <HiVolumeOff /> : <HiVolumeUp />}
           </button>
           <input
             type='range'
