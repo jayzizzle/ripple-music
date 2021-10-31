@@ -22,13 +22,28 @@ spidey = User.create(username: 'spidey', email: 'spidey@marvel.com', password: '
 miles = User.create(username: 'miles', email: 'miles@marvel.com', password: 'morales')
 gwen = User.create(username: 'gwen', email: 'gwen@marvel.com', password: 'gstacy')
 
-her = Artist.create(
-    artist_name: 'H.E.R.', 
+tinashe = Artist.create(
+    artist_name: 'Tinashe', 
     bio: ''
 )
 
-kehlani = Artist.create(
-    artist_name: 'Kehlani', 
+jhene = Artist.create(
+    artist_name: 'Jhene Aiko', 
+    bio: ''
+)
+
+miguel = Artist.create(
+    artist_name: 'Miguel', 
+    bio: ''
+)
+
+frank = Artist.create(
+    artist_name: 'Frank Ocean', 
+    bio: ''
+)
+
+jenevieve = Artist.create(
+    artist_name: 'Jenevieve', 
     bio: ''
 )
 
@@ -37,11 +52,60 @@ wolftyla = Artist.create(
     bio: ''
 )
 
+weeknd = Artist.create(
+    artist_name: 'The Weeknd', 
+    bio: ''
+)
+
+drake = Artist.create(
+    artist_name: 'Drake', 
+    bio: ''
+)
+
+jcole = Artist.create(
+    artist_name: 'J. Cole', 
+    bio: ''
+)
+
+kehlani = Artist.create(
+    artist_name: 'Kehlani', 
+    bio: ''
+)
+
+her = Artist.create(
+    artist_name: 'H.E.R.', 
+    bio: ''
+)
+
+file001 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/drake.jpg')
+drake.photo.attach(io: file001, filename: 'drake.jpg')
+
+file002 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/frank.jpg')
+frank.photo.attach(io: file002, filename: 'frank.jpg')
+
 file003 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
 her.photo.attach(io: file003, filename: 'her.jpg')
 
+file004 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/jcole.jpg')
+jcole.photo.attach(io: file004, filename: 'jcole.jpg')
+
+file005 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/jenevieve.jpg')
+jenevieve.photo.attach(io: file005, filename: 'jenevieve.jpg')
+
+file006 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/jhene.jpg')
+jhene.photo.attach(io: file006, filename: 'jhene.jpg')
+
 file007 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/kehlani.jpg')
 kehlani.photo.attach(io: file007, filename: 'kehlani.jpg')
+
+file008 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/miguel.jpg')
+miguel.photo.attach(io: file008, filename: 'miguel.jpg')
+
+file009 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/tinashe.jpg')
+tinashe.photo.attach(io: file009, filename: 'tinashe.jpg')
+
+file010 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/weeknd.jpg')
+weeknd.photo.attach(io: file010, filename: 'weeknd.jpg')
 
 file011 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
 wolftyla.photo.attach(io: file011, filename: 'wolftyla.jpg')
