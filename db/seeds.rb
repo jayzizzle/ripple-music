@@ -156,6 +156,105 @@ her_vol_1_07 = Track.create(
 vol1_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-1/Pigment.mp3')
 her_vol_1_07.audiofile.attach(io: vol1_07, filename: 'Pigment.mp3')
 
+her_vol_2 = Album.create(
+    title: 'H.E.R. Volume 2',
+    artist_id: her.id,
+    category: 'EP',
+    year: 2017,
+    is_explicit: false
+)
+    
+cover13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/her-vol2.jpg')
+her_vol_2.cover.attach(io: cover13, filename: 'her-vol2.jpg')
+
+her_vol_2_01 = Track.create(
+    title: 'Every Kind Of Way',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 1,
+    seconds: 160
+)
+
+vol2_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Every+Kind+Of+Way.mp3')
+her_vol_2_01.audiofile.attach(io: vol2_01, filename: 'Every+Kind+Of+Way.mp3')
+
+her_vol_2_02 = Track.create(
+    title: 'Say It Again',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 2,
+    seconds: 172
+)
+
+vol2_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Say+It+Again.mp3')
+her_vol_2_02.audiofile.attach(io: vol2_02, filename: 'Say+It+Again.mp3')
+
+her_vol_2_03 = Track.create(
+    title: 'Still Down',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 3,
+    seconds: 169
+)
+
+vol2_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Still+Down.mp3')
+her_vol_2_03.audiofile.attach(io: vol2_03, filename: 'Still+Down.mp3')
+
+her_vol_2_04 = Track.create(
+    title: 'Avenue',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 4,
+    seconds: 214
+)
+
+vol2_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Avenue.mp3')
+her_vol_2_04.audiofile.attach(io: vol2_04, filename: 'Avenue.mp3')
+
+her_vol_2_05 = Track.create(
+    title: 'Gone Away',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 5,
+    seconds: 249
+)
+
+vol2_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Gone+Away.mp3')
+her_vol_2_05.audiofile.attach(io: vol2_05, filename: 'Gone+Away.mp3')
+
+her_vol_2_06 = Track.create(
+    title: "I Won't",
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 6,
+    seconds: 212
+)
+
+vol2_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/I+Wont.mp3')
+her_vol_2_06.audiofile.attach(io: vol2_06, filename: 'I+Wont.mp3')
+
+her_vol_2_07 = Track.create(
+    title: 'Changes',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 7,
+    seconds: 213
+)
+
+vol2_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Changes.mp3')
+her_vol_2_07.audiofile.attach(io: vol2_07, filename: 'Changes.mp3')
+
+her_vol_2_08 = Track.create(
+    title: 'Lights On',
+    artist_id: her.id,
+    album_id: her_vol_2.id,
+    num: 8,
+    seconds: 219
+)
+
+vol2_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/her-vol-2/Lights+On.mp3')
+her_vol_2_08.audiofile.attach(io: vol2_08, filename: '/Lights+On.mp3')
+
 cloud_19_01 = Track.create(
     title: 'FWU',
     artist_id: kehlani.id,
