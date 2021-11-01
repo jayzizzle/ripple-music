@@ -1439,6 +1439,453 @@ mischief_08 = Track.create(
 misc_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/08+8-+Supernatural.mp3')
 mischief_08.audiofile.attach(io: misc_08, filename: '08+8-+Supernatural.mp3')
 
+black_water_01 = Track.create(
+    title: 'Black Water',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 1,
+    seconds: 176
+)
+
+black_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/01+Black+Water.mp3')
+black_water_01.audiofile.attach(io: black_01, filename: '01+Black+Water.mp3')
+
+black_water_02 = Track.create(
+    title: 'Before The Storm (Interlude)',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 2,
+    seconds: 23,
+    is_interlude: true
+)
+
+black_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/02+Before+the+Storm.mp3')
+black_water_02.audiofile.attach(io: black_02, filename: '02+Before+the+Storm.mp3')
+
+black_water_03 = Track.create(
+    title: 'Vulnerable (feat. Travis Scott)',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 3,
+    seconds: 206
+)
+
+black_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/03+Vulnerable.MP3')
+black_water_03.audiofile.attach(io: black_03, filename: '03+Vulnerable.MP3')
+
+black_water_04 = Track.create(
+    title: 'Secret Weapon',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 4,
+    seconds: 190
+)
+
+black_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/04+Secret+Weapon.mp3')
+black_water_04.audiofile.attach(io: black_04, filename: '04+Secret+Weapon.mp3')
+
+black_water_05 = Track.create(
+    title: 'Video Tapes (Interlude)',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 5,
+    seconds: 39,
+    is_interlude: true
+)
+
+black_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/05+Video+Tapes.mp3')
+black_water_05.audiofile.attach(io: black_05, filename: '05+Video+Tapes.mp3')
+
+black_water_06 = Track.create(
+    title: 'Midnight Sun',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 6,
+    seconds: 272
+)
+
+black_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/06+Midnight+Sun.mp3')
+black_water_06.audiofile.attach(io: black_06, filename: '06+Midnight+Sun.mp3')
+
+black_water_07 = Track.create(
+    title: '1 For Me',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 7,
+    seconds: 208
+)
+
+black_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/07+1+for+Me.mp3')
+black_water_07.audiofile.attach(io: black_07, filename: '07+1+for+Me.mp3')
+
+black_water_08 = Track.create(
+    title: 'Daybreak (Interlude)',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 8,
+    seconds: 34,
+    is_interlude: true
+)
+
+black_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/08+Daybreak.mp3')
+black_water_08.audiofile.attach(io: black_08, filename: '08+Daybreak.mp3')
+
+black_water_09 = Track.create(
+    title: 'Fugitive',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 9,
+    seconds: 134
+)
+
+black_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/09+Fugitive.mp3')
+black_water_09.audiofile.attach(io: black_09, filename: '09+Fugitive.mp3')
+
+black_water_10 = Track.create(
+    title: 'Stunt',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 10,
+    seconds: 215
+)
+
+black_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/10+Stunt.mp3')
+black_water_10.audiofile.attach(io: black_10, filename: '10+Stunt.mp3')
+
+black_water_11 = Track.create(
+    title: 'Just A Taste',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 11,
+    seconds: 197
+)
+
+black_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/11+Just+A+Taste.mp3')
+black_water_11.audiofile.attach(io: black_11, filename: '11+Just+A+Taste.mp3')
+
+black_water_12 = Track.create(
+    title: 'Middle Of Nowhere',
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 12,
+    seconds: 192
+)
+
+black_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/12+Middle+of+Nowhere.mp3')
+black_water_12.audiofile.attach(io: black_12, filename: '12+Middle+of+Nowhere.mp3')
+
+black_water_13 = Track.create(
+    title: "Ain't Ready...",
+    artist_id: tinashe.id,
+    album_id: black_water.id,
+    num: 13,
+    seconds: 92
+)
+
+black_13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-blackwater/13+Aint+Ready.mp3')
+black_water_13.audiofile.attach(io: black_13, filename: '13+Aint+Ready.mp3')
+
+in_case_we_die_01 = Track.create(
+    title: 'The Last Night On Earth',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 1,
+    seconds: 278
+)
+
+case_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/01+The+Last+Night+On+Earth.mp3')
+in_case_we_die_01.audiofile.attach(io: case_01, filename: '01+The+Last+Night+On+Earth.mp3')
+
+in_case_we_die_02 = Track.create(
+    title: 'My High',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 2,
+    seconds: 269
+)
+
+case_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/02+My+High.mp3')
+in_case_we_die_02.audiofile.attach(io: case_02, filename: '02+My+High.mp3')
+
+in_case_we_die_03 = Track.create(
+    title: 'Let You Love Me',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 3,
+    seconds: 252
+)
+
+case_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/03+Let+You+Love+Me.mp3')
+in_case_we_die_03.audiofile.attach(io: case_03, filename: '03+Let+You+Love+Me.mp3')
+
+in_case_we_die_04 = Track.create(
+    title: 'That',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 4,
+    seconds: 344
+)
+
+case_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/04+That.mp3')
+in_case_we_die_04.audiofile.attach(io: case_04, filename: '04+That.mp3')
+
+in_case_we_die_05 = Track.create(
+    title: 'The Will To Survive (Interlude)',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 5,
+    seconds: 37,
+    is_interlude: true
+)
+
+case_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/05+The+Will+to+Survive.mp3')
+in_case_we_die_05.audiofile.attach(io: case_05, filename: '05+The+Will+to+Survive.mp3')
+
+in_case_we_die_06 = Track.create(
+    title: 'Boss',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 6,
+    seconds: 221
+)
+
+case_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/06+Boss.mp3')
+in_case_we_die_06.audiofile.attach(io: case_06, filename: '06+Boss.mp3')
+
+in_case_we_die_07 = Track.create(
+    title: 'I Tried',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 7,
+    seconds: 275
+)
+
+case_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/07+I+Tried.mp3')
+in_case_we_die_07.audiofile.attach(io: case_07, filename: '07+I+Tried.mp3')
+
+in_case_we_die_08 = Track.create(
+    title: 'Another Season',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 8,
+    seconds: 247
+)
+
+case_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/08+Another+Season.mp3')
+in_case_we_die_08.audiofile.attach(io: case_08, filename: '08+Another+Season.mp3')
+
+in_case_we_die_09 = Track.create(
+    title: 'This Feeling',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 9,
+    seconds: 201
+)
+
+case_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/09+This+Feeling.mp3')
+in_case_we_die_09.audiofile.attach(io: case_09, filename: '09+This+Feeling.mp3')
+
+in_case_we_die_10 = Track.create(
+    title: 'Stumble',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 10,
+    seconds: 405
+)
+
+case_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/10+Stumble.mp3')
+in_case_we_die_10.audiofile.attach(io: case_10, filename: '10+Stumble.mp3')
+
+in_case_we_die_11 = Track.create(
+    title: 'Crossing The Cosmo',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 11,
+    seconds: 227
+)
+
+case_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/11+Crossing+The+Cosmo.mp3')
+in_case_we_die_11.audiofile.attach(io: case_11, filename: '11+Crossing+The+Cosmo.mp3')
+
+in_case_we_die_12 = Track.create(
+    title: 'Fading (Interlude)',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 12,
+    seconds: 86,
+    is_interlude: true
+)
+
+case_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/12+Fading.mp3')
+in_case_we_die_12.audiofile.attach(io: case_12, filename: '12+Fading.mp3')
+
+in_case_we_die_13 = Track.create(
+    title: 'Biding My Time',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 13,
+    seconds: 165
+)
+
+case_13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/13+Biding+My+Time.mp3')
+in_case_we_die_13.audiofile.attach(io: case_13, filename: '13+Biding+My+Time.mp3')
+
+in_case_we_die_14 = Track.create(
+    title: 'Heaven (Interlude)',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 14,
+    seconds: 129,
+    is_interlude: true
+)
+
+case_14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/14+Heaven.mp3')
+in_case_we_die_14.audiofile.attach(io: case_14, filename: '14+Heaven.mp3')
+
+in_case_we_die_15 = Track.create(
+    title: 'Chainless (Bonus Track)',
+    artist_id: tinashe.id,
+    album_id: in_case_we_die.id,
+    num: 15,
+    seconds: 191
+)
+
+case_15 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-in-case/15+Chainless+Bonus+Track.mp3')
+in_case_we_die_15.audiofile.attach(io: case_15, filename: '15+Chainless+Bonus+Track.mp3')
+
+reverie_01 = Track.create(
+    title: 'Fear Not',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 1,
+    seconds: 153
+)
+
+rev_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/01+Fear+Not.mp3')
+reverie_01.audiofile.attach(io: rev_01, filename: '01+Fear+Not.mp3')
+
+reverie_02 = Track.create(
+    title: 'Stargazing',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 2,
+    seconds: 225
+)
+
+rev_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/02+Stargazing.mp3')
+reverie_02.audiofile.attach(io: rev_02, filename: '02+Stargazing.mp3')
+
+reverie_03 = Track.create(
+    title: 'Yours',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 3,
+    seconds: 277
+)
+
+rev_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/03+Yours.mp3')
+reverie_03.audiofile.attach(io: rev_03, filename: '03+Yours.mp3')
+
+reverie_04 = Track.create(
+    title: 'Slow',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 4,
+    seconds: 268
+)
+
+rev_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/04+Slow.mp3')
+reverie_04.audiofile.attach(io: rev_04, filename: '04+Slow.mp3')
+
+reverie_05 = Track.create(
+    title: 'Another Me',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 5,
+    seconds: 249
+)
+
+rev_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/05+Another+Me.mp3')
+reverie_05.audiofile.attach(io: rev_05, filename: '05+Another+Me.mp3')
+
+reverie_06 = Track.create(
+    title: 'Come When I Call',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 6,
+    seconds: 274
+)
+
+rev_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/06+Come+When+I+Call.mp3')
+reverie_06.audiofile.attach(io: rev_06, filename: '06+Come+When+I+Call.mp3')
+
+reverie_07 = Track.create(
+    title: 'Illusions (Interlude)',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 7,
+    seconds: 45,
+    is_interlude: true
+)
+
+rev_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/07+Illusions.mp3')
+reverie_07.audiofile.attach(io: rev_07, filename: '07+Illusions.mp3')
+
+reverie_08 = Track.create(
+    title: 'Reverie',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 8,
+    seconds: 237
+)
+
+rev_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/08+Reverie.mp3')
+reverie_08.audiofile.attach(io: rev_08, filename: '08+Reverie.mp3')
+
+reverie_09 = Track.create(
+    title: "I'm Selfish",
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 9,
+    seconds: 162
+)
+
+rev_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/09+I_m+Selfish.mp3')
+reverie_09.audiofile.attach(io: rev_09, filename: '09+I_m+Selfish.mp3')
+
+reverie_10 = Track.create(
+    title: 'Ecstasy',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 10,
+    seconds: 203
+)
+
+rev_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/10+Ecstasy.mp3')
+reverie_10.audiofile.attach(io: rev_10, filename: '10+Ecstasy.mp3')
+
+reverie_11 = Track.create(
+    title: 'Who Am I Working For?',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 11,
+    seconds: 227
+)
+
+rev_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/11+Who+Am+I+Working+For_.mp3')
+reverie_11.audiofile.attach(io: rev_11, filename: '11+Who+Am+I+Working+For_.mp3')
+
+reverie_12 = Track.create(
+    title: 'Let You Love Me (XXYYXX Remix)',
+    artist_id: tinashe.id,
+    album_id: reverie.id,
+    num: 12,
+    seconds: 228
+)
+
+rev_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/12+Let+You+Love+Me+Xxyyxx+Remix.mp3')
+reverie_12.audiofile.attach(io: rev_12, filename: '12+Let+You+Love+Me+Xxyyxx+Remix.mp3')
+
 
 
 follows1 = Follow.create(
