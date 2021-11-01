@@ -1,6 +1,6 @@
 class Album < ApplicationRecord
   validates :title, :artist_id, :category, :year, presence: true
-  validates :category, inclusion: { in: ['LP', 'EP', 'Single'] }
+  validates :category, inclusion: { in: ['LP', 'EP', 'Single', 'Mix'] }
   validates :is_explicit, inclusion: { in: [true, false] }
 
   belongs_to :artist,

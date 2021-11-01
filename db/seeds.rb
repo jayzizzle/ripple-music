@@ -72,6 +72,11 @@ her = Artist.create(
     bio: ''
 )
 
+jonzamora = Artist.create(
+    artist_name: 'Jon Zamora', 
+    bio: ''
+)
+
 file001 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/drake.jpg')
 drake.photo.attach(io: file001, filename: 'drake.jpg')
 
@@ -101,6 +106,9 @@ weeknd.photo.attach(io: file010, filename: 'weeknd.jpg')
 
 file011 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/wolftyla.jpg')
 wolftyla.photo.attach(io: file011, filename: 'wolftyla.jpg')
+
+file012 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/jonzamora.jpg')
+jonzamora.photo.attach(io: file012, filename: 'jonzamora.jpg')
 
 in_case_we_die = Album.create(
     title: 'In Case We Die',
@@ -266,6 +274,28 @@ room_for_improvement = Album.create(
 
 cover14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/drake-room.jpg')
 room_for_improvement.cover.attach(io: cover14, filename: 'drake-room.jpg')
+
+rewind = Album.create(
+    title: 'Rewind',
+    artist_id: jonzamora.id,
+    category: 'Mix',
+    year: 2013,
+    is_explicit: false
+)
+
+mix_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jz-rewind.jpg')
+rewind.cover.attach(io: mix_01, filename: 'jz-rewind.jpg')
+
+summerchill = Album.create(
+    title: 'A Summer Chill',
+    artist_id: jonzamora.id,
+    category: 'Mix',
+    year: 2011,
+    is_explicit: false
+)
+
+mix_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jz-summerchill.jpg')
+summerchill.cover.attach(io: mix_02, filename: 'jz-summerchill.jpg')
 
 her_vol_1_01 = Track.create(
     title: 'Losing',
@@ -2163,6 +2193,28 @@ thursday_09 = Track.create(
 
 thurs_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/09+Heaven+Or+Las+Vegas.mp3')
 thursday_09.audiofile.attach(io: thurs_09, filename: '09+Heaven+Or+Las+Vegas.mp3')
+
+rewind_01 = Track.create(
+    title: 'Rewind',
+    artist_id: jonzamora.id,
+    album_id: rewind.id,
+    num: 1,
+    seconds: 3759
+)
+
+rew_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jz-mixes/Rewind.mp3')
+rewind_01.audiofile.attach(io: rew_01, filename: 'Rewind.mp3')
+
+summer_chill_01 = Track.create(
+    title: 'A Summer Chill',
+    artist_id: jonzamora.id,
+    album_id: summerchill.id,
+    num: 1,
+    seconds: 3572
+)
+
+chill_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jz-mixes/A+Summer+Chill.mp3')
+summer_chill_01.audiofile.attach(io: chill_01, filename: 'A+Summer+Chill.mp3')
 
 follows1 = Follow.create(
     artist_id: her.id,
