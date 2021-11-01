@@ -23,7 +23,7 @@ export const Tracks = (props) => {
       albumId: track.albumId,
       album: track.albumTitle,
       audioUrl: track.audioUrl,
-      // cover: props.album.coverUrl, -- HOW !?!?
+      cover: track.coverUrl, // FIX N+1
       playlistTitle: 'My Tracks',
     }));
   }

@@ -38,7 +38,7 @@ export const PlaylistShow = (props) => {
       albumId: track.albumId,
       album: track.albumTitle,
       audioUrl: track.audioUrl,
-      // cover: props.album.coverUrl,
+      cover: track.coverUrl,
       playlistTitle: props.playlist.title,
     }));
   }

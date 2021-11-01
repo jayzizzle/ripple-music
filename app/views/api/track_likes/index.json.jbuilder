@@ -6,7 +6,7 @@ json.set! 'tracks' do
       json.albumTitle track.album.title
       json.albumId track.album.id
       json.audioUrl url_for(track.audiofile)
-      # json.coverUrl url_for(track.album.cover)
+      json.coverUrl url_for(track.album.cover) # N+1 QUERY!!!
     end
   end
 end
