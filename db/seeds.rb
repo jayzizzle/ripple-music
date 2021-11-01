@@ -37,10 +37,10 @@ miguel = Artist.create(
     bio: ''
 )
 
-frank = Artist.create(
-    artist_name: 'Frank Ocean', 
-    bio: ''
-)
+# frank = Artist.create(
+#     artist_name: 'Frank Ocean', 
+#     bio: ''
+# )
 
 jenevieve = Artist.create(
     artist_name: 'Jenevieve', 
@@ -80,8 +80,8 @@ her = Artist.create(
 file001 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/drake.jpg')
 drake.photo.attach(io: file001, filename: 'drake.jpg')
 
-file002 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/frank.jpg')
-frank.photo.attach(io: file002, filename: 'frank.jpg')
+# file002 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/frank.jpg')
+# frank.photo.attach(io: file002, filename: 'frank.jpg')
 
 file003 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
 her.photo.attach(io: file003, filename: 'her.jpg')
@@ -154,16 +154,16 @@ sailing_souls = Album.create(
 cover06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jhene-sailing.jpg')
 sailing_souls.cover.attach(io: cover06, filename: 'jhene-sailing.jpg')
 
-nostalgia_ultra = Album.create(
-    title: 'Nostalgia, Ultra',
-    artist_id: frank.id,
-    category: 'LP',
-    year: 2011,
-    is_explicit: true
-)
+# nostalgia_ultra = Album.create(
+#     title: 'Nostalgia, Ultra',
+#     artist_id: frank.id,
+#     category: 'LP',
+#     year: 2011,
+#     is_explicit: true
+# )
 
-cover07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/frank-nostalgia.jpg')
-nostalgia_ultra.cover.attach(io: cover07, filename: 'frank-nostalgia.jpg')
+# cover07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/frank-nostalgia.jpg')
+# nostalgia_ultra.cover.attach(io: cover07, filename: 'frank-nostalgia.jpg')
 
 house_of_balloons = Album.create(
     title: 'House Of Balloons',
