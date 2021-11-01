@@ -1206,6 +1206,241 @@ division_12 = Track.create(
 div_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/12+Crybaby.mp3')
 division_12.audiofile.attach(io: div_12, filename: '12+Crybaby.mp3')
 
+sailing_souls_01 = Track.create(
+    title: 'The Beginning',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 1,
+    seconds: 9,
+    is_interlude: true
+)
+
+sailing_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/01+the+beginning.mp3')
+sailing_souls_01.audiofile.attach(io: sailing_01, filename: '01+the+beginning.mp3')
+
+sailing_souls_02 = Track.create(
+    title: 'Stranger',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 2,
+    seconds: 215
+)
+
+sailing_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/02+stranger.mp3')
+sailing_souls_02.audiofile.attach(io: sailing_02, filename: '02+stranger.mp3')
+
+sailing_souls_03 = Track.create(
+    title: 'Hoe (feat. Miguel, Gucci Mane)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 3,
+    seconds: 218
+)
+
+sailing_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/03+hoe+feat+Miguel.mp3')
+sailing_souls_03.audiofile.attach(io: sailing_03, filename: '03+hoe+feat+Miguel.mp3')
+
+sailing_souls_04 = Track.create(
+    title: 'July (feat. Drake)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 4,
+    seconds: 239
+)
+
+sailing_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/04+july+feat+Drake.mp3')
+sailing_souls_04.audiofile.attach(io: sailing_04, filename: '04+july+feat+Drake.mp3')
+
+sailing_souls_05 = Track.create(
+    title: 'My Mine',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 5,
+    seconds: 242
+)
+
+sailing_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/05+my+mine.mp3')
+sailing_souls_05.audiofile.attach(io: sailing_05, filename: '05+my+mine.mp3')
+
+sailing_souls_06 = Track.create(
+    title: 'Popular',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 6,
+    seconds: 178
+)
+
+sailing_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/06+popular.mp3')
+sailing_souls_06.audiofile.attach(io: sailing_06, filename: '06+popular.mp3')
+
+sailing_souls_07 = Track.create(
+    title: 'Real Now (feat. Dominik, HOPE, K. Roosevelt)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 7,
+    seconds: 261
+)
+
+sailing_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/07+real+now+feat+Lite+HOPE+Roosevelt.mp3')
+sailing_souls_07.audiofile.attach(io: sailing_07, filename: '07+real+now+feat+Lite+HOPE+Roosevelt.mp3')
+
+sailing_souls_08 = Track.create(
+    title: 'Sailing Not Selling (feat. Kanye West)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 8,
+    seconds: 181
+)
+
+sailing_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/08+sailing+NOT+selling+feat+Kanye.mp3')
+sailing_souls_08.audiofile.attach(io: sailing_08, filename: '08+sailing+NOT+selling+feat+Kanye.mp3')
+
+sailing_souls_09 = Track.create(
+    title: 'Do Better Blues (feat. HOPE)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 9,
+    seconds: 254
+)
+
+sailing_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/09+do+better+blues+with+HOPE.mp3')
+sailing_souls_09.audiofile.attach(io: sailing_09, filename: '09+do+better+blues+with+HOPE.mp3')
+
+sailing_souls_10 = Track.create(
+    title: 'Higher',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 10,
+    seconds: 232
+)
+
+sailing_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/10+higher.mp3')
+sailing_souls_10.audiofile.attach(io: sailing_10, filename: '10+higher.mp3')
+
+sailing_souls_11 = Track.create(
+    title: 'You vs Them',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 11,
+    seconds: 205
+)
+
+sailing_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/11+you+vs+them.mp3')
+sailing_souls_11.audiofile.attach(io: sailing_11, filename: '11+you+vs+them.mp3')
+
+sailing_souls_12 = Track.create(
+    title: 'Space Jam',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 12,
+    seconds: 179
+)
+
+sailing_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/12+space+jam.mp3')
+sailing_souls_12.audiofile.attach(io: sailing_12, filename: '12+space+jam.mp3')
+
+sailing_souls_13 = Track.create(
+    title: 'Growing Apart Too (feat. Kendrick Lamar, HOPE)',
+    artist_id: jhene.id,
+    album_id: sailing_souls.id,
+    num: 13,
+    seconds: 204
+)
+
+sailing_13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jhene-sailing/13+growing+apart+too+feat+Kendrick+Lamar+HOPE.mp3')
+sailing_souls_13.audiofile.attach(io: sailing_13, filename: '13+growing+apart+too+feat+Kendrick+Lamar+HOPE.mp3')
+
+mischief_01 = Track.create(
+    title: 'Intro',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 1,
+    seconds: 73,
+    is_interlude: true
+)
+
+misc_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/01+1-+Intro.mp3')
+mischief_01.audiofile.attach(io: misc_01, filename: '01+1-+Intro.mp3')
+
+mischief_02 = Track.create(
+    title: 'Ooh Ahh!',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 2,
+    seconds: 154
+)
+
+misc_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/02+2-+Ooh+Ahh!.mp3')
+mischief_02.audiofile.attach(io: misc_02, filename: '02+2-+Ooh+Ahh!.mp3')
+
+mischief_03 = Track.create(
+    title: 'All Night Long',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 3,
+    seconds: 172
+)
+
+misc_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/03+3-+All+Night+Long.mp3')
+mischief_03.audiofile.attach(io: misc_03, filename: '03+3-+All+Night+Long.mp3')
+
+mischief_04 = Track.create(
+    title: 'Strawberry Amazing',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 4,
+    seconds: 207
+)
+
+misc_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/04+4-+Strawberry+Amazing.mp3')
+mischief_04.audiofile.attach(io: misc_04, filename: '04+4-+Strawberry+Amazing.mp3')
+
+mischief_05 = Track.create(
+    title: 'Dig',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 5,
+    seconds: 157
+)
+
+misc_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/05+5-+Dig.mp3')
+mischief_05.audiofile.attach(io: misc_05, filename: '05+5-+Dig.mp3')
+
+mischief_06 = Track.create(
+    title: 'Overload',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 6,
+    seconds: 182
+)
+
+misc_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/06+6-+Overload.mp3')
+mischief_06.audiofile.attach(io: misc_06, filename: '06+6-+Overload.mp3')
+
+mischief_07 = Track.create(
+    title: 'Pick Up The Pace',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 7,
+    seconds: 135
+)
+
+misc_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/07+7-+Pick+Up+The+Pace.mp3')
+mischief_07.audiofile.attach(io: misc_07, filename: '07+7-+Pick+Up+The+Pace.mp3')
+
+mischief_08 = Track.create(
+    title: 'Super(natural)',
+    artist_id: miguel.id,
+    album_id: mischief.id,
+    num: 8,
+    seconds: 239
+)
+
+misc_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/miguel-mischief/08+8-+Supernatural.mp3')
+mischief_08.audiofile.attach(io: misc_08, filename: '08+8-+Supernatural.mp3')
+
+
+
 follows1 = Follow.create(
     artist_id: her.id,
     user_id: spidey.id
