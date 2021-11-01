@@ -853,7 +853,358 @@ room_for_improvement_23 = Track.create(
 room_23 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/drake-room/23+UPA+Outro.mp3')
 room_for_improvement_23.audiofile.attach(io: room_23, filename: '23+UPA+Outro.mp3')
 
+friday_night_lights_01 = Track.create(
+    title: 'Friday Night Lights (Intro)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 1,
+    seconds: 105,
+    is_interlude: true
+)
 
+friday_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/01+Friday+Night+Lights+Intro.mp3')
+friday_night_lights_01.audiofile.attach(io: friday_01, filename: '01+Friday+Night+Lights+Intro.mp3')
+
+friday_night_lights_02 = Track.create(
+    title: 'Too Deep For The Intro',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 2,
+    seconds: 225
+)
+
+friday_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/02+Too+Deep+For+The+Intro.mp3')
+friday_night_lights_02.audiofile.attach(io: friday_02, filename: '02+Too+Deep+For+The+Intro.mp3')
+
+friday_night_lights_03 = Track.create(
+    title: "Before I'm Gone",
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 3,
+    seconds: 264
+)
+
+friday_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/03+Before+Im+Gone.mp3')
+friday_night_lights_03.audiofile.attach(io: friday_03, filename: '03+Before+Im+Gone.mp3')
+
+friday_night_lights_04 = Track.create(
+    title: 'Back To The Topic (Freestyle)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 4,
+    seconds: 180
+)
+
+friday_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/04+Back+To+The+Topic+Freestyle.mp3')
+friday_night_lights_04.audiofile.attach(io: friday_04, filename: '04+Back+To+The+Topic+Freestyle.mp3')
+
+friday_night_lights_05 = Track.create(
+    title: 'You Got It (feat. Wale)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 5,
+    seconds: 287
+)
+
+friday_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/05+You+Got+It.mp3')
+friday_night_lights_05.audiofile.attach(io: friday_05, filename: '05+You+Got+It.mp3')
+
+friday_night_lights_06 = Track.create(
+    title: 'Villematic',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 6,
+    seconds: 193
+)
+
+friday_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/06+Villematic.mp3')
+friday_night_lights_06.audiofile.attach(io: friday_06, filename: '06+Villematic.mp3')
+
+friday_night_lights_07 = Track.create(
+    title: 'Enchanted (feat. Omen)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 7,
+    seconds: 251
+)
+
+friday_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/07+Enchanted.mp3')
+friday_night_lights_07.audiofile.attach(io: friday_07, filename: '07+Enchanted.mp3')
+
+friday_night_lights_08 = Track.create(
+    title: 'Blow Up',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 8,
+    seconds: 300
+)
+
+friday_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/08+Blow+Up.mp3')
+friday_night_lights_08.audiofile.attach(io: friday_08, filename: '08+Blow+Up.mp3')
+
+friday_night_lights_09 = Track.create(
+    title: 'Higher',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 9,
+    seconds: 229
+)
+
+friday_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/09+Higher.mp3')
+friday_night_lights_09.audiofile.attach(io: friday_09, filename: '09+Higher.mp3')
+
+friday_night_lights_10 = Track.create(
+    title: 'In The Morning (feat. Drake)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 10,
+    seconds: 234
+)
+
+friday_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/10+In+The+Morning.mp3')
+friday_night_lights_10.audiofile.attach(io: friday_10, filename: '10+In+The+Morning.mp3')
+
+friday_night_lights_11 = Track.create(
+    title: '2Face',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 11,
+    seconds: 286
+)
+
+friday_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/11+2Face.mp3')
+friday_night_lights_11.audiofile.attach(io: friday_11, filename: '11+2Face.mp3')
+
+friday_night_lights_12 = Track.create(
+    title: 'The Autograph',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 12,
+    seconds: 223
+)
+
+friday_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/12+The+Autograph.mp3')
+friday_night_lights_12.audiofile.attach(io: friday_12, filename: '12+The+Autograph.mp3')
+
+friday_night_lights_13 = Track.create(
+    title: 'Best Friend',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 13,
+    seconds: 205
+)
+
+friday_13 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/13+Best+Friend.mp3')
+friday_night_lights_13.audiofile.attach(io: friday_13, filename: '13+Best+Friend.mp3')
+
+friday_night_lights_14 = Track.create(
+    title: 'Cost Me A Lot',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 14,
+    seconds: 198
+)
+
+friday_14 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/14+Cost+Me+A+Lot.mp3')
+friday_night_lights_14.audiofile.attach(io: friday_14, filename: '14+Cost+Me+A+Lot.mp3')
+
+friday_night_lights_15 = Track.create(
+    title: 'Premeditated Murder',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 15,
+    seconds: 234
+)
+
+friday_15 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/15+Premeditated+Murder.mp3')
+friday_night_lights_15.audiofile.attach(io: friday_15, filename: '15+Premeditated+Murder.mp3')
+
+friday_night_lights_16 = Track.create(
+    title: 'Home For The Holidays',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 16,
+    seconds: 235
+)
+
+friday_16 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/16+Home+For+The+Holidays.mp3')
+friday_night_lights_16.audiofile.attach(io: friday_16, filename: '16+Home+For+The+Holidays.mp3')
+
+friday_night_lights_17 = Track.create(
+    title: 'Love Me Not',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 17,
+    seconds: 211
+)
+
+friday_17 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/17+Love+Me+Not.mp3')
+friday_night_lights_17.audiofile.attach(io: friday_17, filename: '17+Love+Me+Not.mp3')
+
+friday_night_lights_18 = Track.create(
+    title: 'See World',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 18,
+    seconds: 254
+)
+
+friday_18 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/18+See+World.mp3')
+friday_night_lights_18.audiofile.attach(io: friday_18, filename: '18+See+World.mp3')
+
+friday_night_lights_19 = Track.create(
+    title: 'Farewell',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 19,
+    seconds: 212
+)
+
+friday_19 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/19+Farewell.mp3')
+friday_night_lights_19.audiofile.attach(io: friday_19, filename: '19+Farewell.mp3')
+
+friday_night_lights_20 = Track.create(
+    title: 'Looking For Trouble (Bonus Track)',
+    artist_id: jcole.id,
+    album_id: friday_night_lights.id,
+    num: 20,
+    seconds: 335
+)
+
+friday_20 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jcole-friday/20+Looking+For+Trouble+Bonus.mp3')
+friday_night_lights_20.audiofile.attach(io: friday_20, filename: '20+Looking+For+Trouble+Bonus.mp3')
+
+division_01 = Track.create(
+    title: 'Medallion',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 1,
+    seconds: 147
+)
+
+div_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/01+Medallion.mp3')
+division_01.audiofile.attach(io: div_01, filename: '01+Medallion.mp3')
+
+division_02 = Track.create(
+    title: 'Nxwhere',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 2,
+    seconds: 197
+)
+
+div_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/02+Nxwhere.mp3')
+division_02.audiofile.attach(io: div_02, filename: '02+Nxwhere.mp3')
+
+division_03 = Track.create(
+    title: 'Eternal',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 3,
+    seconds: 159
+)
+
+div_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/03+Eternal.mp3')
+division_03.audiofile.attach(io: div_03, filename: '03+Eternal.mp3')
+
+division_04 = Track.create(
+    title: 'Midnight Charm',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 4,
+    seconds: 178
+)
+
+div_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/04+Midnight+Charm.mp3')
+division_04.audiofile.attach(io: div_04, filename: '04+Midnight+Charm.mp3')
+
+division_05 = Track.create(
+    title: 'Blameless',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 5,
+    seconds: 186
+)
+
+div_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/05+Blameless.mp3')
+division_05.audiofile.attach(io: div_05, filename: '05+Blameless.mp3')
+
+division_06 = Track.create(
+    title: 'No Sympathy',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 6,
+    seconds: 187
+)
+
+div_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/06+No+Sympathy.mp3')
+division_06.audiofile.attach(io: div_06, filename: '06+No+Sympathy.mp3')
+
+division_07 = Track.create(
+    title: 'Baby Powder',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 7,
+    seconds: 177
+)
+
+div_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/07+Baby+Powder.mp3')
+division_07.audiofile.attach(io: div_07, filename: '07+Baby+Powder.mp3')
+
+division_08 = Track.create(
+    title: 'Resume',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 8,
+    seconds: 180
+)
+
+div_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/08+Resume.mp3')
+division_08.audiofile.attach(io: div_08, filename: '08+Resume.mp3')
+
+division_09 = Track.create(
+    title: 'Mellow Eyes',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 9,
+    seconds: 183
+)
+
+div_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/09+Mellow+Eyes.mp3')
+division_09.audiofile.attach(io: div_09, filename: '09+Mellow+Eyes.mp3')
+
+division_10 = Track.create(
+    title: 'Division',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 10,
+    seconds: 172
+)
+
+div_10 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/10+Division.mp3')
+division_10.audiofile.attach(io: div_10, filename: '10+Division.mp3')
+
+division_11 = Track.create(
+    title: 'Exit Wounds',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 11,
+    seconds: 186
+)
+
+div_11 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/11+Exit+Wounds.mp3')
+division_11.audiofile.attach(io: div_11, filename: '11+Exit+Wounds.mp3')
+
+division_12 = Track.create(
+    title: 'Crybaby',
+    artist_id: jenevieve.id,
+    album_id: division.id,
+    num: 12,
+    seconds: 235
+)
+
+div_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/jenevieve-division/12+Crybaby.mp3')
+division_12.audiofile.attach(io: div_12, filename: '12+Crybaby.mp3')
 
 follows1 = Follow.create(
     artist_id: her.id,
