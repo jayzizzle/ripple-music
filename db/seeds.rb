@@ -37,11 +37,6 @@ miguel = Artist.create(
     bio: ''
 )
 
-# frank = Artist.create(
-#     artist_name: 'Frank Ocean', 
-#     bio: ''
-# )
-
 jenevieve = Artist.create(
     artist_name: 'Jenevieve', 
     bio: ''
@@ -79,9 +74,6 @@ her = Artist.create(
 
 file001 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/drake.jpg')
 drake.photo.attach(io: file001, filename: 'drake.jpg')
-
-# file002 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/frank.jpg')
-# frank.photo.attach(io: file002, filename: 'frank.jpg')
 
 file003 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_artists/her.jpg')
 her.photo.attach(io: file003, filename: 'her.jpg')
@@ -153,17 +145,6 @@ sailing_souls = Album.create(
 
 cover06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/jhene-sailing.jpg')
 sailing_souls.cover.attach(io: cover06, filename: 'jhene-sailing.jpg')
-
-# nostalgia_ultra = Album.create(
-#     title: 'Nostalgia, Ultra',
-#     artist_id: frank.id,
-#     category: 'LP',
-#     year: 2011,
-#     is_explicit: true
-# )
-
-# cover07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/_covers/frank-nostalgia.jpg')
-# nostalgia_ultra.cover.attach(io: cover07, filename: 'frank-nostalgia.jpg')
 
 house_of_balloons = Album.create(
     title: 'House Of Balloons',
@@ -1886,7 +1867,302 @@ reverie_12 = Track.create(
 rev_12 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/tinashe-reverie/12+Let+You+Love+Me+Xxyyxx+Remix.mp3')
 reverie_12.audiofile.attach(io: rev_12, filename: '12+Let+You+Love+Me+Xxyyxx+Remix.mp3')
 
+echoes_of_silence_01 = Track.create(
+    title: 'D.D.',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 1,
+    seconds: 275
+)
 
+echoes_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/01+DD.mp3')
+echoes_of_silence_01.audiofile.attach(io: echoes_01, filename: '01+DD.mp3')
+
+echoes_of_silence_02 = Track.create(
+    title: 'Montreal',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 2,
+    seconds: 250
+)
+
+echoes_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/02+Montreal.mp3')
+echoes_of_silence_02.audiofile.attach(io: echoes_02, filename: '02+Montreal.mp3')
+
+echoes_of_silence_03 = Track.create(
+    title: 'Outside',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 3,
+    seconds: 260
+)
+
+echoes_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/03+Outside.mp3')
+echoes_of_silence_03.audiofile.attach(io: echoes_03, filename: '03+Outside.mp3')
+
+echoes_of_silence_04 = Track.create(
+    title: 'XO / The Host',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 4,
+    seconds: 443
+)
+
+echoes_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/04+XO+_+The+Host.mp3')
+echoes_of_silence_04.audiofile.attach(io: echoes_04, filename: '04+XO+_+The+Host.mp3')
+
+echoes_of_silence_05 = Track.create(
+    title: 'Initiation',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 5,
+    seconds: 260
+)
+
+echoes_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/05+Initiation.mp3')
+echoes_of_silence_05.audiofile.attach(io: echoes_05, filename: '05+Initiation.mp3')
+
+echoes_of_silence_06 = Track.create(
+    title: 'Same Old Song (feat. Juicy J)',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 6,
+    seconds: 312
+)
+
+echoes_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/06+Same+Old+Song.mp3')
+echoes_of_silence_06.audiofile.attach(io: echoes_06, filename: '06+Same+Old+Song.mp3')
+
+echoes_of_silence_07 = Track.create(
+    title: 'The Fall',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 7,
+    seconds: 345
+)
+
+echoes_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/07+The+Fall.mp3')
+echoes_of_silence_07.audiofile.attach(io: echoes_07, filename: '07+The+Fall.mp3')
+
+echoes_of_silence_08 = Track.create(
+    title: 'Next',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 8,
+    seconds: 360
+)
+
+echoes_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/08+Next.mp3')
+echoes_of_silence_08.audiofile.attach(io: echoes_08, filename: '08+Next.mp3')
+
+echoes_of_silence_09 = Track.create(
+    title: 'Echoes Of Silence',
+    artist_id: weeknd.id,
+    album_id: echoes_of_silence.id,
+    num: 9,
+    seconds: 242
+)
+
+echoes_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-echoes/09+Echoes+Of+Silence.mp3')
+echoes_of_silence_09.audiofile.attach(io: echoes_09, filename: '/09+Echoes+Of+Silence.mp3')
+
+house_of_balloons_01 = Track.create(
+    title: 'High For This',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 1,
+    seconds: 247
+)
+
+balloons_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/01+High+For+This.mp3')
+house_of_balloons_01.audiofile.attach(io: balloons_01, filename: '01+High+For+This.mp3')
+
+house_of_balloons_02 = Track.create(
+    title: 'What You Need',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 2,
+    seconds: 206
+)
+
+balloons_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/02+What+You+Need.mp3')
+house_of_balloons_02.audiofile.attach(io: balloons_02, filename: '02+What+You+Need.mp3')
+
+house_of_balloons_03 = Track.create(
+    title: 'House Of Balloons / Glass Table Girls',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 3,
+    seconds: 407
+)
+
+balloons_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/03+House+Of+Balloons+-+Glass+Table+Girls.mp3')
+house_of_balloons_03.audiofile.attach(io: balloons_03, filename: '03+House+Of+Balloons+-+Glass+Table+Girls.mp3')
+
+house_of_balloons_04 = Track.create(
+    title: 'The Morning',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 4,
+    seconds: 315
+)
+
+balloons_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/04+The+Morning.mp3')
+house_of_balloons_04.audiofile.attach(io: balloons_04, filename: '04+The+Morning.mp3')
+
+house_of_balloons_05 = Track.create(
+    title: 'Wicked Games',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 5,
+    seconds: 325
+)
+
+balloons_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/05+Wicked+Games.mp3')
+house_of_balloons_05.audiofile.attach(io: balloons_05, filename: '05+Wicked+Games.mp3')
+
+house_of_balloons_06 = Track.create(
+    title: 'The Party & The After Party',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 6,
+    seconds: 459
+)
+
+balloons_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/06+The+Party+_+The+After+Party.mp3')
+house_of_balloons_06.audiofile.attach(io: balloons_06, filename: '06+The+Party+_+The+After+Party.mp3')
+
+house_of_balloons_07 = Track.create(
+    title: 'Coming Down',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 7,
+    seconds: 295
+)
+
+balloons_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/07+Coming+Down.mp3')
+house_of_balloons_07.audiofile.attach(io: balloons_07, filename: '07+Coming+Down.mp3')
+
+house_of_balloons_08 = Track.create(
+    title: 'Loft Music',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 8,
+    seconds: 364
+)
+
+balloons_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/08+Loft+Music.mp3')
+house_of_balloons_08.audiofile.attach(io: balloons_08, filename: '08+Loft+Music.mp3')
+
+house_of_balloons_09 = Track.create(
+    title: 'The Knowing',
+    artist_id: weeknd.id,
+    album_id: house_of_balloons.id,
+    num: 9,
+    seconds: 341
+)
+
+balloons_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-house/09+The+Knowing.mp3')
+house_of_balloons_09.audiofile.attach(io: balloons_09, filename: '09+The+Knowing.mp3')
+
+thursday_01 = Track.create(
+    title: 'Lonely Star',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 1,
+    seconds: 349
+)
+
+thurs_01 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/01+Lonely+Star.mp3')
+thursday_01.audiofile.attach(io: thurs_01, filename: '01+Lonely+Star.mp3')
+
+thursday_02 = Track.create(
+    title: 'Life Of The Party',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 2,
+    seconds: 297
+)
+
+thurs_02 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/02+Life+Of+The+Party.mp3')
+thursday_02.audiofile.attach(io: thurs_02, filename: '02+Life+Of+The+Party.mp3')
+
+thursday_03 = Track.create(
+    title: 'Thursday',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 3,
+    seconds: 319
+)
+
+thurs_03 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/03+Thursday.mp3')
+thursday_03.audiofile.attach(io: thurs_03, filename: '03+Thursday.mp3')
+
+thursday_04 = Track.create(
+    title: 'The Zone (feat. Drake)',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 4,
+    seconds: 418
+)
+
+thurs_04 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/04+The+Zone.mp3')
+thursday_04.audiofile.attach(io: thurs_04, filename: '04+The+Zone.mp3')
+
+thursday_05 = Track.create(
+    title: 'The Birds, Pt. 1',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 5,
+    seconds: 214
+)
+
+thurs_05 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/05+The+Birds+Part+1.mp3')
+thursday_05.audiofile.attach(io: thurs_05, filename: '05+The+Birds+Part+1.mp3')
+
+thursday_06 = Track.create(
+    title: 'The Birds, Pt. 2',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 6,
+    seconds: 350
+)
+
+thurs_06 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/06+The+Birds+Part+2.mp3')
+thursday_06.audiofile.attach(io: thurs_06, filename: '06+The+Birds+Part+2.mp3')
+
+thursday_07 = Track.create(
+    title: 'Rolling Stone',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 8,
+    seconds: 230
+)
+
+thurs_07 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/07+Rolling+Stone.mp3')
+thursday_07.audiofile.attach(io: thurs_07, filename: '07+Rolling+Stone.mp3')
+
+thursday_08 = Track.create(
+    title: 'Gone',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 7,
+    seconds: 487
+)
+
+thurs_08 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/08+Gone.mp3')
+thursday_08.audiofile.attach(io: thurs_08, filename: '08+Gone.mp3')
+
+thursday_09 = Track.create(
+    title: 'Heaven Or Las Vegas',
+    artist_id: weeknd.id,
+    album_id: thursday.id,
+    num: 9,
+    seconds: 353
+)
+
+thurs_09 = URI.open('https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/weeknd-thursday/09+Heaven+Or+Las+Vegas.mp3')
+thursday_09.audiofile.attach(io: thurs_09, filename: '09+Heaven+Or+Las+Vegas.mp3')
 
 follows1 = Follow.create(
     artist_id: her.id,
