@@ -20,6 +20,9 @@ export const Player = (props) => {
   let currentTrackIndex = props.currentSongIndex;
 
   const [artist, setArtist] = useState('');
+  const [artistId, setArtistId] = useState('');
+  const [album, setAlbum] = useState('');
+  const [albumId, setAlbumId] = useState('');
   const [title, setTitle] = useState('');
   const [playlistTitle, setPlaylistTitle] = useState('');
   const [cover, setCover] = useState('');
@@ -47,6 +50,9 @@ export const Player = (props) => {
       let currentSong = songs[currentTrackIndex];
 
       setArtist(currentSong.artist);
+      setArtistId(currentSong.artistId);
+      setAlbum(currentSong.album);
+      setAlbumId(currentSong.albumId);
       setTitle(currentSong.title);
       setPlaylistTitle(currentSong.playlistTitle);
       setCover(currentSong.cover);
@@ -166,11 +172,20 @@ export const Player = (props) => {
 
         <div className='flex-row-start vertical-center player-side player-left'>
           <div className='player-cover'>
-            <img src={cover} />
+            <Link to={`/artists/${artistId}/albums/${albumId}`}>
+              <img src={cover} />
+            </Link>
           </div>
           <div className='player-info'>
-            <p className='player-title'>{title}</p>
-            <p className='player-artist'>{artist}</p>
+            <Link
+              className='hover-line'
+              to={`/artists/${artistId}/albums/${albumId}`}
+            >
+              <p className='player-title'>{title}</p>
+            </Link>
+            <Link className='hover-white' to={`/artists/${artistId}`}>
+              <p className='player-artist'>{artist}</p>
+            </Link>
             <p className='player-playlist'>
               <span className='bold'>Playing From</span> {playlistTitle}
             </p>

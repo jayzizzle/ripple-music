@@ -326,3 +326,8 @@ hover-white:hover {
   text-shadow: 4px 4px 10px #000;
   color: #ccc;
 }
+
+a.hover-white .player-artist:hover {
+  text-decoration: underline;
+  color: #fff;
+}
