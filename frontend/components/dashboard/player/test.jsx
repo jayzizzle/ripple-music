@@ -25,6 +25,10 @@ export const Test = (props) => {
   const [songUrl, setSongUrl] = useState('');
 
   useEffect(() => {
+    props.getFeaturedPlaylist(3);
+  }, []);
+
+  useEffect(() => {
     player.current.volume = currentVolume;
 
     const seconds = Math.floor(player.current.duration);

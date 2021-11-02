@@ -4,3 +4,10 @@ export const getAllFeatures = () => {
     url: '/api/features',
   });
 };
+
+export const getFeaturedPlaylist = (albumId) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/features/${albumId}`,
+  });
+};

@@ -4,6 +4,7 @@ import {
   REMOVED_TRACK_FROM_PLAYLIST,
   ADDED_SINGLE_TRACKLIST,
 } from '../../actions/current_playlist_actions';
+import { RECEIVED_FEATURED_PLAYLIST } from '../../actions/feature_actions';
 
 const defaultState = [
   {
@@ -54,6 +55,8 @@ const currentPlaylistReducer = (oldState = defaultState, action) => {
       return newState;
     case ADDED_SINGLE_TRACKLIST:
       return { [action.track.id]: action.track };
+    case RECEIVED_FEATURED_PLAYLIST:
+      return Object.values(action.songList.songList);
     default:
       return oldState;
   }
