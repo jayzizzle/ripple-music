@@ -25,6 +25,8 @@ export const Tracks = (props) => {
       audioUrl: track.audioUrl,
       cover: track.coverUrl, // FIX N+1
       playlistTitle: 'My Tracks',
+      sourceType: 'tracks',
+      sourceId: null,
     }));
   }
 

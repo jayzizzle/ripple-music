@@ -40,6 +40,8 @@ export const PlaylistShow = (props) => {
       audioUrl: track.audioUrl,
       cover: track.coverUrl,
       playlistTitle: props.playlist.title,
+      sourceType: 'playlists',
+      sourceId: props.match.params.playlistId,
     }));
   }
 

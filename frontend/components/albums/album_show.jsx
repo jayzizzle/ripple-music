@@ -27,6 +27,8 @@ export const AlbumShow = (props) => {
       audioUrl: track.audioUrl,
       cover: props.album.coverUrl,
       playlistTitle: props.album.title,
+      sourceType: 'albums',
+      sourceId: props.album.id,
     }));
   }
 

@@ -9,5 +9,7 @@ json.set! 'songList' do
     json.audioUrl url_for(track.audiofile)
     json.cover url_for(@album.cover)
     json.playlistTitle @album.title
+    json.sourceType 'albums'
+    json.sourceId @album.id
   end
 end

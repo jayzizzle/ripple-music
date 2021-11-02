@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { convertDuration } from '../../../util/helper_util';
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
+import { linkToSource } from '../../../util/helper_jsx_util';
 
 export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,6 +26,8 @@ export const Player = (props) => {
   const [albumId, setAlbumId] = useState('');
   const [title, setTitle] = useState('');
   const [playlistTitle, setPlaylistTitle] = useState('');
+  const [sourceType, setSourceType] = useState('');
+  const [sourceId, setSourceId] = useState('');
   const [cover, setCover] = useState('');
   const [songUrl, setSongUrl] = useState('');
 
@@ -55,6 +58,8 @@ export const Player = (props) => {
       setAlbumId(currentSong.albumId);
       setTitle(currentSong.title);
       setPlaylistTitle(currentSong.playlistTitle);
+      setSourceType(currentSong.sourceType);
+      setSourceId(currentSong.sourceId);
       setCover(currentSong.cover);
       setSongUrl(currentSong.audioUrl);
     }
@@ -187,7 +192,13 @@ export const Player = (props) => {
               <p className='player-artist'>{artist}</p>
             </Link>
             <p className='player-playlist'>
-              <span className='bold'>Playing From</span> {playlistTitle}
+              <span className='bold'>Playing From</span>&nbsp;
+              <Link
+                className='hover-line lightgray-white'
+                to={linkToSource(sourceType, artistId, sourceId)}
+              >
+                {playlistTitle}
+              </Link>
             </p>
           </div>
         </div>
