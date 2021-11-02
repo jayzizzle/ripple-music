@@ -1,72 +1,79 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { convertDuration } from '../../../util/helper_util';
+import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
-export const Player = (props) => {
+export const Test = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(0.5);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
-  const [isReady, setIsReady] = useState(false);
 
   const player = useRef();
   const volumeSlider = useRef();
   const progressBar = useRef();
   const animationRef = useRef();
 
-  // if (!props.currentPlaylist) return null;
-
   const songs = props.currentPlaylist;
+  let currentTrackIndex = props.currentSongIndex;
 
-  const [songIndex, setSongIndex] = useState({ num: 0 });
   const [artist, setArtist] = useState('');
   const [title, setTitle] = useState('');
+  const [playlistTitle, setPlaylistTitle] = useState('');
   const [cover, setCover] = useState('');
   const [songUrl, setSongUrl] = useState('');
 
   useEffect(() => {
-    player.current.volume = currentVolume;
+    let randomIndex = Math.floor(Math.random() * 15) + 1;
+    props
+      .getFeaturedPlaylist(randomIndex)
+      .then(() => props.setToReady({ isReady: true }));
+  }, []);
 
-    // setIsAutoPlay(true);
-    // togglePlayPause();
+  useEffect(() => {
+    if (player.current) {
+      player.current.volume = currentVolume;
 
-    props.currentPlaylist[0] !== songs[0] ? togglePlayPause() : null; // TESTING
-
-    if (player.current.currentTime !== 0 && isReady) {
-      setIsPlaying(true);
-      // player.current.play();
-      togglePlayPause();
-    } else {
-      setIsPlaying(false);
+      const seconds = Math.floor(player.current.duration);
+      setDuration(seconds);
+      progressBar.current.max = seconds;
     }
-
-    // if (player.current.currentTime !== 0) {
-    //   setIsPlaying(true);
-    //   // player.current.play();
-    //   togglePlayPause();
-    // } else if (isPlaying) {
-    //   setIsPlaying(true);
-    // }
-
-    if (!songs[songIndex.num]) songIndex.num = 0;
-    let currentSong = songs[songIndex.num];
-
-    setArtist(currentSong.artist);
-    setTitle(currentSong.title);
-    setCover(currentSong.cover);
-    setSongUrl(currentSong.filePath);
-
-    setIsPlaying(
-      props.currentPlaylist ? (!!player.current.paused ? false : true) : false
-    );
-
-    const seconds = Math.floor(player.current.duration);
-    setDuration(seconds);
-    progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
+  useEffect(() => {
+    if (player.current) {
+      let currentSong = songs[currentTrackIndex];
+
+      setArtist(currentSong.artist);
+      setTitle(currentSong.title);
+      setPlaylistTitle(currentSong.playlistTitle);
+      setCover(currentSong.cover);
+      setSongUrl(currentSong.audioUrl);
+    }
+  }, [player?.current?.src]);
+
+  useEffect(() => {
+    if (!isPlaying && props.isCurrentlyPlaying) {
+      togglePlayPause();
+      setIsAutoPlay(true);
+    }
+  }, [props.isCurrentlyPlaying]);
+
   const loadSong = (song) => {
-    player.current.src = song.filePath;
+    player.current.src = song.audioUrl;
+  };
+
+  const toggleMute = () => {
+    if (!isMuted) {
+      player.current.volume = 0;
+      setCurrentVolume(0);
+      setIsMuted(true);
+    } else {
+      adjustVolume();
+      setIsMuted(false);
+    }
   };
 
   const togglePlayPause = () => {
@@ -76,10 +83,12 @@ export const Player = (props) => {
       player.current.play();
       animationRef.current = requestAnimationFrame(whilePlaying);
       setIsAutoPlay(true);
+      if (!props.isCurrentlyPlaying) props.setToPlay({ isPlaying: true });
     } else {
       player.current.pause();
       cancelAnimationFrame(animationRef.current);
       setIsAutoPlay(false);
+      props.setToPause({ isPlaying: false });
     }
   };
 
@@ -87,21 +96,23 @@ export const Player = (props) => {
     if (player.current.currentTime > 3) {
       player.current.currentTime = 0;
     } else {
-      songIndex.num--;
-      if (songIndex.num < 0) {
-        songIndex.num = songs.length - 1;
+      currentTrackIndex--;
+      if (currentTrackIndex < 0) {
+        currentTrackIndex = songs.length - 1;
       }
-      loadSong(songs[songIndex.num]);
+      loadSong(songs[currentTrackIndex]);
+      props.receivedCurrentTrack({ idx: currentTrackIndex });
       if (isPlaying) player.current.play();
     }
   };
 
   const nextSong = () => {
-    songIndex.num++;
-    if (songIndex.num > songs.length - 1) {
-      songIndex.num = 0;
+    currentTrackIndex++;
+    if (currentTrackIndex > songs.length - 1) {
+      currentTrackIndex = 0;
     }
-    loadSong(songs[songIndex.num]);
+    props.receivedCurrentTrack({ idx: currentTrackIndex });
+    loadSong(songs[currentTrackIndex]);
     if (isPlaying) {
       player.current.play();
     } else {
@@ -111,11 +122,12 @@ export const Player = (props) => {
 
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {
-      songIndex.num++;
-      if (songIndex.num > songs.length - 1) {
-        songIndex.num = 0;
+      currentTrackIndex++;
+      if (currentTrackIndex > songs.length - 1) {
+        currentTrackIndex = 0;
       }
-      loadSong(songs[songIndex.num]);
+      props.receivedCurrentTrack({ idx: currentTrackIndex });
+      loadSong(songs[currentTrackIndex]);
       player.current.play();
     }
     progressBar.current.value = player.current.currentTime;
@@ -141,25 +153,16 @@ export const Player = (props) => {
     setCurrentTime(progressBar.current.value);
   };
 
-  if (!props.currentPlaylist) {
+  if (props.currentPlaylist.length === 0) {
     return null;
   } else {
     return (
       <div className='player-wrapper flex-row-between'>
-        {/* SOLVE WHY THIS BUGS OUT NEXT SONG */}
-        {/* <audio ref={player} src={songUrl} /> */}
-
-        {/* <audio autoPlay ref={player} /> */}
-        {/* <audio autoPlay ref={player} /> */}
-
         <audio
           autoPlay={isAutoPlay}
           ref={player}
-          src={props.currentPlaylist ? props.currentPlaylist[0].filePath : ''}
+          src={props.currentPlaylist ? props.currentPlaylist[0].audioUrl : ''}
         />
-
-        {/* <audio autoPlay={true} ref={player} src={songs[0].filePath} /> */}
-        {/* <audio ref={player} src='https://ripple-jz-seeds.s3.us-west-1.amazonaws.com/wolftyla-wolf/03+All+Tinted.mp3' /> */}
 
         <div className='flex-row-start vertical-center player-side player-left'>
           <div className='player-cover'>
@@ -168,6 +171,9 @@ export const Player = (props) => {
           <div className='player-info'>
             <p className='player-title'>{title}</p>
             <p className='player-artist'>{artist}</p>
+            <p className='player-playlist'>
+              <span className='bold'>Playing From</span> {playlistTitle}
+            </p>
           </div>
         </div>
 
@@ -203,13 +209,19 @@ export const Player = (props) => {
         </div>
 
         <div className='flex-row-end vertical-center player-side player-right'>
+          <button
+            className={isMuted ? 'salmon mute-btn' : 'mute-btn hover-cyan'}
+            onClick={() => toggleMute()}
+          >
+            {isMuted ? <HiVolumeOff /> : <HiVolumeUp />}
+          </button>
           <input
             type='range'
             min='0'
             max='1'
             step='0.02'
             defaultValue={currentVolume}
-            onChange={adjustVolume}
+            onChange={isMuted ? null : adjustVolume}
             ref={volumeSlider}
             className='volumeSlider'
           />

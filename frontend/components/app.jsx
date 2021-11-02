@@ -14,8 +14,6 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import SidebarContainer from './dashboard/sidebar/sidebar_container';
 import PlayerContainer from './dashboard/player/player_container';
-import TestContainer from './dashboard/player/test_container';
-
 import MainContainer from './dashboard/main/main_container';
 import PlaylistsContainer from './playlists/playlists_container';
 import ArtistsContainer from './artists/artists_container';
@@ -59,8 +57,7 @@ const App = () => (
         <ProtectedRoute exact path='/tracks' component={TracksContainer} />
         <ProtectedRoute exact path='/artists' component={ArtistsContainer} />
         <ProtectedRoute exact path='/explore' component={ExploreContainer} />
-        {/* <PlayerContainer /> */}
-        <TestContainer />
+        <PlayerContainer />
       </>
     </Switch>
   </>
