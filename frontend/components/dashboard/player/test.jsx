@@ -220,7 +220,7 @@ export const Test = (props) => {
             max='1'
             step='0.02'
             defaultValue={currentVolume}
-            onChange={adjustVolume}
+            onChange={isMuted ? null : adjustVolume}
             ref={volumeSlider}
             className='volumeSlider'
           />

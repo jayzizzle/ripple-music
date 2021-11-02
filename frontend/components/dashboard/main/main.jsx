@@ -21,6 +21,9 @@ export const Main = (props) => {
         <div className='flex-col-start full-width z1'>
           <div className='flex-row-between full-width main-heading vertical-center'>
             <h1 className='artist-h1'>Welcome back, {props.user.username}!</h1>
+            <button onClick={() => props.getAllFeatures()}>
+              Refresh Features
+            </button>
           </div>
           <h1 className='section-title'>Featured Albums</h1>
           <ul className='flex-row-start flex-wrap'>

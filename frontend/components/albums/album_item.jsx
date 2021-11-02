@@ -9,7 +9,7 @@ export const AlbumItem = (props) => {
       <Link to={`/artists/${album.artistId}/albums/${album.id}`}>
         <img className='cover' src={album.coverUrl} />
       </Link>
-      <div className='flex-row-between vertical-center full-width'>
+      <div className='flex-row-between vertical-center w-150'>
         <Link
           className='hover-line'
           to={`/artists/${album.artistId}/albums/${album.id}`}
