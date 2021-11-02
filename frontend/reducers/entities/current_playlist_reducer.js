@@ -6,42 +6,7 @@ import {
 } from '../../actions/current_playlist_actions';
 import { RECEIVED_FEATURED_PLAYLIST } from '../../actions/feature_actions';
 
-const defaultState = [
-  {
-    id: 1,
-    artist: 'Jenevieve',
-    title: 'Resume',
-    albumId: 4,
-    album: 'Division',
-    audioUrl: '/assets/jenevieve-resume.mp3',
-    cover: '/assets/jenevieve-division.jpg',
-    playlistTitle: 'Ripple Playlist',
-  },
-  {
-    id: 2,
-    artist: 'Mahalia',
-    title: 'Surprise Me',
-    albumId: 5,
-    album: 'Seasons',
-    audioUrl: '/assets/mahalia-surprise_me.mp3',
-    cover: '/assets/mahalia-seasons.jpg',
-    playlistTitle: 'Ripple Playlist',
-  },
-  {
-    id: 3,
-    artist: 'Brasstracks',
-    title: 'My Boo',
-    albumId: 6,
-    album: 'My Boo',
-    audioUrl: '/assets/brasstracks-my_boo.mp3',
-    cover: '/assets/brasstracks-my_boo.jpg',
-    playlistTitle: 'Ripple Playlist',
-  },
-];
-
-const currentPlaylistReducer = (oldState = defaultState, action) => {
-  //test preloaded state
-
+const currentPlaylistReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   const newState = Object.assign({}, oldState);
   switch (action.type) {

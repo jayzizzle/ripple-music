@@ -29,21 +29,25 @@ export const Test = (props) => {
   }, []);
 
   useEffect(() => {
-    player.current.volume = currentVolume;
+    if (player.current) {
+      player.current.volume = currentVolume;
 
-    const seconds = Math.floor(player.current.duration);
-    setDuration(seconds);
-    progressBar.current.max = seconds;
+      const seconds = Math.floor(player.current.duration);
+      setDuration(seconds);
+      progressBar.current.max = seconds;
+    }
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
   useEffect(() => {
-    let currentSong = songs[currentTrackIndex];
+    if (player.current) {
+      let currentSong = songs[currentTrackIndex];
 
-    setArtist(currentSong.artist);
-    setTitle(currentSong.title);
-    setPlaylistTitle(currentSong.playlistTitle);
-    setCover(currentSong.cover);
-    setSongUrl(currentSong.audioUrl);
+      setArtist(currentSong.artist);
+      setTitle(currentSong.title);
+      setPlaylistTitle(currentSong.playlistTitle);
+      setCover(currentSong.cover);
+      setSongUrl(currentSong.audioUrl);
+    }
   }, [player?.current?.src]);
 
   useEffect(() => {
@@ -145,7 +149,7 @@ export const Test = (props) => {
     setCurrentTime(progressBar.current.value);
   };
 
-  if (!props.currentPlaylist) {
+  if (props.currentPlaylist.length === 0) {
     return null;
   } else {
     return (
