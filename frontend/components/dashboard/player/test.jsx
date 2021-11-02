@@ -18,7 +18,6 @@ export const Test = (props) => {
   const songs = props.currentPlaylist;
   let currentTrackIndex = props.currentSongIndex;
 
-  // const [songIndex, setSongIndex] = useState({ num: 0 });
   const [artist, setArtist] = useState('');
   const [title, setTitle] = useState('');
   const [playlistTitle, setPlaylistTitle] = useState('');
@@ -33,14 +32,7 @@ export const Test = (props) => {
     progressBar.current.max = seconds;
   }, [player?.current?.loadedmetadata, player?.current?.readyState]);
 
-  // useEffect(() => {
-  //   songIndex.num = 0;
-  // }, [songs]);
-
   useEffect(() => {
-    // if (!songs[songIndex.num]) songIndex.num = 0;
-    // let currentSong = songs[songIndex.num];
-
     let currentSong = songs[currentTrackIndex];
 
     setArtist(currentSong.artist);
@@ -49,10 +41,6 @@ export const Test = (props) => {
     setCover(currentSong.cover);
     setSongUrl(currentSong.audioUrl);
   }, [player?.current?.src]);
-
-  // useEffect(() => {
-  //   console.log('index has changed');
-  // }, [songIndex.num]);
 
   useEffect(() => {
     if (!isPlaying && props.isCurrentlyPlaying) {
@@ -92,19 +80,6 @@ export const Test = (props) => {
     }
   };
 
-  // const prevSong = () => {
-  //   if (player.current.currentTime > 3) {
-  //     player.current.currentTime = 0;
-  //   } else {
-  //     songIndex.num--;
-  //     if (songIndex.num < 0) {
-  //       songIndex.num = songs.length - 1;
-  //     }
-  //     loadSong(songs[songIndex.num]);
-  //     if (isPlaying) player.current.play();
-  //   }
-  // };
-
   const prevSong = () => {
     if (player.current.currentTime > 3) {
       player.current.currentTime = 0;
@@ -119,19 +94,6 @@ export const Test = (props) => {
     }
   };
 
-  // const nextSong = () => {
-  //   songIndex.num++;
-  //   if (songIndex.num > songs.length - 1) {
-  //     songIndex.num = 0;
-  //   }
-  //   loadSong(songs[songIndex.num]);
-  //   if (isPlaying) {
-  //     player.current.play();
-  //   } else {
-  //     player.current.pause();
-  //   }
-  // };
-
   const nextSong = () => {
     currentTrackIndex++;
     if (currentTrackIndex > songs.length - 1) {
@@ -145,20 +107,6 @@ export const Test = (props) => {
       player.current.pause();
     }
   };
-
-  // const whilePlaying = () => {
-  //   if (player.current.currentTime === player.current.duration) {
-  //     songIndex.num++;
-  //     if (songIndex.num > songs.length - 1) {
-  //       songIndex.num = 0;
-  //     }
-  //     loadSong(songs[songIndex.num]);
-  //     player.current.play();
-  //   }
-  //   progressBar.current.value = player.current.currentTime;
-  //   changePlayerCurrentTime();
-  //   animationRef.current = requestAnimationFrame(whilePlaying);
-  // };
 
   const whilePlaying = () => {
     if (player.current.currentTime === player.current.duration) {

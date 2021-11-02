@@ -7,6 +7,7 @@ import { receivedCurrentTrack } from '../../../actions/current_playlist_actions'
 const mSTP = (state) => ({
   currentPlaylist: Object.values(state.entities.currentPlaylist),
   albums: state.entities.albums,
+  tracks: Object.values(state.entities.tracks),
   isCurrentlyPlaying: state.ui.isPlaying,
   currentSongIndex: state.entities.currentTrack.idx,
 });
