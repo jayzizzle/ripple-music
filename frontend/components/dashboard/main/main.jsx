@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { AlbumItem } from '../../albums/album_item';
 import { ArtistItem } from '../../artists/artist_item';
+import { FiRefreshCcw } from 'react-icons/fi';
 
 export const Main = (props) => {
   useEffect(() => {
@@ -19,10 +20,14 @@ export const Main = (props) => {
       <main className='flex-col-start'>
         <div className='main-bg'></div>
         <div className='flex-col-start full-width z1'>
-          <div className='flex-row-between full-width main-heading vertical-center'>
+          <div className='full-width main-heading'>
             <h1 className='artist-h1'>Welcome back, {props.user.username}!</h1>
-            <button onClick={() => props.getAllFeatures()}>
-              Refresh Features
+            <button
+              className='refresh-btn hover-cyan'
+              onClick={() => props.getAllFeatures()}
+            >
+              Refresh Dashboard&nbsp;&nbsp;
+              <FiRefreshCcw />
             </button>
           </div>
           <h1 className='section-title'>Featured Albums</h1>

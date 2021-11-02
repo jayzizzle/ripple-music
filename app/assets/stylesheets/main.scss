@@ -303,6 +303,10 @@ hover-white:hover {
 }
 
 .main-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   height: 400px;
   text-shadow: 4px 4px 10px #000;
 }
@@ -313,4 +317,10 @@ hover-white:hover {
 
 .invisible {
   visibility: hidden;
+}
+
+.refresh-btn {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: bold;
 }

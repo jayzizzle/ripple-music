@@ -30,6 +30,12 @@
   border-radius: 4px;
   padding: 20px;
   transition: all 0.3s ease-in-out;
+
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-ul {

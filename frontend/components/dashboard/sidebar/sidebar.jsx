@@ -31,8 +31,6 @@ export default class Sidebar extends Component {
 
         <div className='sidebar-break flex-row-start'></div>
 
-        {/* window.location.reload(); */}
-
         <NavLink
           className='sidebar-link main-link'
           to='/dashboard'
