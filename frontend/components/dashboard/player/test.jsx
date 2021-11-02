@@ -25,7 +25,10 @@ export const Test = (props) => {
   const [songUrl, setSongUrl] = useState('');
 
   useEffect(() => {
-    props.getFeaturedPlaylist(3);
+    let randomIndex = Math.floor(Math.random() * 15) + 1;
+    props
+      .getFeaturedPlaylist(randomIndex)
+      .then(() => props.setToReady({ isReady: true }));
   }, []);
 
   useEffect(() => {
