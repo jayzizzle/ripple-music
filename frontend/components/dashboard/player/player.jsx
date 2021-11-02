@@ -9,7 +9,7 @@ export const Player = (props) => {
   const [isMuted, setIsMuted] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [currentVolume, setCurrentVolume] = useState(0.5);
+  const [currentVolume, setCurrentVolume] = useState(0.4);
   const [isAutoPlay, setIsAutoPlay] = useState(false);
 
   const player = useRef();
@@ -244,8 +244,8 @@ export const Player = (props) => {
           <input
             type='range'
             min='0'
-            max='1'
-            step='0.02'
+            max='0.8'
+            step='0.01'
             defaultValue={currentVolume}
             onChange={isMuted ? null : adjustVolume}
             ref={volumeSlider}

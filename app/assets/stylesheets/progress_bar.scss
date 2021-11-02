@@ -1,10 +1,10 @@
 .progressBar {
   --bar-bg: #999;
   --seek-before-width: 0;
-  --seek-before-color: cyan;
+  // --seek-before-color: cyan;
   --knobby: #fff;
   --selected-knobby: cyan;
-  
+
   appearance: none;
   background: var(--bar-bg);
   border-radius: 10px;
