@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { convertDuration } from '../../../util/helper_util';
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 
-export const Test = (props) => {
+export const Player = (props) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [duration, setDuration] = useState(0);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { Test } from './test';
+import { Player } from './player';
 import { setToPlay, setToPause, setToReady } from '../../../actions/ui_actions';
 import { receivedCurrentTrack } from '../../../actions/current_playlist_actions';
 import { getFeaturedPlaylist } from '../../../actions/feature_actions';
@@ -20,4 +20,4 @@ const mDTP = (dispatch) => ({
   getFeaturedPlaylist: (albumId) => dispatch(getFeaturedPlaylist(albumId)),
 });
 
-export default connect(mSTP, mDTP)(Test);
+export default connect(mSTP, mDTP)(Player);
