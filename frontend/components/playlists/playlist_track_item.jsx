@@ -18,15 +18,21 @@ export const PlaylistTrackItem = (props) => {
   };
 
   return (
-    <div className='flex-row-between vertical-center full-width track-row'>
+    <div
+      className='flex-row-between vertical-center full-width track-row'
+      onDoubleClick={() => playSong()}
+    >
       <div className='flex-row-end w-5 midgray table-pad'>
         {props.num ? props.num : track.num}
       </div>
-      <div className='flex-row-start flex-wrap w-25 table-pad'>
-        {track.title}
-        <button className='inline-play-btn' onClick={() => playSong()}>
+      <div
+        className='flex-row-start flex-wrap w-25 table-pad hover-cyan cursor-pointer'
+        onClick={() => playSong()}
+      >
+        {track.title}&nbsp;
+        <span className='midgray inline-play hover-cyan'>
           <FaRegPlayCircle />
-        </button>
+        </span>
       </div>
       <div className='flex-row-start flex-wrap w-20 table-pad'>
         <Link className='hover-line' to={`../../../artists/${props.artist.id}`}>
