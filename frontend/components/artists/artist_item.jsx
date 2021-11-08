@@ -7,7 +7,7 @@ export const ArtistItem = (props) => {
   return (
     <li className='flex-col-center artist-li'>
       <Link to={`/artists/${artist.id}`}>
-        <div className='image-crop'>
+        <div className='image-crop' width='150' height='150'>
           <img
             className='artist-photo'
             src={artist.photoUrl}
