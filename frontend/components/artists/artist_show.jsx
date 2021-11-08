@@ -30,8 +30,13 @@ export const ArtistShow = (props) => {
             />
           </div>
           <Link to={`/artists/${props.artist.id}`}>
-            <div className='image-crop'>
-              <img className='artist-photo' src={props.artist.photoUrl} />
+            <div className='image-crop' width='150' height='150'>
+              <img
+                className='artist-photo'
+                src={props.artist.photoUrl}
+                width='150'
+                height='150'
+              />
             </div>
           </Link>
           <h3 className='subtitle'>Albums by {props.artist.artistName}</h3>
