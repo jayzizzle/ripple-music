@@ -11,11 +11,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  align-items: flex-start;
+  object-fit: contain;
 }
 
 .artist-photo {
-  display: flex;
-  align-items: flex-start;
+  display: inline;
   margin: 0 auto;
   // margin-left: -25%;
   width: auto;
